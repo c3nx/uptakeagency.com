@@ -3,6 +3,24 @@ name: AI Security Review
 on:
   pull_request:
     types: [opened, synchronize]
+    paths:
+      - '**.py'
+      - '**.js'
+      - '**.ts'
+      - '**.jsx'
+      - '**.tsx'
+      - '**.go'
+      - '**.rs'
+      - '**.java'
+      - '**.cs'
+      - '**.php'
+      - '**.rb'
+      - '**.sql'
+      - '**.sh'
+      - '**.yml'
+      - '**.yaml'
+      - 'Dockerfile'
+      - '**.env.example'
 
 jobs:
   security:
