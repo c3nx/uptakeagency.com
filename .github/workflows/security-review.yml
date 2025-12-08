@@ -1,0 +1,11 @@
+name: AI Security Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  security:
+    uses: estanbulgaming/.github/.github/workflows/security-review.yml@main
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_CI }}
