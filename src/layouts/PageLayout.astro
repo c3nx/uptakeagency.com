@@ -1,0 +1,32 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "en" | "tr";
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const { title, description, locale, canonicalPath, ogImage } = Astro.props;
+
+// Derive current path from canonicalPath for active nav highlighting
+const currentPath = canonicalPath || "/";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  ogImage={ogImage}
+>
+  <Header locale={locale} currentPath={currentPath} />
+  <main class="pt-16">
+    <slot />
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>

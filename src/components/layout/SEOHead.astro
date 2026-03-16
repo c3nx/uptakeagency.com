@@ -1,0 +1,64 @@
+---
+import { getLocalizedPath, getAlternateLocale } from "@/i18n";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "en" | "tr";
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonicalPath = "/",
+  ogImage = "/images/og-default.png",
+} = Astro.props;
+
+const site = "https://uptakeagency.com";
+const canonical = `${site}${getLocalizedPath(canonicalPath, locale)}`;
+const altLocale = getAlternateLocale(locale);
+const altUrl = `${site}${getLocalizedPath(canonicalPath, altLocale)}`;
+const fullTitle = title === "Uptake Agency" ? title : `${title} | Uptake Agency`;
+const langCode = locale === "tr" ? "tr-TR" : "en-US";
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={canonical} />
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang={locale} href={canonical} />
+<link rel="alternate" hreflang={altLocale} href={altUrl} />
+<link rel="alternate" hreflang="x-default" href={`${site}${canonicalPath}`} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={`${site}${ogImage}`} />
+<meta property="og:locale" content={langCode} />
+<meta property="og:site_name" content="Uptake Agency" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`${site}${ogImage}`} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Font: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>

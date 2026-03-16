@@ -1,0 +1,134 @@
+---
+import LegalLayout from "@/layouts/LegalLayout.astro";
+
+const locale = "tr";
+---
+
+<LegalLayout
+  title="Gizlilik Politikasi"
+  description="Uptake Agency Gizlilik Politikasi - Verilerinizi nasil topluyor, kullaniyor ve koruyoruz."
+  locale={locale}
+  canonicalPath="/privacy-policy"
+>
+  <h1>Gizlilik Politikasi</h1>
+  <p class="text-gray-500">Son guncelleme: 14 Mart 2026</p>
+
+  <h2>1. Biz Kimiz</h2>
+  <p>Uptake Agency ("biz", "bize", "bizim"), Turkiye merkezli, isletmeler icin pazarlama otomasyonu ve musteri iliskileri yonetimi (CRM) platformlari gelistiren ve isleten bir dijital ajanstir. Ana urumumuz ARU, isletmelerin WhatsApp Business Platform uzerinden musteri iletisimlerini yonetmelerine yardimci olan bir SaaS platformudur.</p>
+  <p><strong>Veri Sorumlusu:</strong> Uptake Agency<br />
+  <strong>Iletisim E-postasi:</strong> <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a><br />
+  <strong>Web Sitesi:</strong> <a href="https://uptakeagency.com">https://uptakeagency.com</a></p>
+
+  <h2>2. Hangi Verileri Topluyoruz</h2>
+  <p>Platformumuz araciligiyla asagidaki kisisel veri kategorilerini topluyoruz ve isliyoruz:</p>
+  <ul>
+    <li><strong>Musteri iletisim bilgileri:</strong> Musteri isletmelerimiz tarafindan saglanan telefon numaralari, isimler ve e-posta adresleri</li>
+    <li><strong>Randevu ve hizmet verileri:</strong> Randevu tarihleri, hizmet turleri, ziyaret gecmisi</li>
+    <li><strong>Urun satin alma verileri:</strong> Satin alinan urunler, satin alma tarihleri</li>
+    <li><strong>Iletisim verileri:</strong> WhatsApp mesaj teslimat durumlari (gonderildi, teslim edildi, okundu, basarisiz), mesaj zaman damgalari</li>
+    <li><strong>WhatsApp Business Hesap verileri:</strong> Isletme telefon numaralari, hesap kimlikleri, sablon bilgileri ve WhatsApp Business API uzerinden yonetilen isletme profil verileri</li>
+    <li><strong>Kullanim verileri:</strong> Platform giris aktivitesi, isletme kullanicilari tarafindan ozellik kullanimi</li>
+  </ul>
+  <p>WhatsApp mesajlarinin icerigini teslimattan sonra <strong>saklamiyoruz</strong>. Mesaj sablonlari Meta tarafindan onceden onaylanir ve WhatsApp Cloud API araciligiyla gonderilir. Yalnizca teslimat durumu meta verilerini sakliyoruz.</p>
+
+  <h2>3. Verileri Nasil Topluyoruz</h2>
+  <ul>
+    <li><strong>Musteri isletmelerimizden:</strong> Musteri verileri, hizmet verdigimiz isletmeler tarafindan platformumuza girilir veya iceri aktarilir</li>
+    <li><strong>WhatsApp Business API'den:</strong> Meta'nin Graph API'si araciligiyla mesaj teslimat durumlari, webhook olaylari ve hesap bilgileri</li>
+    <li><strong>Platform kullanimindan:</strong> Isletme kullanicilari platformumuzla etkilesimde bulundugunda olusturulan kimlik dogrulama ve kullanim gunlukleri</li>
+  </ul>
+
+  <h2>4. Verileri Neden Isliyoruz (Amaclar)</h2>
+  <p>Kisisel verileri asagidaki belirli amaclar icin isliyoruz:</p>
+  <ul>
+    <li><strong>Randevu hatirlatalari:</strong> Planlanmis randevulardan once (24 saat ve 2 saat oncesinden) otomatik WhatsApp hatirlatalari gonderme</li>
+    <li><strong>Hizmet takibi:</strong> Bir sonraki hizmet ziyaretinin zamani geldiginde musterileri bilgilendirme</li>
+    <li><strong>Urun yenilemesi:</strong> Satin alinan urunlerin yenilenmesi gerektiginde musterileri hatirlatma</li>
+    <li><strong>Dogum gunu ve promosyon kampanyalari:</strong> Kisisellestirilmis kutlamalar ve ozel teklifler gonderme</li>
+    <li><strong>Musteri yeniden etkilestirme:</strong> Bir suredir ziyaret etmeyen musterilere ulasma</li>
+    <li><strong>Mesaj teslimat takibi:</strong> Guvenilir iletisim saglamak icin teslimat durumlarini izleme</li>
+    <li><strong>WhatsApp Business Hesap yonetimi:</strong> Musteri isletmelerimiz adina telefon numaralari, mesaj sablonlari ve isletme profillerini yonetme</li>
+  </ul>
+
+  <h2>5. Islemenin Hukuki Dayagani</h2>
+  <p>Kisisel verileri asagidaki hukuki dayanaklara gore isliyoruz:</p>
+  <ul>
+    <li><strong>Rizalik:</strong> Musteri isletmelerimizin son musterileri WhatsApp mesajlari almak icin onay verir. Musteri isletmelerimiz, musterileri iletisim kampanyalarina eklemeden once gecerli opt-in onayi almakla yukumludur.</li>
+    <li><strong>Mesru menfaat:</strong> Musteri isletmelerimizle sozlesme geregi CRM ve iletisim hizmetleri saglamak icin verileri isleme.</li>
+    <li><strong>Sozlesmesel zorunluluk:</strong> Musteri isletmelerle hizmet sozlesmelerimizi yerine getirmek icin gerekli verileri isleme.</li>
+  </ul>
+
+  <h2>6. Veri Paylasimi ve Ucuncu Taraflar</h2>
+  <p>Kisisel verileri, yalnizca yukarida aciklanan amaclar dogrultusunda asagidaki ucuncu taraf kategorileriyle paylasiyoruz:</p>
+  <ul>
+    <li><strong>Meta Platforms / WhatsApp:</strong> Telefon numaralari ve mesaj icerikleri, mesajlari teslim etmek icin WhatsApp Business Cloud API uzerinden iletilir. Meta'nin gizlilik politikasi, platformlarinda islenen veriler icin gecerlidir.</li>
+    <li><strong>Google (Gemini API):</strong> Kisisellestirilmis mesaj sablonlari olusturmak icin Google'in Gemini AI'sini kullaniyoruz. Yalnizca anonimlestirilmis baglamsal bilgiler (hizmet turu, zamanlama) yapay zekaya gonderilir; mesaj olusturma icin Google ile kisisel olarak tanimlanabilir musteri bilgisi paylasilmaz.</li>
+    <li><strong>Musteri isletmeleri:</strong> Musteri verileri ve iletisim raporlari, musteri iliskisine sahip isletme tarafindan erisilebilir.</li>
+    <li><strong>Altyapi saglayicilari:</strong> Platformumuz kendi yonetigimiz altyapida barindiriliyor. Veritabani yedekleri sifrelenmistir.</li>
+  </ul>
+  <p>Kisisel verileri hicbir ucuncu tarafa <strong>satmiyoruz</strong>, kiralamiyoruz veya lisanslamiyoruz. Kisisel verileri yukarida aciklanan hizmetlerle ilgisi olmayan reklam, profilleme veya amaclar icin <strong>kullanmiyoruz</strong>.</p>
+
+  <h2>7. Uluslararasi Veri Transferleri</h2>
+  <p>Kisisel veriler, Meta'nin WhatsApp Business API'si ve Google'in Gemini API'sinin kullanimi kapsaminda Turkiye disindaki ulkelere aktarilabilir ve buralarda islenebilir. Bu transferler, Turk Kisisel Verilerin Korunmasi Kanunu (KVKK) dahil olmak uzere yururlukteki veri koruma yasalarinin gerektirdigi uygun guvencelere tabidir.</p>
+
+  <h2>8. Veri Saklama</h2>
+  <ul>
+    <li><strong>Musteri verileri:</strong> Musteri isletmesi platformumuzda aktif bir aboneligi surduurdugu surece saklanir. Hesap kapanmasindan sonraki 30 gun icinde veya talep uzerine silinir.</li>
+    <li><strong>Mesaj teslimat gunlukleri:</strong> Raporlama ve sorun giderme amaciyla 12 aya kadar saklanir, ardindan otomatik olarak silinir.</li>
+    <li><strong>WhatsApp Business Hesap verileri:</strong> Musterimizle is iliskisi aktif oldugu surece saklanir.</li>
+    <li><strong>Yedek verileri:</strong> Veritabani yedekleri 30 gune kadar saklanir ve ardindan kalici olarak silinir.</li>
+  </ul>
+
+  <h2>9. Veri Guvenligi</h2>
+  <p>Kisisel verileri korumak icin asagidakiler dahil uygun teknik ve organizasyonel onlemler uyguluyoruz:</p>
+  <ul>
+    <li>Transfer halindeki tum veriler icin HTTPS sifreleme</li>
+    <li>Sifreli veritabani baglantilari</li>
+    <li>Guvenli oturum yonetimi ile JWT tabanli kimlik dogrulama</li>
+    <li>Rol tabanli erisim kontrolu (yonetici, mudur, personel)</li>
+    <li>Duzenliv sifreli veritabani yedeklemeleri</li>
+    <li>Tum gelen Meta API cagrilari icin webhook imza dogrulamasi</li>
+  </ul>
+
+  <h2>10. Haklariniz</h2>
+  <p>Yururlukteki veri koruma yasalari (KVKK ve gecerli oldugu durumlarda GDPR dahil) kapsaminda asagidaki haklara sahipsiniz:</p>
+  <ul>
+    <li><strong>Erisim hakki:</strong> Hakkinizdaki hangi kisisel verileri tuttugumuza dair bilgi talep etme</li>
+    <li><strong>Duzeltme hakki:</strong> Yanlis kisisel verilerin duzeltilmesini talep etme</li>
+    <li><strong>Silme hakki:</strong> Kisisel verilerinizin silinmesini talep etme (Bolum 11'e bakiniz)</li>
+    <li><strong>Islemeyi kisitlama hakki:</strong> Verilerinizi nasil kullandigimizi sinirlandirmamizi talep etme</li>
+    <li><strong>Veri tasinabilirligi hakki:</strong> Verilerinizi yapilandirilmis, makine tarafindan okunabilir bir formatta talep etme</li>
+    <li><strong>Itiraz hakki:</strong> Pazarlama mesajlarindan cekilme dahil, verilerinizin islenmesine itiraz etme</li>
+  </ul>
+  <p>Bu haklardan herhangi birini kullanmak icin <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a> adresinden bize ulasin.</p>
+
+  <h2>11. Veri Silme Talebi Nasil Yapilir</h2>
+  <p>Kisisel verilerinizin silinmesini asagidaki yollarla talep edebilirsiniz:</p>
+  <ul>
+    <li><strong>STOP yaniti:</strong> Gelecekteki iletisimlerden cikmak icin herhangi bir WhatsApp mesajina "STOP" yaniti verin</li>
+    <li><strong>E-posta:</strong> <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a> adresine "Veri Silme Talebi" konusuyla bir talep gonderin</li>
+    <li><strong>Veri Silme Sayfasi:</strong> Ayrintili talimatlar icin <a href="https://uptakeagency.com/data-deletion">uptakeagency.com/data-deletion</a> adresini ziyaret edin</li>
+  </ul>
+  <p>Silme taleplerini 30 gun icinde isleyecegiz ve tamamlandiginda onay gonderecegiz.</p>
+
+  <h2>12. Opt-In ve Opt-Out</h2>
+  <p>Tum WhatsApp pazarlama mesajlari, alicinin onceden acik rizasini gerektirir. Musteri isletmelerimizin, herhangi bir musteriyi WhatsApp iletisim kampanyalarina eklemeden once acik ve olumlu opt-in onayi almasi gerekmektedir.</p>
+  <p>Alicilar istedikleri zaman asagidaki yollarla cekilebilir:</p>
+  <ul>
+    <li>Herhangi bir WhatsApp mesajina "STOP" yaniti vererek</li>
+    <li>Isletmeyle dogrudan iletisime gecerek</li>
+    <li><a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a> adresine e-posta gondererek</li>
+  </ul>
+
+  <h2>13. Cerezler ve Izleme</h2>
+  <p>Web platformumuz yalnizca kimlik dogrulama ve oturum yonetimi icin temel cerezler kullanir. Ucuncu taraf izleme cerezleri, reklam pikselleri veya bireysel kullanicilari izleyen analiz araclari kullanmiyoruz.</p>
+
+  <h2>14. Bu Politikadaki Degisiklikler</h2>
+  <p>Bu gizlilik politikasini zaman zaman guncelleyebiliriz. Bu sayfanin ustundeki "Son guncelleme" tarihi, politikanin en son ne zaman revize edildigini gosterir. Bu politikayi duzenliv olarak gozden gecirmenizi oneririz.</p>
+
+  <h2>15. Iletisim</h2>
+  <p>Bu gizlilik politikasi veya veri uygulamalarimiz hakkinda sorulariniz varsa, lutfen bizimle iletisime gecin:</p>
+  <p><strong>Uptake Agency</strong><br />
+  E-posta: <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a><br />
+  Web Sitesi: <a href="https://uptakeagency.com">https://uptakeagency.com</a></p>
+</LegalLayout>

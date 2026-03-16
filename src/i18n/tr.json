@@ -1,0 +1,78 @@
+{
+  "site": {
+    "title": "Uptake Agency",
+    "description": "Teknoloji Danismanlik & Yapay Zeka Cozumleri. Isletmelerin en son teknolojiyi ve yapay zekayi kullanarak buyume ve verimlilik saglamasina yardimci oluyoruz."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkimizda",
+    "services": "Hizmetler",
+    "work": "Projeler",
+    "contact": "Iletisim"
+  },
+  "hero": {
+    "title": "Teknoloji Danismanlik & Yapay Zeka Cozumleri",
+    "subtitle": "Isletmelerin en son teknolojiyi ve yapay zekayi kullanarak buyume ve verimlilik saglamasina yardimci oluyoruz.",
+    "cta_primary": "Projelerimiz",
+    "cta_secondary": "Iletisime Gecin"
+  },
+  "services": {
+    "title": "Ne Yapiyoruz",
+    "subtitle": "Isletmelerin calisma seklini donusturen uctan uca teknoloji cozumleri sunuyoruz.",
+    "ai_consulting": {
+      "title": "Yapay Zeka Danismanligi",
+      "description": "Kavram kanitindan uretim dagitimina kadar stratejik yapay zeka entegrasyonu. Ozel LLM cozumleri, RAG sistemleri ve akilli otomasyon."
+    },
+    "custom_software": {
+      "title": "Ozel Yazilim Gelistirme",
+      "description": "Is gereksinimlerinize ozel web uygulamalari, API'ler ve platformlarin full-stack gelistirilmesi."
+    },
+    "automation": {
+      "title": "Otomasyon & Entegrasyon",
+      "description": "Akilli otomasyon, CRM entegrasyonu ve cok kanalli iletisim platformlariyla operasyonlari optimize edin."
+    },
+    "infrastructure": {
+      "title": "Altyapi & DevOps",
+      "description": "Olceklenebilir bulut altyapisi, CI/CD pipeline'lari, konteynerizasyon ve performans optimizasyonu."
+    }
+  },
+  "projects": {
+    "title": "One Cikan Projeler",
+    "subtitle": "Yapay zeka, otomasyon ve yazilim gelistirme alanlarindaki uzmanligimizi gosteren secilmis projeler.",
+    "view_all": "Tum Projeleri Gor",
+    "view_project": "Projeyi Gor",
+    "visit_github": "GitHub"
+  },
+  "about": {
+    "title": "Hakkimizda",
+    "founder_title": "Kurucumuz Cengiz Selcuk",
+    "founder_bio": "Teknoloji altyapisi ve yazilim gelistirme alaninda 15+ yillik deneyim, Intel, NVIDIA ve MSI ile kurumsal ortakliklar dahil, Uptake Agency her projeye derin teknik uzmanlik getirmektedir.",
+    "stats": {
+      "experience": "15+ Yil Deneyim",
+      "revenue": "2M$+ Gelir Uretildi",
+      "partners": "Kurumsal Ortaklar"
+    }
+  },
+  "partners": {
+    "title": "Sektorde Guvenilen Ortaklar"
+  },
+  "contact": {
+    "title": "Birlikte Bir Seyler Insa Edelim",
+    "subtitle": "Isletmenizi teknolojiyle donusturmeye hazir misiniz? Bir sonraki projenizi konusalim.",
+    "cta": "Iletisime Gecin",
+    "email_label": "E-posta adresimiz",
+    "page_title": "Iletisim",
+    "page_subtitle": "Bir sonraki projenizi konusmak icin bizimle iletisime gecin."
+  },
+  "footer": {
+    "rights": "Tum haklari saklidir.",
+    "privacy": "Gizlilik Politikasi",
+    "terms": "Kullanim Kosullari",
+    "data_deletion": "Veri Silme"
+  },
+  "common": {
+    "learn_more": "Daha Fazla",
+    "back": "Geri",
+    "read_more": "Devamini Oku"
+  }
+}

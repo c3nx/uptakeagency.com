@@ -1,0 +1,30 @@
+---
+import SEOHead from "@/components/layout/SEOHead.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "en" | "tr";
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const { title, description, locale, canonicalPath, ogImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      locale={locale}
+      canonicalPath={canonicalPath}
+      ogImage={ogImage}
+    />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 font-sans antialiased">
+    <slot />
+  </body>
+</html>
