@@ -1,0 +1,21 @@
+---
+import { getAlternateLocale, getLocalizedPath } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const altLocale = getAlternateLocale(locale);
+const altPath = getLocalizedPath(currentPath, altLocale);
+const label = altLocale === "tr" ? "TR" : "EN";
+---
+
+<a
+  href={altPath}
+  class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+  aria-label={altLocale === "tr" ? "Turkce" : "English"}
+>
+  {label}
+</a>

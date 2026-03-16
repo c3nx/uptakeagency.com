@@ -1,0 +1,35 @@
+---
+import Container from "@/components/ui/Container.astro";
+import { t } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+const i18n = t(locale);
+
+const partners = [
+  { name: "Intel", width: "w-20" },
+  { name: "NVIDIA", width: "w-24" },
+  { name: "MSI", width: "w-16" },
+  { name: "Praxilla", width: "w-20" },
+];
+---
+
+<section class="border-y border-gray-100 bg-white py-16">
+  <Container>
+    <p class="text-center text-sm font-medium uppercase tracking-widest text-gray-400">
+      {i18n.partners.title}
+    </p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
+      {partners.map((partner) => (
+        <div class="group transition-all duration-300 grayscale opacity-40 hover:grayscale-0 hover:opacity-100">
+          <span class={`block text-2xl font-bold tracking-tight text-gray-900 ${partner.width}`}>
+            {partner.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

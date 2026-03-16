@@ -1,0 +1,67 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Container from "@/components/ui/Container.astro";
+import Button from "@/components/ui/Button.astro";
+import { getCollection } from "astro:content";
+import { getLocalizedPath } from "@/i18n";
+
+export async function getStaticPaths() {
+  const services = await getCollection("services");
+  return services
+    .filter((s) => s.data.locale === "en")
+    .map((service) => ({
+      params: { slug: service.slug.replace("en/", "") },
+      props: { service },
+    }));
+}
+
+const { service } = Astro.props;
+const { Content } = await service.render();
+const locale = "en";
+---
+
+<PageLayout
+  title={service.data.title}
+  description={service.data.description}
+  locale={locale}
+  canonicalPath={`/services/${service.slug.replace("en/", "")}`}
+>
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <!-- Back link -->
+        <a
+          href={getLocalizedPath("/services", locale)}
+          class="mb-8 inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          <svg class="mr-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          All Services
+        </a>
+
+        <h1 class="text-display font-bold tracking-tight text-gray-900">
+          {service.data.title}
+        </h1>
+        <p class="mt-4 text-xl text-gray-500">
+          {service.data.description}
+        </p>
+
+        <article class="prose prose-gray mt-12 max-w-none prose-headings:font-semibold prose-a:text-brand-600">
+          <Content />
+        </article>
+
+        <!-- CTA -->
+        <div class="mt-16 rounded-2xl border border-gray-100 bg-gray-50 p-8 text-center">
+          <h3 class="text-xl font-semibold text-gray-900">Interested in this service?</h3>
+          <p class="mt-2 text-gray-500">Let's discuss how we can help your business.</p>
+          <div class="mt-6">
+            <Button href="mailto:info@uptakeagency.com">
+              Get in Touch
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

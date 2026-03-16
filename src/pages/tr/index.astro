@@ -1,0 +1,27 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Hero from "@/components/sections/home/Hero.astro";
+import Services from "@/components/sections/home/Services.astro";
+import FeaturedProjects from "@/components/sections/home/FeaturedProjects.astro";
+import About from "@/components/sections/home/About.astro";
+import Partners from "@/components/sections/home/Partners.astro";
+import ContactCTA from "@/components/sections/home/ContactCTA.astro";
+import { t } from "@/i18n";
+
+const locale = "tr";
+const i18n = t(locale);
+---
+
+<PageLayout
+  title={i18n.site.title}
+  description={i18n.site.description}
+  locale={locale}
+  canonicalPath="/"
+>
+  <Hero locale={locale} />
+  <Services locale={locale} />
+  <FeaturedProjects locale={locale} />
+  <About locale={locale} />
+  <Partners locale={locale} />
+  <ContactCTA locale={locale} />
+</PageLayout>

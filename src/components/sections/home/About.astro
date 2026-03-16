@@ -1,0 +1,75 @@
+---
+import Container from "@/components/ui/Container.astro";
+import { t } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+const i18n = t(locale);
+
+const stats = [
+  { value: "15+", label: locale === "en" ? "Years Experience" : "Yil Deneyim" },
+  { value: "$2M+", label: locale === "en" ? "Revenue Generated" : "Uretilen Gelir" },
+  { value: "4", label: locale === "en" ? "Enterprise Partners" : "Kurumsal Ortak" },
+];
+---
+
+<section class="py-section-mobile lg:py-section">
+  <Container>
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+      <!-- Content -->
+      <div>
+        <h2 class="text-headline font-bold tracking-tight text-gray-900 sm:text-4xl">
+          {i18n.about.founder_title}
+        </h2>
+        <p class="mt-6 text-lg text-gray-500 leading-relaxed">
+          {i18n.about.founder_bio}
+        </p>
+
+        <!-- Stats -->
+        <div class="mt-10 grid grid-cols-3 gap-4">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gray-900">
+                {stat.value}
+              </div>
+              <div class="mt-1 text-sm text-gray-500">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Visual element -->
+      <div class="relative">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-gray-100 to-gray-50 p-1">
+          <div class="flex h-full w-full flex-col items-center justify-center rounded-[1.25rem] border border-gray-100 bg-white">
+            <!-- Abstract representation -->
+            <div class="grid grid-cols-3 gap-3 p-8">
+              <div class="flex items-end justify-center">
+                <div class="h-16 w-10 rounded-lg bg-gray-900"></div>
+              </div>
+              <div class="flex items-end justify-center">
+                <div class="h-24 w-10 rounded-lg bg-brand-300"></div>
+              </div>
+              <div class="flex items-end justify-center">
+                <div class="h-20 w-10 rounded-lg bg-gray-200"></div>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <p class="text-sm font-medium text-gray-900">Cengiz Selcuk</p>
+              <p class="text-xs text-gray-500">Founder & CTO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute -right-4 -top-4 h-24 w-24 rounded-2xl border border-brand-200 bg-brand-50/50 -z-10"></div>
+        <div class="absolute -bottom-4 -left-4 h-16 w-16 rounded-xl border border-gray-200 bg-gray-50/50 -z-10"></div>
+      </div>
+    </div>
+  </Container>
+</section>

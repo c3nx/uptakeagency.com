@@ -1,0 +1,78 @@
+{
+  "site": {
+    "title": "Uptake Agency",
+    "description": "Technology Consulting & AI Solutions. We help businesses leverage cutting-edge technology and artificial intelligence to drive growth and efficiency."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Technology Consulting & AI Solutions",
+    "subtitle": "We help businesses leverage cutting-edge technology and artificial intelligence to drive growth and efficiency.",
+    "cta_primary": "View Our Work",
+    "cta_secondary": "Get in Touch"
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "We deliver end-to-end technology solutions that transform how businesses operate.",
+    "ai_consulting": {
+      "title": "AI Consulting",
+      "description": "Strategic AI integration, from proof-of-concept to production deployment. Custom LLM solutions, RAG systems, and intelligent automation."
+    },
+    "custom_software": {
+      "title": "Custom Software",
+      "description": "Full-stack development of web applications, APIs, and platforms tailored to your business requirements."
+    },
+    "automation": {
+      "title": "Automation & Integration",
+      "description": "Streamline operations with intelligent automation, CRM integration, and multi-channel communication platforms."
+    },
+    "infrastructure": {
+      "title": "Infrastructure & DevOps",
+      "description": "Scalable cloud infrastructure, CI/CD pipelines, containerization, and performance optimization."
+    }
+  },
+  "projects": {
+    "title": "Featured Work",
+    "subtitle": "Selected projects showcasing our expertise across AI, automation, and software development.",
+    "view_all": "View All Projects",
+    "view_project": "View Project",
+    "visit_github": "GitHub"
+  },
+  "about": {
+    "title": "About",
+    "founder_title": "Founded by Cengiz Selcuk",
+    "founder_bio": "With 15+ years of experience in technology infrastructure and software development, including enterprise partnerships with Intel, NVIDIA, and MSI, Uptake Agency brings deep technical expertise to every engagement.",
+    "stats": {
+      "experience": "15+ Years Experience",
+      "revenue": "$2M+ Revenue Generated",
+      "partners": "Enterprise Partners"
+    }
+  },
+  "partners": {
+    "title": "Trusted By Industry Leaders"
+  },
+  "contact": {
+    "title": "Let's Build Something Together",
+    "subtitle": "Ready to transform your business with technology? Let's talk about your next project.",
+    "cta": "Get in Touch",
+    "email_label": "Email us at",
+    "page_title": "Contact",
+    "page_subtitle": "Get in touch to discuss your next project."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "data_deletion": "Data Deletion"
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "back": "Back",
+    "read_more": "Read More"
+  }
+}

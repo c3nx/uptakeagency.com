@@ -1,0 +1,102 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Container from "@/components/ui/Container.astro";
+import { t } from "@/i18n";
+
+const locale = "en";
+const i18n = t(locale);
+
+const timeline = [
+  { year: "2009", title: "Started in Tech", desc: "Began career in technology infrastructure and system administration." },
+  { year: "2014", title: "Gaming Industry", desc: "Entered the gaming and entertainment industry, building infrastructure for large-scale venues." },
+  { year: "2018", title: "Enterprise Partnerships", desc: "Established partnerships with Intel, NVIDIA, and MSI for enterprise-grade solutions." },
+  { year: "2022", title: "AI Pivot", desc: "Began integrating AI solutions into client projects, from chatbots to full automation systems." },
+  { year: "2024", title: "Uptake Agency", desc: "Founded Uptake Agency to deliver technology consulting and AI solutions to international clients." },
+];
+---
+
+<PageLayout
+  title="About"
+  description="Learn about Uptake Agency and founder Cengiz Selcuk's 15+ years of technology experience."
+  locale={locale}
+  canonicalPath="/about"
+>
+  <!-- Hero -->
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <h1 class="text-display font-bold tracking-tight text-gray-900">
+          {i18n.about.title}
+        </h1>
+        <p class="mt-6 text-xl text-gray-500 leading-relaxed">
+          {i18n.about.founder_bio}
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Founder section -->
+  <section class="border-t border-gray-100 py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-headline font-bold tracking-tight text-gray-900">
+          {i18n.about.founder_title}
+        </h2>
+
+        <div class="mt-8 space-y-6 text-lg text-gray-600 leading-relaxed">
+          <p>
+            Cengiz Selcuk is a technology leader with over 15 years of experience spanning infrastructure engineering, software development, and AI integration. His career began in enterprise IT, where he developed deep expertise in building and managing large-scale technology systems.
+          </p>
+          <p>
+            In the gaming entertainment industry, Cengiz led the technical infrastructure for major venues, forging partnerships with Intel, NVIDIA, and MSI to deliver enterprise-grade computing solutions. This experience provided a unique perspective on how technology can transform traditional businesses.
+          </p>
+          <p>
+            Today, through Uptake Agency, Cengiz combines his infrastructure expertise with cutting-edge AI capabilities to help businesses worldwide leverage technology for growth. From custom LLM solutions to full-stack platform development, Uptake Agency delivers end-to-end technology consulting with a focus on practical, measurable results.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Timeline -->
+  <section class="bg-gray-50 py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-12">Career Timeline</h2>
+        <div class="space-y-8">
+          {timeline.map((item) => (
+            <div class="flex gap-8">
+              <div class="flex-shrink-0 w-20 text-right">
+                <span class="text-sm font-bold text-brand-600">{item.year}</span>
+              </div>
+              <div class="flex-1 border-l-2 border-gray-200 pl-8 pb-2">
+                <h3 class="font-semibold text-gray-900">{item.title}</h3>
+                <p class="mt-1 text-gray-500">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+        <div class="text-center">
+          <div class="text-5xl font-bold text-gray-900">15+</div>
+          <div class="mt-2 text-gray-500">{i18n.about.stats.experience}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl font-bold text-gray-900">$2M+</div>
+          <div class="mt-2 text-gray-500">{i18n.about.stats.revenue}</div>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl font-bold text-gray-900">4</div>
+          <div class="mt-2 text-gray-500">{i18n.about.stats.partners}</div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

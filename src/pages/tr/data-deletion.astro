@@ -1,0 +1,69 @@
+---
+import LegalLayout from "@/layouts/LegalLayout.astro";
+
+const locale = "tr";
+---
+
+<LegalLayout
+  title="Veri Silme Talebi"
+  description="Uptake Agency'den kisisel verilerinizin silinmesini nasil talep edebilirsiniz."
+  locale={locale}
+  canonicalPath="/data-deletion"
+>
+  <h1>Veri Silme Talebi</h1>
+  <p class="text-gray-500">Kisisel verilerinizin silinmesini nasil talep edebilirsiniz</p>
+
+  <p>Uptake Agency olarak, kisisel verileriniz uzerindeki kontrol hakkiniza saygi duyuyoruz. Hakkinizdaki kisisel verilerin silinmesini asagidaki yontemlerden birini kullanarak talep edebilirsiniz.</p>
+
+  <div class="rounded-xl border border-gray-200 bg-gray-50 p-6 my-6">
+    <h3 class="mt-0">Yontem 1: WhatsApp Uzerinden STOP Yaniti</h3>
+    <p>Platformumuzu kullanan bir isletmeden WhatsApp mesajlari aliyorsaniz, herhangi bir mesaja <strong>STOP</strong> yaniti verin. Bu islem:</p>
+    <ul>
+      <li>Sizi o isletmeden gelecek tum WhatsApp iletisimlerinden derhal cikaracaktir</li>
+      <li>Verilerinizi inceleme ve silme icin isaretleyecektir</li>
+    </ul>
+  </div>
+
+  <div class="rounded-xl border border-gray-200 bg-gray-50 p-6 my-6">
+    <h3 class="mt-0">Yontem 2: E-posta Talebi</h3>
+    <p>Verilerinizin tamamen silinmesini talep etmek icin bir e-posta gonderin:</p>
+    <ol>
+      <li><a href="mailto:privacy@uptakeagency.com"><strong>privacy@uptakeagency.com</strong></a> adresine e-posta gonderin</li>
+      <li>Konu satirinda: <strong>"Veri Silme Talebi"</strong> kullnain</li>
+      <li>Telefon numaranizi ve/veya etkilesimde bulundugunuz isletmenin adini ekleyin</li>
+      <li>3 is gunu icinde alinan teyit edeceigz</li>
+      <li>Verileriniz 30 gun icinde silinecektir</li>
+      <li>Silme tamamlandiginda bir onay e-postasi alacaksiniz</li>
+    </ol>
+  </div>
+
+  <h2>Hangi Veriler Silinecek</h2>
+  <p>Gecerli bir silme talebi aldigimizda, sizinle iliskili asagidaki verileri silecegiz:</p>
+  <ul>
+    <li>Iletisim bilgileriniz (telefon numarasi, ad)</li>
+    <li>Randevu ve hizmet gecmisiniz</li>
+    <li>Urun satin alma kayitlariniz</li>
+    <li>Telefon numaranizla iliskili mesaj teslimat gunlukleri</li>
+    <li>Hesabiniza bagli diger kisisel olarak tanimlanabilir bilgiler</li>
+  </ul>
+
+  <h2>Saklanabilecek Veriler</h2>
+  <p>Belirli durumlarda, yasalarin gerektirdigi sinirli verileri saklayabiliriz:</p>
+  <ul>
+    <li><strong>Yasal yukumlulukler:</strong> Turk ticaret hukuku geregi finansal kayitlar ve faturalar (yasal olarak zorunlu sure boyunca saklanir)</li>
+    <li><strong>Anonimlestirilmis veriler:</strong> Size geri baglanamaycak toplanmis, tanimlanamayan istatistiksel veriler</li>
+  </ul>
+
+  <div class="rounded-xl border-l-4 border-brand-400 bg-brand-50 p-5 my-6">
+    <p class="mb-0"><strong>Not:</strong> Sistemlerimizden veri silme, Meta/WhatsApp tarafindan veya etkilesimde bulundugunuz isletme tarafindan bagimsiz olarak saklanan verileri etkilemez. Meta'dan silme talep etmek icin <a href="https://www.facebook.com/help/contact/784491318687824" target="_blank" rel="noopener noreferrer">Meta'nin veri silme sayfasini</a> ziyaret edin.</p>
+  </div>
+
+  <h2>Silme Talebi Durumu</h2>
+  <p>Bir silme talebi gonderdiyseniz ve bir onay kodu aldiyysaniz, talebinizin durumunu <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a> adresine onay kodunuzla e-posta gondererek kontrol edebilirsiniz.</p>
+
+  <h2>Sorulariniz mi var?</h2>
+  <p>Veri silme veya gizlilik haklariniz hakkinda sorulariniz varsa, lutfen bizimle iletisime gecin:</p>
+  <p><strong>Uptake Agency</strong><br />
+  E-posta: <a href="mailto:privacy@uptakeagency.com">privacy@uptakeagency.com</a><br />
+  Web Sitesi: <a href="https://uptakeagency.com">https://uptakeagency.com</a></p>
+</LegalLayout>
