@@ -1,0 +1,14 @@
+name: AI Code Review
+
+on:
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  review:
+    uses: uptakeagency/.github/.github/workflows/ai-code-review.yml@main
+    with:
+      fail_on_critical: true
+      runs_on: 'self-hosted'
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_CI }}
