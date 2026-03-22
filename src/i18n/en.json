@@ -8,6 +8,8 @@
     "about": "About",
     "services": "Services",
     "work": "Work",
+    "stack": "Stack",
+    "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
@@ -62,7 +64,13 @@
     "cta": "Get in Touch",
     "email_label": "Email us at",
     "page_title": "Contact",
-    "page_subtitle": "Get in touch to discuss your next project."
+    "page_subtitle": "Get in touch to discuss your next project.",
+    "form_name": "Name",
+    "form_name_placeholder": "Your name",
+    "form_email_placeholder": "you@company.com",
+    "form_message": "Message",
+    "form_message_placeholder": "Tell us about your project...",
+    "form_submit": "Send Message"
   },
   "footer": {
     "about": "Uptake Agency is a technology consulting firm based in Istanbul, Turkey, specializing in AI integration, custom software development, automation, and cloud infrastructure. Founded by Cengiz Selcuk with 15+ years of experience and enterprise partnerships with Intel, NVIDIA, and MSI.",
@@ -71,6 +79,27 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "data_deletion": "Data Deletion"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights on AI, software development, and technology consulting.",
+    "read_more": "Read More",
+    "back": "Back to Blog",
+    "reading_time": "min read",
+    "published": "Published",
+    "by": "by"
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "subtitle": "Technologies we use to build solutions.",
+    "daily": "Daily",
+    "frequent": "Frequent",
+    "occasional": "Occasional"
+  },
+  "github": {
+    "title": "Open Source Activity",
+    "comment": "open_source",
+    "view_profile": "View GitHub Profile"
   },
   "common": {
     "learn_more": "Learn More",

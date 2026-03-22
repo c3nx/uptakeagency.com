@@ -10,10 +10,10 @@ const { locale } = Astro.props;
 const i18n = t(locale);
 
 const partners = [
-  { name: "Intel" },
-  { name: "NVIDIA" },
-  { name: "MSI" },
-  { name: "Praxilla" },
+  { name: "Intel", logo: "/images/partners/intel.svg" },
+  { name: "NVIDIA", logo: "/images/partners/nvidia.svg" },
+  { name: "MSI", logo: "/images/partners/msi.svg" },
+  { name: "Praxilla", logo: "/images/partners/praxilla.svg" },
 ];
 ---
 
@@ -25,9 +25,11 @@ const partners = [
     <div class="mt-10 flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
       {partners.map((partner) => (
         <div class="group transition-all duration-300 opacity-40 hover:opacity-100">
-          <span class="block text-2xl font-bold tracking-tight text-text-primary">
-            {partner.name}
-          </span>
+          <img
+            src={partner.logo}
+            alt={`${partner.name} logo`}
+            class="h-8 w-auto object-contain"
+          />
         </div>
       ))}
     </div>

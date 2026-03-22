@@ -2,6 +2,7 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import Container from "@/components/ui/Container.astro";
 import Button from "@/components/ui/Button.astro";
+import ContactForm from "@/components/sections/ContactForm.astro";
 import { t } from "@/i18n";
 
 const locale = "tr";
@@ -43,6 +44,16 @@ const i18n = t(locale);
               <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
             </svg>
           </Button>
+        </div>
+
+        <div class="mt-12 rounded-2xl border border-surface-border bg-surface-raised p-8 sm:p-12">
+          <div class="flex items-center gap-2 mb-6 pb-3 border-b border-surface-border">
+            <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
+            <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
+            <span class="h-3 w-3 rounded-full bg-green-500/80"></span>
+            <span class="ml-2 text-xs font-mono text-text-muted">contact-form</span>
+          </div>
+          <ContactForm locale={locale} />
         </div>
 
         <div class="mt-12">

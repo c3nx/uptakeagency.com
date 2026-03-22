@@ -1,0 +1,196 @@
+---
+import Container from "@/components/ui/Container.astro";
+import { t } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+const i18n = t(locale);
+
+// Fetch GitHub events at build time
+interface GitHubEvent {
+  id: string;
+  type: string;
+  repo: { name: string };
+  payload: {
+    commits?: { sha: string }[];
+    ref_type?: string;
+    ref?: string;
+    action?: string;
+  };
+  created_at: string;
+}
+
+interface FormattedEvent {
+  hash: string;
+  description: string;
+  timeAgo: string;
+}
+
+function formatTimeAgo(dateStr: string, loc: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+
+  if (loc === "tr") {
+    if (days > 0) return `${days} gun once`;
+    if (hours > 0) return `${hours} saat once`;
+    return `${minutes} dk once`;
+  }
+
+  if (days > 0) return `${days}d ago`;
+  if (hours > 0) return `${hours}h ago`;
+  return `${minutes}m ago`;
+}
+
+function shortHash(id: string): string {
+  return id.slice(0, 7);
+}
+
+function formatEvent(event: GitHubEvent, loc: string): FormattedEvent {
+  const repo = event.repo.name;
+  let description: string;
+
+  switch (event.type) {
+    case "PushEvent": {
+      const count = event.payload.commits?.length ?? 0;
+      const suffix = count === 1 ? "commit" : "commits";
+      description =
+        loc === "tr"
+          ? `${repo} deposuna ${count} ${suffix} gonderildi`
+          : `pushed ${count} ${suffix} to ${repo}`;
+      break;
+    }
+    case "CreateEvent": {
+      const refType = event.payload.ref_type ?? "repository";
+      description =
+        loc === "tr"
+          ? `${repo} icinde ${refType} olusturuldu`
+          : `created ${refType} in ${repo}`;
+      break;
+    }
+    case "PullRequestEvent": {
+      const action = event.payload.action ?? "opened";
+      description =
+        loc === "tr"
+          ? `${repo} icinde PR ${action}`
+          : `${action} PR in ${repo}`;
+      break;
+    }
+    case "IssuesEvent": {
+      const action = event.payload.action ?? "opened";
+      description =
+        loc === "tr"
+          ? `${repo} icinde issue ${action}`
+          : `${action} issue in ${repo}`;
+      break;
+    }
+    default:
+      description =
+        loc === "tr"
+          ? `${event.type.replace("Event", "")} - ${repo}`
+          : `${event.type.replace("Event", "")} in ${repo}`;
+  }
+
+  return {
+    hash: shortHash(event.id),
+    description,
+    timeAgo: formatTimeAgo(event.created_at, loc),
+  };
+}
+
+let events: FormattedEvent[] = [];
+let fetchFailed = false;
+
+try {
+  const res = await fetch(
+    "https://api.github.com/users/c3nx/events/public?per_page=5",
+    {
+      headers: { "User-Agent": "uptakeagency.com" },
+    }
+  );
+  if (res.ok) {
+    const data: GitHubEvent[] = await res.json();
+    events = data.map((e) => formatEvent(e, locale));
+  } else {
+    fetchFailed = true;
+  }
+} catch {
+  fetchFailed = true;
+}
+
+const fallbackMessage =
+  locale === "tr"
+    ? "Aktivite verileri su anda yuklenemiyor. GitHub profilini ziyaret edin."
+    : "Activity data currently unavailable. Visit the GitHub profile.";
+---
+
+<section class="py-section-mobile lg:py-section">
+  <Container>
+    <div class="text-center mb-12">
+      <p class="font-mono text-sm text-brand-400 mb-4">
+        // {i18n.github.comment}
+      </p>
+      <h2
+        class="text-headline font-bold tracking-tight text-text-primary sm:text-4xl"
+      >
+        {i18n.github.title}
+      </h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      <div class="terminal-window">
+        <div class="terminal-dots"></div>
+        <div class="p-6 font-mono text-sm">
+          <p class="text-text-muted mb-4">
+            <span class="text-brand-400">$</span> git log --oneline --author="c3nx"
+            --recent
+          </p>
+
+          {
+            fetchFailed || events.length === 0 ? (
+              <p class="text-text-muted italic">{fallbackMessage}</p>
+            ) : (
+              <div class="space-y-2">
+                {events.map((event) => (
+                  <div class="flex flex-wrap items-start gap-x-3 gap-y-1">
+                    <span class="text-yellow-400 shrink-0">{event.hash}</span>
+                    <span class="text-text-secondary">{event.description}</span>
+                    <span class="text-text-muted text-xs ml-auto shrink-0">
+                      {event.timeAgo}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )
+          }
+
+          <div class="mt-6 pt-4 border-t border-surface-border">
+            <a
+              href="https://github.com/c3nx"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              {i18n.github.view_profile} &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

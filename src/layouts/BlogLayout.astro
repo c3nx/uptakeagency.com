@@ -1,0 +1,86 @@
+---
+import PageLayout from "./PageLayout.astro";
+import Container from "@/components/ui/Container.astro";
+import Badge from "@/components/ui/Badge.astro";
+import { t, getLocalizedPath } from "@/i18n";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "en" | "tr";
+  date: Date;
+  author: string;
+  tags: string[];
+  canonicalPath?: string;
+}
+
+const { title, description, locale, date, author, tags, canonicalPath } =
+  Astro.props;
+const i18n = t(locale);
+
+const formattedDate = date.toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<PageLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonicalPath={canonicalPath}
+>
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <!-- Back link -->
+        <a
+          href={getLocalizedPath("/blog", locale)}
+          class="mb-8 inline-flex items-center text-sm text-text-secondary hover:text-text-primary transition-colors"
+        >
+          <svg
+            class="mr-1.5 h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+            />
+          </svg>
+          {i18n.blog.back}
+        </a>
+
+        <!-- Terminal-style comment -->
+        <p class="font-mono text-sm text-text-muted mb-4">// blog_post</p>
+
+        <!-- Title -->
+        <h1 class="text-display font-bold tracking-tight text-text-primary">
+          {title}
+        </h1>
+
+        <!-- Date + Author -->
+        <p class="mt-4 text-sm text-text-secondary">
+          {i18n.blog.published}
+          <time datetime={date.toISOString()}>{formattedDate}</time>
+          {" "}{i18n.blog.by}{" "}
+          <span class="text-text-primary">{author}</span>
+        </p>
+
+        <!-- Tags -->
+        <div class="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => <Badge>{tag}</Badge>)}
+        </div>
+
+        <!-- Content -->
+        <article class="prose prose-gray prose-invert mt-8 max-w-none prose-headings:font-semibold prose-a:text-brand-400">
+          <slot />
+        </article>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

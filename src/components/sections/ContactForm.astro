@@ -1,0 +1,47 @@
+---
+import { t } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+const i18n = t(locale);
+---
+
+<form action="https://formspree.io/f/PLACEHOLDER" method="POST" class="space-y-6">
+  <div>
+    <label for="name" class="block text-sm font-medium text-text-secondary mb-2">
+      {i18n.contact.form_name}
+    </label>
+    <input
+      type="text" id="name" name="name" required
+      class="w-full rounded-lg border border-surface-border bg-surface-raised px-4 py-3 text-text-primary placeholder-text-muted focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition-colors"
+      placeholder={i18n.contact.form_name_placeholder}
+    />
+  </div>
+  <div>
+    <label for="email" class="block text-sm font-medium text-text-secondary mb-2">Email</label>
+    <input
+      type="email" id="email" name="email" required
+      class="w-full rounded-lg border border-surface-border bg-surface-raised px-4 py-3 text-text-primary placeholder-text-muted focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition-colors"
+      placeholder={i18n.contact.form_email_placeholder}
+    />
+  </div>
+  <div>
+    <label for="message" class="block text-sm font-medium text-text-secondary mb-2">
+      {i18n.contact.form_message}
+    </label>
+    <textarea
+      id="message" name="message" rows="5" required
+      class="w-full rounded-lg border border-surface-border bg-surface-raised px-4 py-3 text-text-primary placeholder-text-muted focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition-colors resize-none"
+      placeholder={i18n.contact.form_message_placeholder}
+    ></textarea>
+  </div>
+  <button type="submit"
+    class="inline-flex w-full items-center justify-center font-medium rounded-lg px-8 py-3 text-base bg-brand-500 text-white hover:bg-brand-600 shadow-lg shadow-brand-500/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2 focus:ring-offset-surface"
+  >
+    <span class="font-mono text-sm mr-2 opacity-70">$</span>
+    {i18n.contact.form_submit}
+  </button>
+</form>

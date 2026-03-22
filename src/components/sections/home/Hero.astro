@@ -28,7 +28,7 @@ const stats = [
       <div class="animate-fade-in mb-8">
         <span class="inline-flex items-center gap-2 rounded-lg border border-surface-border bg-surface-raised px-4 py-2 font-mono text-xs text-text-muted">
           <span class="text-brand-400">$</span>
-          <span class="text-text-secondary">~/projects/uptake-agency</span>
+          <span id="terminal-text" class="text-text-secondary" style="visibility:hidden;">~/projects/uptake-agency</span>
           <span class="h-3.5 w-[2px] bg-brand-400 animate-terminal-blink"></span>
         </span>
       </div>
@@ -78,3 +78,21 @@ const stats = [
     </div>
   </Container>
 </section>
+
+<script>
+  const el = document.getElementById('terminal-text');
+  if (el) {
+    const text = el.textContent || '';
+    el.textContent = '';
+    el.style.visibility = 'visible';
+    let i = 0;
+    const type = () => {
+      if (i < text.length) {
+        el.textContent += text[i];
+        i++;
+        setTimeout(type, 50 + Math.random() * 30);
+      }
+    };
+    setTimeout(type, 600); // delay after page load
+  }
+</script>

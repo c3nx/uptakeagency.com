@@ -1,0 +1,75 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Container from "@/components/ui/Container.astro";
+import Badge from "@/components/ui/Badge.astro";
+import { getCollection } from "astro:content";
+import { t, getLocalizedPath } from "@/i18n";
+
+const locale = "tr";
+const i18n = t(locale);
+
+const posts = (await getCollection("blog"))
+  .filter((p) => p.data.locale === locale)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<PageLayout
+  title="Blog"
+  description="Yapay zeka, yazilim gelistirme ve teknoloji danismanligi uzerine yazilar."
+  locale={locale}
+  canonicalPath="/blog"
+>
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="font-mono text-sm text-text-muted">// blog</p>
+        <h1 class="mt-4 text-display font-bold tracking-tight text-text-primary">
+          {i18n.blog.title}
+        </h1>
+        <p class="mt-6 text-xl text-text-secondary">
+          {i18n.blog.subtitle}
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => {
+          const slug = post.slug.replace(`${locale}/`, "");
+          const formattedDate = post.data.date.toLocaleDateString("tr-TR", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+          return (
+            <a
+              href={getLocalizedPath(`/blog/${slug}`, locale)}
+              class="group flex flex-col rounded-2xl border border-surface-border bg-surface-raised p-6 transition-all duration-300 hover:border-surface-border-hover"
+            >
+              <p class="text-xs font-medium text-text-muted">
+                <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+              </p>
+
+              <h3 class="mt-3 text-lg font-semibold text-text-primary group-hover:text-brand-400 transition-colors">
+                {post.data.title}
+              </h3>
+              <p class="mt-2 flex-1 text-sm text-text-secondary leading-relaxed">
+                {post.data.description}
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                {post.data.tags.map((tag: string) => (
+                  <span class="rounded-md bg-surface-overlay px-2 py-0.5 text-xs text-text-secondary">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <span class="mt-4 text-sm font-medium text-brand-400">
+                {i18n.blog.read_more} &rarr;
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </Container>
+  </section>
+</PageLayout>

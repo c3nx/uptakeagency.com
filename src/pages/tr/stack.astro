@@ -1,0 +1,192 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Container from "@/components/ui/Container.astro";
+import { t } from "@/i18n";
+
+const locale = "tr";
+const i18n = t(locale);
+
+type UsageLevel = "daily" | "frequent" | "occasional";
+
+interface Tech {
+  name: string;
+  usage: UsageLevel;
+}
+
+interface Category {
+  key: string;
+  label: string;
+  techs: Tech[];
+}
+
+const categories: Category[] = [
+  {
+    key: "diller_calisma_ortami",
+    label: "Diller & Calisma Ortami",
+    techs: [
+      { name: "TypeScript", usage: "daily" },
+      { name: "Python", usage: "frequent" },
+      { name: "Rust", usage: "occasional" },
+      { name: "Swift", usage: "occasional" },
+    ],
+  },
+  {
+    key: "on_yuz",
+    label: "Frontend",
+    techs: [
+      { name: "React", usage: "daily" },
+      { name: "Next.js", usage: "daily" },
+      { name: "Astro", usage: "frequent" },
+      { name: "Tailwind CSS", usage: "daily" },
+      { name: "Vite", usage: "daily" },
+    ],
+  },
+  {
+    key: "arka_yuz",
+    label: "Backend",
+    techs: [
+      { name: "Node.js", usage: "daily" },
+      { name: "Express.js", usage: "frequent" },
+      { name: "FastAPI", usage: "frequent" },
+      { name: "Bun", usage: "daily" },
+    ],
+  },
+  {
+    key: "yapay_zeka",
+    label: "Yapay Zeka & ML",
+    techs: [
+      { name: "OpenAI GPT", usage: "daily" },
+      { name: "Google Gemini", usage: "frequent" },
+      { name: "LangChain", usage: "frequent" },
+      { name: "RAG Sistemleri", usage: "frequent" },
+    ],
+  },
+  {
+    key: "veritabanlari",
+    label: "Veritabanlari",
+    techs: [
+      { name: "PostgreSQL", usage: "daily" },
+      { name: "MongoDB", usage: "frequent" },
+      { name: "SQLite", usage: "occasional" },
+    ],
+  },
+  {
+    key: "altyapi",
+    label: "Altyapi",
+    techs: [
+      { name: "Docker", usage: "daily" },
+      { name: "Kubernetes", usage: "frequent" },
+      { name: "GitHub Actions", usage: "daily" },
+      { name: "Nginx", usage: "frequent" },
+      { name: "Coolify", usage: "frequent" },
+    ],
+  },
+  {
+    key: "gercek_zamanli",
+    label: "Gercek Zamanli",
+    techs: [
+      { name: "WebSocket", usage: "frequent" },
+      { name: "Sockudo", usage: "frequent" },
+      { name: "Pusher", usage: "occasional" },
+    ],
+  },
+];
+
+function getBadgeClasses(usage: UsageLevel): string {
+  switch (usage) {
+    case "daily":
+      return "bg-brand-500/20 text-brand-400 border-brand-500/30";
+    case "frequent":
+      return "bg-brand-400/10 text-brand-400/70 border-brand-400/20";
+    case "occasional":
+      return "bg-surface-overlay text-text-muted border-surface-border";
+  }
+}
+
+function getUsageLabel(usage: UsageLevel): string {
+  return i18n.stack[usage];
+}
+---
+
+<PageLayout
+  title={i18n.stack.title}
+  description={i18n.stack.subtitle}
+  locale={locale}
+  canonicalPath="/stack"
+>
+  <!-- Hero -->
+  <section class="py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <p class="font-mono text-sm text-brand-400 mb-4">// tech_stack</p>
+        <h1 class="text-display font-bold tracking-tight text-text-primary">
+          {i18n.stack.title}
+        </h1>
+        <p class="mt-6 text-xl text-text-secondary leading-relaxed">
+          {i18n.stack.subtitle}
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Tech Grid -->
+  <section class="border-t border-surface-border py-section-mobile lg:py-section">
+    <Container>
+      <div class="space-y-16">
+        {categories.map((category) => (
+          <div>
+            <p class="font-mono text-sm text-brand-400 mb-6">
+              // {category.key}
+            </p>
+            <h2 class="text-2xl font-bold text-text-primary mb-8">
+              {category.label}
+            </h2>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {category.techs.map((tech) => (
+                <div class="glass-card p-5 flex items-center justify-between">
+                  <span class="font-medium text-text-primary">{tech.name}</span>
+                  <span
+                    class:list={[
+                      "inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium",
+                      getBadgeClasses(tech.usage),
+                    ]}
+                  >
+                    {getUsageLabel(tech.usage)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Legend -->
+  <section class="bg-surface-raised py-section-mobile lg:py-section">
+    <Container>
+      <div class="mx-auto max-w-3xl">
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full border bg-brand-500/20 text-brand-400 border-brand-500/30 px-3 py-1 text-xs font-medium">
+              {i18n.stack.daily}
+            </span>
+            <span class="text-sm text-text-muted">Temel araclar</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full border bg-brand-400/10 text-brand-400/70 border-brand-400/20 px-3 py-1 text-xs font-medium">
+              {i18n.stack.frequent}
+            </span>
+            <span class="text-sm text-text-muted">Duzeli kullanim</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full border bg-surface-overlay text-text-muted border-surface-border px-3 py-1 text-xs font-medium">
+              {i18n.stack.occasional}
+            </span>
+            <span class="text-sm text-text-muted">Projeye ozel</span>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

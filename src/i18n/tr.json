@@ -8,6 +8,8 @@
     "about": "Hakkimizda",
     "services": "Hizmetler",
     "work": "Projeler",
+    "stack": "Teknolojiler",
+    "blog": "Blog",
     "contact": "Iletisim"
   },
   "hero": {
@@ -62,7 +64,13 @@
     "cta": "Iletisime Gecin",
     "email_label": "E-posta adresimiz",
     "page_title": "Iletisim",
-    "page_subtitle": "Bir sonraki projenizi konusmak icin bizimle iletisime gecin."
+    "page_subtitle": "Bir sonraki projenizi konusmak icin bizimle iletisime gecin.",
+    "form_name": "Ad Soyad",
+    "form_name_placeholder": "Adiniz",
+    "form_email_placeholder": "siz@sirket.com",
+    "form_message": "Mesaj",
+    "form_message_placeholder": "Projenizi anlatin...",
+    "form_submit": "Mesaj Gonder"
   },
   "footer": {
     "about": "Uptake Agency, Istanbul merkezli bir teknoloji danismanlik firmasidir. Yapay zeka entegrasyonu, ozel yazilim gelistirme, otomasyon ve bulut altyapisi konularinda uzmandir. Cengiz Selcuk tarafindan 15+ yillik deneyim ve Intel, NVIDIA, MSI ile kurumsal ortakliklarla kurulmustur.",
@@ -71,6 +79,27 @@
     "privacy": "Gizlilik Politikasi",
     "terms": "Kullanim Kosullari",
     "data_deletion": "Veri Silme"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Yapay zeka, yazilim gelistirme ve teknoloji danismanligi uzerine yazilar.",
+    "read_more": "Devamini Oku",
+    "back": "Bloga Don",
+    "reading_time": "dk okuma",
+    "published": "Yayinlanma",
+    "by": "tarafindan"
+  },
+  "stack": {
+    "title": "Teknoloji Yigini",
+    "subtitle": "Cozumlerimizi gelistirmek icin kullandigimiz teknolojiler.",
+    "daily": "Gunluk",
+    "frequent": "Sik",
+    "occasional": "Ara Sira"
+  },
+  "github": {
+    "title": "Acik Kaynak Aktivitesi",
+    "comment": "acik_kaynak",
+    "view_profile": "GitHub Profilini Gor"
   },
   "common": {
     "learn_more": "Daha Fazla",
