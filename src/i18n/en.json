@@ -96,11 +96,6 @@
     "frequent": "Frequent",
     "occasional": "Occasional"
   },
-  "github": {
-    "title": "Open Source Activity",
-    "comment": "open_source",
-    "view_profile": "View GitHub Profile"
-  },
   "common": {
     "learn_more": "Learn More",
     "back": "Back",
