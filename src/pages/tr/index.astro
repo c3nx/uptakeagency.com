@@ -6,10 +6,72 @@ import FeaturedProjects from "@/components/sections/home/FeaturedProjects.astro"
 import About from "@/components/sections/home/About.astro";
 import Partners from "@/components/sections/home/Partners.astro";
 import ContactCTA from "@/components/sections/home/ContactCTA.astro";
+import FAQ from "@/components/sections/home/FAQ.astro";
+import JsonLd from "@/components/seo/JsonLd.astro";
 import { t } from "@/i18n";
 
 const locale = "tr";
 const i18n = t(locale);
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://uptakeagency.com/#organization",
+  name: "Uptake Agency",
+  url: "https://uptakeagency.com",
+  logo: "https://uptakeagency.com/images/logos/Uptake-logo-png-beyazyazi.png",
+  description: "Yapay zeka entegrasyonu, ozel yazilim gelistirme, otomasyon ve bulut altyapisi konularinda uzman teknoloji danismanlik firmasi.",
+  email: "info@uptakeagency.com",
+  founder: {
+    "@type": "Person",
+    name: "Cengiz Selcuk",
+    jobTitle: "Kurucu & CTO",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Istanbul",
+    addressCountry: "TR",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Uptake Agency hangi hizmetleri sunuyor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Uptake Agency; Yapay Zeka Danismanligi (ozel LLM cozumleri, RAG sistemleri), Ozel Yazilim Gelistirme (full-stack web uygulamalari), Otomasyon & Entegrasyon (WhatsApp API, CRM senkronizasyonu) ve Altyapi & DevOps (Docker, Kubernetes, CI/CD) hizmetleri sunmaktadir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Uptake Agency nerede bulunuyor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Uptake Agency Istanbul, Turkiye merkezli olup dunya genelinde uzaktan is birligi ile musterilerine hizmet vermektedir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Uptake Agency'yi kim kurdu?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cengiz Selcuk, Uptake Agency'yi 2024 yilinda kurmustur. Teknoloji altyapisi ve yazilim gelistirme alaninda 15+ yillik deneyime sahip olup Intel, NVIDIA ve MSI ile kurumsal ortakliklari bulunmaktadir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Uptake Agency yapay zeka uygulamalari gelistirebilir mi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Evet. Yapay zeka danismanligi temel hizmetlerden biridir. %85 otomatik cozum oranina sahip cok kanalli AI musteri hizmetleri ajanlari, MSI icin Google Gemini tabanli AI gorsellistirme araclari ve ozel RAG sistemleri onemli projeler arasindadir.",
+      },
+    },
+  ],
+};
 ---
 
 <PageLayout
@@ -18,10 +80,21 @@ const i18n = t(locale);
   locale={locale}
   canonicalPath="/"
 >
+  <JsonLd data={organizationSchema} />
+  <JsonLd data={faqSchema} />
+
+  <p class="sr-only">
+    Uptake Agency, 2024 yilinda Cengiz Selcuk tarafindan kurulan, Istanbul merkezli bir teknoloji
+    danismanlik ve yapay zeka cozumleri firmasidir. Yapay Zeka Danismanligi, Ozel Yazilim Gelistirme,
+    Otomasyon & Entegrasyon ve Altyapi & DevOps hizmetleri sunmaktadir. Intel, NVIDIA, MSI ve
+    Praxilla ile kurumsal ortakliklari bulunmaktadir. Iletisim: info@uptakeagency.com.
+  </p>
+
   <Hero locale={locale} />
   <Services locale={locale} />
   <FeaturedProjects locale={locale} />
   <About locale={locale} />
   <Partners locale={locale} />
+  <FAQ locale={locale} />
   <ContactCTA locale={locale} />
 </PageLayout>

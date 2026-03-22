@@ -1,0 +1,153 @@
+---
+import Container from "@/components/ui/Container.astro";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+
+const faqs = locale === "en" ? [
+  {
+    q: "What services does Uptake Agency offer?",
+    a: "We offer four core services: AI Consulting (custom LLM solutions, RAG systems, intelligent automation), Custom Software Development (full-stack web apps, APIs, platforms), Automation & Integration (WhatsApp Business API, CRM sync, multi-channel platforms), and Infrastructure & DevOps (Docker, Kubernetes, CI/CD, cloud infrastructure).",
+  },
+  {
+    q: "Where is Uptake Agency located?",
+    a: "Uptake Agency is based in Istanbul, Turkey, and serves clients worldwide through remote collaboration. We've delivered projects across gaming entertainment, healthcare, education, B2B hardware, and SaaS industries.",
+  },
+  {
+    q: "Who founded Uptake Agency?",
+    a: "Cengiz Selcuk founded Uptake Agency in 2024. He has 15+ years of experience spanning infrastructure engineering, software development, and AI integration, with enterprise partnerships with Intel, NVIDIA, and MSI.",
+  },
+  {
+    q: "Can you build AI-powered applications?",
+    a: "Yes, AI consulting is a core service. Notable projects include a multi-channel AI customer service agent with 85% auto-resolution rate, AI-powered PC build visualization for MSI using Google Gemini, and custom RAG systems for enterprise knowledge bases.",
+  },
+  {
+    q: "What tech stack do you use?",
+    a: "Our primary stack includes TypeScript, React, Next.js, Node.js, Python, and PostgreSQL. For AI we use OpenAI GPT, Google Gemini, and LangChain. Infrastructure runs on Docker, Kubernetes, and CI/CD pipelines via GitHub Actions.",
+  },
+  {
+    q: "Do you offer WhatsApp Business API integration?",
+    a: "Yes. Our ARU platform is a WhatsApp Business CRM and automation system we built from scratch. We offer WhatsApp API integration including appointment reminders, campaign management, and AI-powered messaging as part of our Automation & Integration services.",
+  },
+  {
+    q: "What is your approach to software development?",
+    a: "We follow agile delivery with regular client check-ins, use monorepo architecture with Turborepo, write comprehensive tests, and automate CI/CD. We focus on practical, measurable results rather than over-engineering.",
+  },
+  {
+    q: "Do you work with enterprise clients?",
+    a: "Yes. We have established partnerships with Intel, NVIDIA, MSI, and Praxilla. Our team has experience delivering enterprise-grade solutions including large-scale gaming venue infrastructure and B2B visualization platforms.",
+  },
+  {
+    q: "Do you contribute to open source?",
+    a: "Yes. Quill, an AI-powered system-wide technical dictionary for macOS and Windows built with Swift and Rust/Tauri, is an open-source project maintained by our team.",
+  },
+  {
+    q: "How can I contact Uptake Agency?",
+    a: "Email us at info@uptakeagency.com. We're available for project discussions and consultations worldwide. Visit uptakeagency.com/contact for more details.",
+  },
+] : [
+  {
+    q: "Uptake Agency hangi hizmetleri sunuyor?",
+    a: "Dort temel hizmet sunuyoruz: Yapay Zeka Danismanligi (ozel LLM cozumleri, RAG sistemleri, akilli otomasyon), Ozel Yazilim Gelistirme (full-stack web uygulamalari, API'ler), Otomasyon & Entegrasyon (WhatsApp Business API, CRM senkronizasyonu) ve Altyapi & DevOps (Docker, Kubernetes, CI/CD, bulut altyapisi).",
+  },
+  {
+    q: "Uptake Agency nerede bulunuyor?",
+    a: "Uptake Agency Istanbul, Turkiye merkezlidir ve dunya genelinde uzaktan is birligi ile musterilerine hizmet vermektedir. Oyun eglence, saglik, egitim, B2B donanim ve SaaS sektorlerinde projeler teslim ettik.",
+  },
+  {
+    q: "Uptake Agency'yi kim kurdu?",
+    a: "Cengiz Selcuk, Uptake Agency'yi 2024 yilinda kurmustur. Altyapi muhendisligi, yazilim gelistirme ve yapay zeka entegrasyonu alanlarinda 15+ yillik deneyime sahiptir. Intel, NVIDIA ve MSI ile kurumsal ortakliklari bulunmaktadir.",
+  },
+  {
+    q: "Yapay zeka uygulamalari gelistirebilir misiniz?",
+    a: "Evet, yapay zeka danismanligi temel hizmetlerimizden biridir. %85 otomatik cozum oranina sahip cok kanalli AI musteri hizmetleri ajani, MSI icin Google Gemini tabanli AI gorsellistirme araci ve kurumsal bilgi tabanlari icin ozel RAG sistemleri onemli projelerimiz arasindadir.",
+  },
+  {
+    q: "Hangi teknolojileri kullaniyorsunuz?",
+    a: "Birincil yiginimiz TypeScript, React, Next.js, Node.js, Python ve PostgreSQL'dir. Yapay zeka icin OpenAI GPT, Google Gemini ve LangChain kullaniyoruz. Altyapi Docker, Kubernetes ve GitHub Actions CI/CD pipeline'lari uzerinde calismaktadir.",
+  },
+  {
+    q: "WhatsApp Business API entegrasyonu yapiyor musunuz?",
+    a: "Evet. ARU platformumuz sifirdan insa ettigimiz bir WhatsApp Business CRM ve otomasyon sistemidir. Randevu hatirlatalari, kampanya yonetimi ve yapay zeka destekli mesajlasma dahil WhatsApp API entegrasyonu sunuyoruz.",
+  },
+  {
+    q: "Yazilim gelistirme yaklasiminiz nedir?",
+    a: "Duzenli musteri gorusmeleri ile cevik teslimat izliyoruz, Turborepo ile monorepo mimarisi kullaniyoruz, kapsamli testler yaziyoruz ve CI/CD'yi otomatiklestiriyoruz. Asiri muhendislik yerine pratik, olculebilir sonuclara odaklaniyoruz.",
+  },
+  {
+    q: "Kurumsal musterilerle calisiyor musunuz?",
+    a: "Evet. Intel, NVIDIA, MSI ve Praxilla ile kurumsal ortakliklarimiz bulunmaktadir. Buyuk olcekli oyun salonu altyapisi ve B2B gorsellistirme platformlari dahil kurumsal duzeyde cozumler teslim ettik.",
+  },
+  {
+    q: "Acik kaynak projelere katki sagliyor musunuz?",
+    a: "Evet. Swift ve Rust/Tauri ile gelistirilen, macOS ve Windows icin yapay zeka destekli sistem genelinde teknik sozluk olan Quill, ekibimiz tarafindan bakimi yapilan acik kaynakli bir projedir.",
+  },
+  {
+    q: "Uptake Agency ile nasil iletisime gecebilirim?",
+    a: "info@uptakeagency.com adresinden bize ulasabilirsiniz. Dunya genelinde proje gorustmeleri ve danismanlik icin hazir bulunuyoruz. Daha fazla detay icin uptakeagency.com/contact sayfasini ziyaret edin.",
+  },
+];
+---
+
+<section class="border-t border-surface-border py-section-mobile lg:py-section">
+  <Container>
+    <div class="mx-auto max-w-3xl">
+      <p class="font-mono text-sm text-brand-400 mb-4 text-center">// {locale === "en" ? "frequently_asked" : "sikca_sorulan"}</p>
+      <h2 class="text-headline font-bold tracking-tight text-text-primary sm:text-4xl text-center mb-12">
+        {locale === "en" ? "Frequently Asked Questions" : "Sikca Sorulan Sorular"}
+      </h2>
+
+      <div role="list" class="space-y-3">
+        {faqs.map((faq, i) => (
+          <div role="listitem" class="glass-card overflow-hidden">
+            <button
+              id={`faq-trigger-${i}`}
+              aria-expanded="false"
+              aria-controls={`faq-content-${i}`}
+              class="faq-trigger flex w-full items-center justify-between px-6 py-5 text-left text-text-primary hover:text-brand-400 transition-colors"
+            >
+              <span class="font-medium pr-4">{faq.q}</span>
+              <svg class="faq-chevron h-5 w-5 flex-shrink-0 text-text-muted transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              id={`faq-content-${i}`}
+              role="region"
+              aria-labelledby={`faq-trigger-${i}`}
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="px-6 pb-5 text-text-secondary leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</section>
+
+<script>
+  document.querySelectorAll(".faq-trigger").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      const contentId = btn.getAttribute("aria-controls")!;
+      const content = document.getElementById(contentId)!;
+      const chevron = btn.querySelector(".faq-chevron")!;
+
+      btn.setAttribute("aria-expanded", String(!expanded));
+
+      if (!expanded) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        chevron.classList.add("rotate-180");
+      } else {
+        content.style.maxHeight = "0";
+        chevron.classList.remove("rotate-180");
+      }
+    });
+  });
+</script>

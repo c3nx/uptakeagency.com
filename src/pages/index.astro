@@ -6,10 +6,127 @@ import FeaturedProjects from "@/components/sections/home/FeaturedProjects.astro"
 import About from "@/components/sections/home/About.astro";
 import Partners from "@/components/sections/home/Partners.astro";
 import ContactCTA from "@/components/sections/home/ContactCTA.astro";
+import FAQ from "@/components/sections/home/FAQ.astro";
+import JsonLd from "@/components/seo/JsonLd.astro";
 import { t } from "@/i18n";
 
 const locale = "en";
 const i18n = t(locale);
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://uptakeagency.com/#organization",
+  name: "Uptake Agency",
+  url: "https://uptakeagency.com",
+  logo: "https://uptakeagency.com/images/logos/Uptake-logo-png-beyazyazi.png",
+  description: "Technology consulting and AI solutions firm specializing in custom LLM solutions, full-stack development, automation, and cloud infrastructure.",
+  email: "info@uptakeagency.com",
+  founder: {
+    "@type": "Person",
+    name: "Cengiz Selcuk",
+    jobTitle: "Founder & CTO",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Istanbul",
+    addressCountry: "TR",
+  },
+  knowsAbout: [
+    "Artificial Intelligence", "LLM Solutions", "RAG Systems",
+    "Custom Software Development", "TypeScript", "React", "Next.js",
+    "WhatsApp Business API", "DevOps", "Docker", "Kubernetes",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://uptakeagency.com/#website",
+  name: "Uptake Agency",
+  url: "https://uptakeagency.com",
+  publisher: { "@id": "https://uptakeagency.com/#organization" },
+  inLanguage: ["en", "tr"],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Uptake Agency Services",
+  itemListElement: [
+    {
+      "@type": "Service",
+      name: "AI Consulting",
+      description: "Strategic AI integration, custom LLM solutions, RAG systems, and intelligent automation from proof-of-concept to production.",
+      provider: { "@id": "https://uptakeagency.com/#organization" },
+    },
+    {
+      "@type": "Service",
+      name: "Custom Software Development",
+      description: "Full-stack web applications, APIs, and platforms built with TypeScript, React, Next.js, Node.js, and Python.",
+      provider: { "@id": "https://uptakeagency.com/#organization" },
+    },
+    {
+      "@type": "Service",
+      name: "Automation & Integration",
+      description: "Workflow automation, CRM integration, WhatsApp Business API, and multi-channel communication platforms.",
+      provider: { "@id": "https://uptakeagency.com/#organization" },
+    },
+    {
+      "@type": "Service",
+      name: "Infrastructure & DevOps",
+      description: "Docker, Kubernetes, CI/CD pipelines, monitoring, security hardening, and cloud infrastructure.",
+      provider: { "@id": "https://uptakeagency.com/#organization" },
+    },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Uptake Agency offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Uptake Agency offers AI Consulting (custom LLM solutions, RAG systems), Custom Software Development (full-stack web apps), Automation & Integration (WhatsApp API, CRM sync), and Infrastructure & DevOps (Docker, Kubernetes, CI/CD).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Uptake Agency located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Uptake Agency is based in Istanbul, Turkey, and serves clients worldwide through remote collaboration.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who founded Uptake Agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cengiz Selcuk founded Uptake Agency in 2024. He has 15+ years of experience in technology infrastructure and software development, with enterprise partnerships with Intel, NVIDIA, and MSI.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Uptake Agency build AI-powered applications?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents with 85% auto-resolution, AI-powered PC build visualization for MSI using Google Gemini, and custom RAG systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What tech stack does Uptake Agency use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Docker, Kubernetes, and AI frameworks including OpenAI GPT, Google Gemini, and LangChain.",
+      },
+    },
+  ],
+};
 ---
 
 <PageLayout
@@ -18,10 +135,24 @@ const i18n = t(locale);
   locale={locale}
   canonicalPath="/"
 >
+  <JsonLd data={organizationSchema} />
+  <JsonLd data={websiteSchema} />
+  <JsonLd data={serviceSchema} />
+  <JsonLd data={faqSchema} />
+
+  <p class="sr-only">
+    Uptake Agency is a technology consulting and AI solutions firm based in Istanbul, Turkey,
+    founded by Cengiz Selcuk in 2024. Services include AI Consulting, Custom Software Development,
+    Automation & Integration, and Infrastructure & DevOps. Enterprise partnerships with Intel,
+    NVIDIA, MSI, and Praxilla. 15+ years experience, $2M+ revenue generated, 50+ projects delivered.
+    Contact: info@uptakeagency.com. Website: uptakeagency.com.
+  </p>
+
   <Hero locale={locale} />
   <Services locale={locale} />
   <FeaturedProjects locale={locale} />
   <About locale={locale} />
   <Partners locale={locale} />
+  <FAQ locale={locale} />
   <ContactCTA locale={locale} />
 </PageLayout>

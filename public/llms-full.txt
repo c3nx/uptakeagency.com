@@ -1,0 +1,159 @@
+# Uptake Agency - Full Details
+
+> Technology consulting and AI solutions firm founded in 2024 by Cengiz Selcuk. Based in Istanbul, Turkey, serving clients worldwide. Specializing in AI integration, custom software development, automation, and cloud infrastructure.
+
+## About Uptake Agency
+
+Uptake Agency is a technology consulting firm that helps businesses leverage cutting-edge technology and artificial intelligence to drive growth and efficiency. Founded by Cengiz Selcuk, the firm combines 15+ years of infrastructure engineering, software development, and AI integration expertise with enterprise-grade delivery standards.
+
+The agency was born from Cengiz's extensive career spanning IT infrastructure, the gaming entertainment industry (where he built technical infrastructure for major venues and forged partnerships with Intel, NVIDIA, and MSI), and a strategic pivot to AI in 2022. Today, Uptake Agency delivers end-to-end technology solutions to international clients.
+
+## Services and Capabilities
+
+### AI Consulting
+Strategic AI integration from proof-of-concept to production deployment:
+- Custom LLM solutions and fine-tuning
+- RAG (Retrieval-Augmented Generation) systems
+- Intelligent automation and AI agents
+- AI strategy assessment and workflow audits
+- Multi-channel AI customer service agents
+- Post-deployment optimization and monitoring
+
+### Custom Software Development
+Full-stack development of web applications, APIs, and platforms:
+- Tech stack: TypeScript, React, Next.js, Node.js, Python, PostgreSQL
+- Responsive front-end applications with modern UI/UX
+- Robust back-end APIs and microservices
+- Third-party integrations and data pipelines
+- Agile delivery with regular client check-ins
+- Monorepo architecture with Turborepo
+
+### Automation & Integration
+Workflow automation and system integration:
+- Trigger-based automation pipelines
+- CRM integration with bi-directional data sync
+- WhatsApp Business API implementation
+- Multi-channel communication platforms (email, SMS, WhatsApp, web chat)
+- Resilient, idempotent integrations with comprehensive logging
+
+### Infrastructure & DevOps
+Cloud infrastructure and operations:
+- Docker and Kubernetes containerization
+- CI/CD pipelines (GitHub Actions, GitLab CI)
+- Monitoring, alerting, and observability
+- Performance tuning and database optimization
+- Security hardening, secrets management, network segmentation
+- Self-hosted and cloud deployments
+
+## Featured Projects
+
+### Estanbul AI Agent
+Multi-channel AI customer service agent for a gaming entertainment company. Handles inquiries across WhatsApp, web chat, and social media platforms.
+- Technology: LLMs, RAG, WhatsApp API, Web Chat, Social Media APIs
+- Results: 70% reduction in response time, 85% inquiries auto-resolved, 24/7 coverage
+- Type: Client Work
+
+### ARU
+WhatsApp Business Platform CRM and automation system for SMBs. Features appointment reminders, campaign management, AI-powered messaging, customer database, analytics, and role-based access control.
+- Technology: WhatsApp API, CRM, AI, SaaS
+- Impact: Serving multiple businesses across Turkey, processing thousands of monthly messages
+- Type: Client Work (SaaS)
+
+### OEMBuilder
+B2B PC build visualization service for MSI. Generates photorealistic images of assembled PC builds from selected components using AI image generation.
+- Technology: Google Gemini 3 Pro, Python FastAPI, PostgreSQL, Coolify
+- Features: AI visualization, SKU matching, REST API, JavaScript SDK, batch processing
+- Type: Client Work (B2B)
+
+### Quix
+Real-time interactive multiplayer quiz platform with live competition, instant feedback, and comprehensive admin controls.
+- Technology: Next.js 15, React 19, Express.js, Sockudo WebSocket, Turborepo
+- Performance: Sub-100ms response times, hundreds of concurrent participants
+- Type: Client Work
+
+### Quill
+AI-powered system-wide technical dictionary for macOS and Windows. Provides instant, context-aware definitions and explanations.
+- Technology: Swift (macOS), Rust/Tauri (Windows), LLM integration
+- Features: System-wide activation via global hotkey, context-aware definitions, offline core dictionary
+- Type: Open Source (github.com/nicepkg/quill)
+
+### CastHub
+Self-hosted remote broadcast production monitoring and control platform. Real-time stream health monitoring, OBS/vMix control, and caster management.
+- Technology: Bun.serve, Sockudo, obs-websocket-js, React/Vite
+- Performance: 1-2ms end-to-end latency
+- Type: Client Work
+
+## Founder
+
+### Cengiz Selcuk — Founder & CTO
+Technology leader with 15+ years of experience:
+- 2009: Started in IT infrastructure and system administration
+- 2014: Gaming entertainment industry — built infrastructure for large-scale venues
+- 2018: Enterprise partnerships with Intel, NVIDIA, and MSI
+- 2022: AI pivot — began integrating AI into client projects
+- 2024: Founded Uptake Agency
+
+Enterprise partnerships: Intel, NVIDIA, MSI, Praxilla
+
+## Technology Stack
+
+### Languages & Frameworks
+TypeScript, JavaScript, Python, React, Next.js, Node.js, Astro, Express.js, FastAPI
+
+### Databases & Infrastructure
+PostgreSQL, MongoDB, SQLite, Docker, Kubernetes, Nginx, Coolify
+
+### AI & ML
+OpenAI GPT, Google Gemini, Claude, LangChain, RAG systems, custom LLM fine-tuning
+
+### DevOps & Tools
+GitHub Actions, GitLab CI, Turborepo, Bun, Tailwind CSS, Playwright
+
+## Frequently Asked Questions
+
+### What services does Uptake Agency offer?
+Uptake Agency offers four core services: AI Consulting (custom LLM solutions, RAG systems), Custom Software Development (full-stack web apps and APIs), Automation & Integration (workflow automation, WhatsApp API), and Infrastructure & DevOps (Docker, CI/CD, cloud).
+
+### Where is Uptake Agency located?
+Uptake Agency is based in Istanbul, Turkey, and serves clients worldwide through remote collaboration.
+
+### Who founded Uptake Agency?
+Cengiz Selcuk founded Uptake Agency in 2024. He has 15+ years of experience in technology infrastructure, software development, and AI integration, with enterprise partnerships with Intel, NVIDIA, and MSI.
+
+### What tech stack does Uptake Agency use?
+Primary stack includes TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Docker, and various AI/ML frameworks including OpenAI, Google Gemini, and custom RAG systems.
+
+### Does Uptake Agency work with enterprise clients?
+Yes. Uptake Agency has established partnerships with Intel, NVIDIA, MSI, and Praxilla. The team has experience delivering enterprise-grade solutions across multiple industries.
+
+### Can Uptake Agency build AI-powered applications?
+Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents (85% auto-resolution), AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.
+
+### Does Uptake Agency offer WhatsApp Business API integration?
+Yes. The ARU platform is a WhatsApp Business CRM and automation system built by Uptake Agency. They offer WhatsApp API integration as part of their Automation & Integration services.
+
+### What is Uptake Agency's approach to software development?
+Agile delivery with regular client check-ins, monorepo architecture (Turborepo), full-stack TypeScript, comprehensive testing, and CI/CD automation. Focus on practical, measurable results.
+
+### Does Uptake Agency do DevOps and infrastructure?
+Yes. Services include Docker/Kubernetes containerization, CI/CD pipelines, monitoring, security hardening, and both cloud and self-hosted deployments.
+
+### How can I contact Uptake Agency?
+Email: info@uptakeagency.com. Website: https://uptakeagency.com. The team is available for project discussions and consultations worldwide.
+
+### Does Uptake Agency contribute to open source?
+Yes. Quill, an AI-powered system-wide technical dictionary, is an open-source project maintained by the team (github.com/nicepkg/quill).
+
+### What industries has Uptake Agency served?
+Gaming entertainment, healthcare, education (quiz platforms), PC hardware (MSI), broadcast production, and general B2B SaaS across Turkey and internationally.
+
+## Contact and Location
+
+- Email: info@uptakeagency.com
+- Website: https://uptakeagency.com
+- Location: Istanbul, Turkey
+- Availability: Serving clients worldwide, remote-first
+- Languages: English, Turkish
+
+## Last Updated
+2026-03-22

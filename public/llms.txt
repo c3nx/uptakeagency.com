@@ -1,0 +1,36 @@
+# Uptake Agency
+
+> Technology consulting and AI solutions firm founded in 2024, based in Istanbul, Turkey, serving clients worldwide.
+
+## About
+Uptake Agency is a technology consulting firm specializing in AI integration, custom software development, automation, and infrastructure engineering. Founded by Cengiz Selcuk with 15+ years of experience and enterprise partnerships with Intel, NVIDIA, and MSI.
+
+## Services
+- AI Consulting: Custom LLM solutions, RAG systems, intelligent automation, strategy assessment
+- Custom Software Development: Full-stack web apps, APIs, platforms (TypeScript, React, Next.js, Node.js, Python)
+- Automation & Integration: Workflow automation, CRM sync, WhatsApp Business API, multi-channel platforms
+- Infrastructure & DevOps: Docker, Kubernetes, CI/CD, monitoring, security hardening
+
+## Key Projects
+- Estanbul AI Agent: Multi-channel AI customer service (70% faster response, 85% auto-resolution)
+- ARU: WhatsApp Business CRM & automation SaaS
+- OEMBuilder: AI-powered PC build visualization for MSI (Gemini, FastAPI)
+- Quix: Real-time multiplayer quiz platform (sub-100ms response)
+- Quill: AI-powered system-wide technical dictionary (Swift, Rust/Tauri)
+
+## Stats
+- 15+ years experience
+- $2M+ revenue generated
+- 4 enterprise partners (Intel, NVIDIA, MSI, Praxilla)
+- 50+ projects delivered
+
+## Contact
+- Email: info@uptakeagency.com
+- Location: Istanbul, Turkey | Serving clients worldwide
+- Website: https://uptakeagency.com
+
+## Docs
+- [Full details](https://uptakeagency.com/llms-full.txt): Complete service descriptions, tech stack, case studies, and FAQ
+
+## Last Updated
+2026-03-22

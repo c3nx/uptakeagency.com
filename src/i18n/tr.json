@@ -65,6 +65,8 @@
     "page_subtitle": "Bir sonraki projenizi konusmak icin bizimle iletisime gecin."
   },
   "footer": {
+    "about": "Uptake Agency, Istanbul merkezli bir teknoloji danismanlik firmasidir. Yapay zeka entegrasyonu, ozel yazilim gelistirme, otomasyon ve bulut altyapisi konularinda uzmandir. Cengiz Selcuk tarafindan 15+ yillik deneyim ve Intel, NVIDIA, MSI ile kurumsal ortakliklarla kurulmustur.",
+    "services_keywords": "Yapay Zeka Danismanligi \u2022 Ozel LLM Cozumleri \u2022 RAG Sistemleri \u2022 Full-Stack Gelistirme \u2022 TypeScript \u2022 React \u2022 Next.js \u2022 WhatsApp Business API \u2022 Is Akisi Otomasyonu \u2022 Docker \u2022 Kubernetes \u2022 CI/CD \u2022 Bulut Altyapisi",
     "rights": "Tum haklari saklidir.",
     "privacy": "Gizlilik Politikasi",
     "terms": "Kullanim Kosullari",
