@@ -10,22 +10,22 @@ const { locale } = Astro.props;
 const i18n = t(locale);
 
 const partners = [
-  { name: "Intel", width: "w-20" },
-  { name: "NVIDIA", width: "w-24" },
-  { name: "MSI", width: "w-16" },
-  { name: "Praxilla", width: "w-20" },
+  { name: "Intel" },
+  { name: "NVIDIA" },
+  { name: "MSI" },
+  { name: "Praxilla" },
 ];
 ---
 
-<section class="border-y border-gray-100 bg-white py-16">
+<section class="border-y border-surface-border bg-surface-raised py-16">
   <Container>
-    <p class="text-center text-sm font-medium uppercase tracking-widest text-gray-400">
-      {i18n.partners.title}
+    <p class="text-center font-mono text-xs text-text-muted uppercase tracking-widest">
+      // {i18n.partners.title}
     </p>
     <div class="mt-10 flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
       {partners.map((partner) => (
-        <div class="group transition-all duration-300 grayscale opacity-40 hover:grayscale-0 hover:opacity-100">
-          <span class={`block text-2xl font-bold tracking-tight text-gray-900 ${partner.width}`}>
+        <div class="group transition-all duration-300 opacity-40 hover:opacity-100">
+          <span class="block text-2xl font-bold tracking-tight text-text-primary">
             {partner.name}
           </span>
         </div>

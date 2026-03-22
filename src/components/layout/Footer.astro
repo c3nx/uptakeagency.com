@@ -11,28 +11,28 @@ const i18n = t(locale);
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-gray-100 bg-gray-50">
+<footer class="border-t border-surface-border bg-surface-raised">
   <Container>
     <div class="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
-      <p class="text-sm text-gray-500">
-        &copy; {year} Uptake Agency. {i18n.footer.rights}
+      <p class="text-sm text-text-muted font-mono">
+        <span class="text-text-secondary">&copy; {year}</span> uptake.agency <span class="text-text-muted">// {i18n.footer.rights}</span>
       </p>
       <div class="flex gap-6">
         <a
           href={getLocalizedPath("/privacy-policy", locale)}
-          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          class="text-sm text-text-muted hover:text-text-primary transition-colors"
         >
           {i18n.footer.privacy}
         </a>
         <a
           href={getLocalizedPath("/terms-of-service", locale)}
-          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          class="text-sm text-text-muted hover:text-text-primary transition-colors"
         >
           {i18n.footer.terms}
         </a>
         <a
           href={getLocalizedPath("/data-deletion", locale)}
-          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          class="text-sm text-text-muted hover:text-text-primary transition-colors"
         >
           {i18n.footer.data_deletion}
         </a>

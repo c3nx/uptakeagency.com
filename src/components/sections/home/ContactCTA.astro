@@ -11,28 +11,37 @@ const { locale } = Astro.props;
 const i18n = t(locale);
 ---
 
-<section class="relative overflow-hidden bg-gray-900 py-section-mobile lg:py-section">
+<section class="relative overflow-hidden py-section-mobile lg:py-section">
   <!-- Background gradient -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,rgba(142,214,240,0.15),transparent)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,rgba(59,130,246,0.08),transparent)]"></div>
 
   <Container class="relative">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-headline font-bold tracking-tight text-white sm:text-4xl">
+      <p class="font-mono text-sm text-brand-400 mb-4">// {locale === "en" ? "initialize_connection" : "baglanti_baslat"}</p>
+      <h2 class="text-headline font-bold tracking-tight text-text-primary sm:text-4xl">
         {i18n.contact.title}
       </h2>
-      <p class="mt-6 text-lg text-gray-400">
+      <p class="mt-6 text-lg text-text-secondary">
         {i18n.contact.subtitle}
       </p>
-      <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <Button href="mailto:info@uptakeagency.com" size="lg" variant="inverse">
+
+      <!-- Terminal command -->
+      <div class="mt-8 inline-flex items-center gap-3 rounded-lg border border-surface-border bg-surface-raised px-6 py-3 font-mono text-sm">
+        <span class="text-brand-400">$</span>
+        <span class="text-text-muted">curl -X POST uptake.agency/contact</span>
+      </div>
+
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <Button href="mailto:info@uptakeagency.com" size="lg">
+          <span class="font-mono text-sm mr-2 opacity-70">$</span>
           {i18n.contact.cta}
-          <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-          </svg>
         </Button>
       </div>
-      <p class="mt-6 text-sm text-gray-500">
-        {i18n.contact.email_label}: <a href="mailto:info@uptakeagency.com" class="text-brand-300 hover:text-brand-200 transition-colors">info@uptakeagency.com</a>
+      <p class="mt-6 text-sm text-text-muted">
+        {i18n.contact.email_label}: <a href="mailto:info@uptakeagency.com" class="text-brand-400 hover:text-brand-300 transition-colors font-mono">info@uptakeagency.com</a>
+      </p>
+      <p class="mt-2 text-xs text-text-muted">
+        Istanbul, Turkey | {locale === "en" ? "Serving clients worldwide" : "Dunya genelinde hizmet"}
       </p>
     </div>
   </Container>

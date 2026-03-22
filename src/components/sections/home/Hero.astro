@@ -9,50 +9,71 @@ interface Props {
 
 const { locale } = Astro.props;
 const i18n = t(locale);
+
+const stats = [
+  { value: "15+", label: locale === "en" ? "yrs experience" : "yil deneyim" },
+  { value: "$2M+", label: locale === "en" ? "revenue generated" : "uretilen gelir" },
+  { value: "4", label: locale === "en" ? "enterprise partners" : "kurumsal ortak" },
+  { value: "50+", label: locale === "en" ? "projects delivered" : "tamamlanan proje" },
+];
 ---
 
-<section class="relative overflow-hidden bg-white">
-  <!-- Subtle gradient background -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(142,214,240,0.15),transparent)]"></div>
+<section class="relative overflow-hidden bg-surface">
+  <!-- Gradient background -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.08),transparent)]"></div>
 
   <Container class="relative">
     <div class="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-20 text-center">
-      <!-- Eyebrow -->
-      <div class="animate-fade-in mb-6">
-        <span class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-medium text-gray-600 shadow-sm">
-          <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-          {locale === "en" ? "Technology Consulting & AI" : "Teknoloji Danismanlik & Yapay Zeka"}
+      <!-- Terminal breadcrumb -->
+      <div class="animate-fade-in mb-8">
+        <span class="inline-flex items-center gap-2 rounded-lg border border-surface-border bg-surface-raised px-4 py-2 font-mono text-xs text-text-muted">
+          <span class="text-brand-400">$</span>
+          <span class="text-text-secondary">~/projects/uptake-agency</span>
+          <span class="h-3.5 w-[2px] bg-brand-400 animate-terminal-blink"></span>
         </span>
       </div>
 
       <!-- Main heading -->
-      <h1 class="animate-slide-up max-w-4xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-display">
+      <h1 class="animate-slide-up max-w-4xl text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-display">
         {i18n.hero.title}
       </h1>
 
       <!-- Subtitle -->
-      <p class="animate-slide-up mt-6 max-w-2xl text-lg text-gray-500 sm:text-xl" style="animation-delay: 0.1s;">
+      <p class="animate-slide-up mt-6 max-w-2xl text-lg text-text-secondary sm:text-xl" style="animation-delay: 0.1s;">
         {i18n.hero.subtitle}
       </p>
 
       <!-- CTAs -->
       <div class="animate-slide-up mt-10 flex flex-col gap-4 sm:flex-row" style="animation-delay: 0.2s;">
         <Button href={getLocalizedPath("/work", locale)} size="lg">
+          <span class="font-mono text-sm mr-2 opacity-70">$</span>
           {i18n.hero.cta_primary}
           <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </Button>
         <Button href={getLocalizedPath("/contact", locale)} variant="secondary" size="lg">
+          <span class="font-mono text-sm mr-2 opacity-70">$</span>
           {i18n.hero.cta_secondary}
         </Button>
       </div>
 
+      <!-- Stats bar -->
+      <div class="animate-fade-in mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-10" style="animation-delay: 0.4s;">
+        {stats.map((stat, i) => (
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-2xl font-bold text-brand-400">{stat.value}</span>
+            <span class="text-xs text-text-muted uppercase tracking-wider">{stat.label}</span>
+            {i < stats.length - 1 && (
+              <span class="hidden sm:block ml-4 h-4 w-[1px] bg-surface-border"></span>
+            )}
+          </div>
+        ))}
+      </div>
+
       <!-- Scroll indicator -->
       <div class="animate-fade-in absolute bottom-8 left-1/2 -translate-x-1/2" style="animation-delay: 0.6s;">
-        <div class="flex flex-col items-center gap-2">
-          <div class="h-8 w-[1px] bg-gradient-to-b from-transparent to-gray-300"></div>
-        </div>
+        <div class="h-8 w-[1px] bg-gradient-to-b from-transparent to-surface-border"></div>
       </div>
     </div>
   </Container>

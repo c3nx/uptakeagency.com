@@ -10,10 +10,45 @@
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-surface text-text-primary;
   }
 
   ::selection {
-    @apply bg-brand-300/40;
+    @apply bg-brand-500/30;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-surface-border bg-surface-raised/80 backdrop-blur-sm;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-surface-border-hover hover:bg-surface-overlay/80;
+  }
+
+  .terminal-prompt::before {
+    content: "$ ";
+    @apply text-brand-400 font-mono;
+  }
+
+  .terminal-window {
+    @apply rounded-xl border border-surface-border bg-surface-raised overflow-hidden;
+  }
+
+  .terminal-dots {
+    @apply flex gap-1.5 px-4 py-3 border-b border-surface-border;
+  }
+
+  .terminal-dots::before {
+    content: "";
+    @apply block h-2.5 w-2.5 rounded-full bg-red-500/60;
+  }
+
+  .terminal-dots::after {
+    content: "● ●";
+    @apply text-[10px] leading-none;
+    color: rgba(250, 204, 21, 0.6);
+    letter-spacing: 4px;
   }
 }

@@ -24,23 +24,23 @@ const timeline = [
   <section class="py-section-mobile lg:py-section">
     <Container>
       <div class="mx-auto max-w-3xl">
-        <h1 class="text-display font-bold tracking-tight text-gray-900">
+        <h1 class="text-display font-bold tracking-tight text-text-primary">
           {i18n.about.title}
         </h1>
-        <p class="mt-6 text-xl text-gray-500 leading-relaxed">
+        <p class="mt-6 text-xl text-text-secondary leading-relaxed">
           {i18n.about.founder_bio}
         </p>
       </div>
     </Container>
   </section>
 
-  <section class="border-t border-gray-100 py-section-mobile lg:py-section">
+  <section class="border-t border-surface-border py-section-mobile lg:py-section">
     <Container>
       <div class="mx-auto max-w-3xl">
-        <h2 class="text-headline font-bold tracking-tight text-gray-900">
+        <h2 class="text-headline font-bold tracking-tight text-text-primary">
           {i18n.about.founder_title}
         </h2>
-        <div class="mt-8 space-y-6 text-lg text-gray-600 leading-relaxed">
+        <div class="mt-8 space-y-6 text-lg text-text-secondary leading-relaxed">
           <p>
             Cengiz Selcuk, altyapi muhendisligi, yazilim gelistirme ve yapay zeka entegrasyonu alanlarinda 15 yili askin deneyime sahip bir teknoloji lideridir. Kariyerine kurumsal BT alaninda baslamis ve buyuk olcekli teknoloji sistemleri kurma ve yonetme konusunda derin uzmanlik gelistirmistir.
           </p>
@@ -55,19 +55,19 @@ const timeline = [
     </Container>
   </section>
 
-  <section class="bg-gray-50 py-section-mobile lg:py-section">
+  <section class="bg-surface-raised py-section-mobile lg:py-section">
     <Container>
       <div class="mx-auto max-w-3xl">
-        <h2 class="text-2xl font-bold text-gray-900 mb-12">Kariyer Zaman Cizelgesi</h2>
+        <h2 class="text-2xl font-bold text-text-primary mb-12">Kariyer Zaman Cizelgesi</h2>
         <div class="space-y-8">
           {timeline.map((item) => (
             <div class="flex gap-8">
               <div class="flex-shrink-0 w-20 text-right">
                 <span class="text-sm font-bold text-brand-600">{item.year}</span>
               </div>
-              <div class="flex-1 border-l-2 border-gray-200 pl-8 pb-2">
-                <h3 class="font-semibold text-gray-900">{item.title}</h3>
-                <p class="mt-1 text-gray-500">{item.desc}</p>
+              <div class="flex-1 border-l-2 border-surface-border pl-8 pb-2">
+                <h3 class="font-semibold text-text-primary">{item.title}</h3>
+                <p class="mt-1 text-text-secondary">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -80,16 +80,16 @@ const timeline = [
     <Container>
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         <div class="text-center">
-          <div class="text-5xl font-bold text-gray-900">15+</div>
-          <div class="mt-2 text-gray-500">{i18n.about.stats.experience}</div>
+          <div class="text-5xl font-bold text-text-primary">15+</div>
+          <div class="mt-2 text-text-secondary">{i18n.about.stats.experience}</div>
         </div>
         <div class="text-center">
-          <div class="text-5xl font-bold text-gray-900">$2M+</div>
-          <div class="mt-2 text-gray-500">{i18n.about.stats.revenue}</div>
+          <div class="text-5xl font-bold text-text-primary">$2M+</div>
+          <div class="mt-2 text-text-secondary">{i18n.about.stats.revenue}</div>
         </div>
         <div class="text-center">
-          <div class="text-5xl font-bold text-gray-900">4</div>
-          <div class="mt-2 text-gray-500">{i18n.about.stats.partners}</div>
+          <div class="text-5xl font-bold text-text-primary">4</div>
+          <div class="mt-2 text-text-secondary">{i18n.about.stats.partners}</div>
         </div>
       </div>
     </Container>

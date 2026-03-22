@@ -20,12 +20,13 @@ const navItems = [
 ];
 ---
 
-<header class="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-lg">
+<header class="fixed top-0 z-50 w-full border-b border-surface-border bg-surface/80 backdrop-blur-lg">
   <Container>
     <nav class="flex h-16 items-center justify-between">
       <!-- Logo -->
-      <a href={getLocalizedPath("/", locale)} class="text-lg font-semibold text-gray-900">
-        Uptake Agency
+      <a href={getLocalizedPath("/", locale)} class="flex items-center gap-2 font-mono text-sm text-text-primary">
+        <span class="text-brand-400">~</span>
+        <span class="font-semibold">uptake.agency</span>
       </a>
 
       <!-- Desktop Nav -->
@@ -36,8 +37,8 @@ const navItems = [
             class:list={[
               "text-sm font-medium transition-colors",
               currentPath === item.path
-                ? "text-gray-900"
-                : "text-gray-500 hover:text-gray-900",
+                ? "text-brand-400"
+                : "text-text-muted hover:text-text-primary",
             ]}
           >
             {item.label}
@@ -56,7 +57,7 @@ const navItems = [
         aria-label="Toggle menu"
         type="button"
       >
-        <svg class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <svg class="h-6 w-6 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
@@ -64,18 +65,18 @@ const navItems = [
   </Container>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden border-t border-gray-100 bg-white md:hidden">
+  <div id="mobile-menu" class="hidden border-t border-surface-border bg-surface md:hidden">
     <Container>
       <div class="flex flex-col gap-4 py-6">
         {navItems.map((item) => (
           <a
             href={getLocalizedPath(item.path, locale)}
-            class="text-base font-medium text-gray-700 hover:text-gray-900"
+            class="text-base font-medium text-text-secondary hover:text-text-primary"
           >
             {item.label}
           </a>
         ))}
-        <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+        <div class="flex items-center gap-4 border-t border-surface-border pt-4">
           <LanguageSwitcher locale={locale} currentPath={currentPath} />
           <Button href={`mailto:info@uptakeagency.com`} size="sm">
             {i18n.contact.cta}

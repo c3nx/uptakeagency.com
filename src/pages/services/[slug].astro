@@ -32,7 +32,7 @@ const locale = "en";
         <!-- Back link -->
         <a
           href={getLocalizedPath("/services", locale)}
-          class="mb-8 inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          class="mb-8 inline-flex items-center text-sm text-text-secondary hover:text-text-primary transition-colors"
         >
           <svg class="mr-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -40,21 +40,21 @@ const locale = "en";
           All Services
         </a>
 
-        <h1 class="text-display font-bold tracking-tight text-gray-900">
+        <h1 class="text-display font-bold tracking-tight text-text-primary">
           {service.data.title}
         </h1>
-        <p class="mt-4 text-xl text-gray-500">
+        <p class="mt-4 text-xl text-text-secondary">
           {service.data.description}
         </p>
 
-        <article class="prose prose-gray mt-12 max-w-none prose-headings:font-semibold prose-a:text-brand-600">
+        <article class="prose prose-gray prose-invert mt-12 max-w-none prose-headings:font-semibold prose-a:text-brand-400">
           <Content />
         </article>
 
         <!-- CTA -->
-        <div class="mt-16 rounded-2xl border border-gray-100 bg-gray-50 p-8 text-center">
-          <h3 class="text-xl font-semibold text-gray-900">Interested in this service?</h3>
-          <p class="mt-2 text-gray-500">Let's discuss how we can help your business.</p>
+        <div class="mt-16 rounded-2xl border border-surface-border bg-surface-raised p-8 text-center">
+          <h3 class="text-xl font-semibold text-text-primary">Interested in this service?</h3>
+          <p class="mt-2 text-text-secondary">Let's discuss how we can help your business.</p>
           <div class="mt-6">
             <Button href="mailto:info@uptakeagency.com">
               Get in Touch
