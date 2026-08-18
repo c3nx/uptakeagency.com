@@ -70,7 +70,10 @@
     "form_email_placeholder": "you@company.com",
     "form_message": "Message",
     "form_message_placeholder": "Tell us about your project...",
-    "form_submit": "Send Message"
+    "form_submit": "Send Message",
+    "form_sending": "Sending...",
+    "form_success": "Message received. We'll get back to you shortly.",
+    "form_error": "Something went wrong. Please try again or email us directly."
   },
   "footer": {
     "about": "Uptake Agency is a technology consulting firm based in Istanbul, Turkey, specializing in AI integration, custom software development, automation, and cloud infrastructure. Founded by Cengiz Selcuk with 15+ years of experience and enterprise partnerships with Intel, NVIDIA, and MSI.",
