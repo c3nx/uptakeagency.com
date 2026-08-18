@@ -1,26 +1,26 @@
 ---
-title: "Yapay Zeka Danismanligi"
-description: "Kavram kanitindan uretim dagitimina kadar stratejik yapay zeka entegrasyonu. Ozel LLM cozumleri, RAG sistemleri ve akilli otomasyon."
+title: "Yapay Zeka Danışmanlığı"
+description: "Kavram kanıtından üretim dağıtımına kadar stratejik yapay zeka entegrasyonu. Özel LLM çözümleri, RAG sistemleri ve akıllı otomasyon."
 icon: "sparkles"
 order: 1
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Sirketleri yapay zeka benimseme surecinin her asamasinda yonlendiriyoruz — dogru kullanim alanlarini belirlemekten guvenilir, uretim ortamina hazir sistemler kurmaya kadar. Odak noktamiz somut sonuclar, abartili vaatler degil.
+Şirketleri yapay zeka benimseme sürecinin her aşamasında yönlendiriyoruz — doğru kullanım alanlarını belirlemekten güvenilir, üretim ortamına hazır sistemler kurmaya kadar. Odak noktamız somut sonuçlar, abartılı vaatler değil.
 
-## Sundugumuz Hizmetler
+## Sunduğumuz Hizmetler
 
-- **Yapay Zeka Strateji Degerlendirmesi**: Mevcut is akislarinizi analiz ederek yapay zekanin en fazla deger yaratacagi alanlari belirleriz
-- **Ozel LLM Cozumleri**: Sektorunuze ozel ince ayarli veya yonlendirme muhendisligi uygulanmis dil modelleri
-- **RAG Implementasyonu**: Yanitleri kendi verinize dayandiran retrieval-augmented generation sistemleri
-- **Akilli Otomasyon**: Manuel is yukunu azaltan ve dogrulugu artiran yapay zeka destekli is akislari
+- **Yapay Zeka Strateji Değerlendirmesi**: Mevcut iş akışlarınızı analiz ederek yapay zekanın en fazla değer yaratacağı alanları belirleriz
+- **Özel LLM Çözümleri**: Sektörünüze özel ince ayarlı veya yönlendirme mühendisliği uygulanmış dil modelleri
+- **RAG Implementasyonu**: Yanıtları kendi verinize dayandıran retrieval-augmented generation sistemleri
+- **Akıllı Otomasyon**: Manuel iş yükünü azaltan ve doğruluğu artıran yapay zeka destekli iş akışları
 
-## Yaklasimimiz
+## Yaklaşımımız
 
-Once kesfetme asamasiyla basliyoruz; is baglamini anlayip net basari metrikleriyle iteratif prototipler sunuyoruz. Her cozum, kara kutu karmasikligi yerine surdurulebilirlik goz onunde bulundurularak insa edilir.
+Önce keşfetme aşamasıyla başlıyoruz; iş bağlamını anlayıp net başarı metrikleriyle iteratif prototipler sunuyoruz. Her çözüm, kara kutu karmaşıklığı yerine sürdürülebilirlik göz önünde bulundurularak inşa edilir.
 
-## Surekli Optimizasyon
+## Sürekli Optimizasyon
 
-Dagitim sonrasinda model performansini izler, sapmalari takip eder ve verileriniz gelistikce dogrulugu yuksek tutmak icin yonlendirme ve retrieval pipeline'larini guncelliyoruz.
+Dağıtım sonrasında model performansını izler, sapmaları takip eder ve verileriniz geliştikçe doğruluğu yüksek tutmak için yönlendirme ve retrieval pipeline'larını güncelliyoruz.

@@ -1,107 +1,107 @@
 {
   "site": {
     "title": "Uptake Agency",
-    "description": "Teknoloji Danismanlik & Yapay Zeka Cozumleri. Isletmelerin en son teknolojiyi ve yapay zekayi kullanarak buyume ve verimlilik saglamasina yardimci oluyoruz."
+    "description": "Teknoloji Danışmanlığı & Yapay Zeka Çözümleri. İşletmelerin en son teknolojiyi ve yapay zekayı kullanarak büyüme ve verimlilik sağlamasına yardımcı oluyoruz."
   },
   "nav": {
     "home": "Ana Sayfa",
-    "about": "Hakkimizda",
+    "about": "Hakkımızda",
     "services": "Hizmetler",
     "work": "Projeler",
     "stack": "Teknolojiler",
     "blog": "Blog",
-    "contact": "Iletisim"
+    "contact": "İletişim"
   },
   "hero": {
-    "title": "Teknoloji Danismanlik & Yapay Zeka Cozumleri",
-    "subtitle": "Isletmelerin en son teknolojiyi ve yapay zekayi kullanarak buyume ve verimlilik saglamasina yardimci oluyoruz.",
+    "title": "Teknoloji Danışmanlığı & Yapay Zeka Çözümleri",
+    "subtitle": "İşletmelerin en son teknolojiyi ve yapay zekayı kullanarak büyüme ve verimlilik sağlamasına yardımcı oluyoruz.",
     "cta_primary": "Projelerimiz",
-    "cta_secondary": "Iletisime Gecin"
+    "cta_secondary": "İletişime Geçin"
   },
   "services": {
-    "title": "Ne Yapiyoruz",
-    "subtitle": "Isletmelerin calisma seklini donusturen uctan uca teknoloji cozumleri sunuyoruz.",
+    "title": "Ne Yapıyoruz",
+    "subtitle": "İşletmelerin çalışma şeklini dönüştüren uçtan uca teknoloji çözümleri sunuyoruz.",
     "ai_consulting": {
-      "title": "Yapay Zeka Danismanligi",
-      "description": "Kavram kanitindan uretim dagitimina kadar stratejik yapay zeka entegrasyonu. Ozel LLM cozumleri, RAG sistemleri ve akilli otomasyon."
+      "title": "Yapay Zeka Danışmanlığı",
+      "description": "Kavram kanıtından üretim dağıtımına kadar stratejik yapay zeka entegrasyonu. Özel LLM çözümleri, RAG sistemleri ve akıllı otomasyon."
     },
     "custom_software": {
-      "title": "Ozel Yazilim Gelistirme",
-      "description": "Is gereksinimlerinize ozel web uygulamalari, API'ler ve platformlarin full-stack gelistirilmesi."
+      "title": "Özel Yazılım Geliştirme",
+      "description": "İş gereksinimlerinize özel web uygulamaları, API'ler ve platformların full-stack geliştirilmesi."
     },
     "automation": {
       "title": "Otomasyon & Entegrasyon",
-      "description": "Akilli otomasyon, CRM entegrasyonu ve cok kanalli iletisim platformlariyla operasyonlari optimize edin."
+      "description": "Akıllı otomasyon, CRM entegrasyonu ve çok kanallı iletişim platformlarıyla operasyonları optimize edin."
     },
     "infrastructure": {
-      "title": "Altyapi & DevOps",
-      "description": "Olceklenebilir bulut altyapisi, CI/CD pipeline'lari, konteynerizasyon ve performans optimizasyonu."
+      "title": "Altyapı & DevOps",
+      "description": "Ölçeklenebilir bulut altyapısı, CI/CD pipeline'ları, konteynerizasyon ve performans optimizasyonu."
     }
   },
   "projects": {
-    "title": "One Cikan Projeler",
-    "subtitle": "Yapay zeka, otomasyon ve yazilim gelistirme alanlarindaki uzmanligimizi gosteren secilmis projeler.",
-    "view_all": "Tum Projeleri Gor",
-    "view_project": "Projeyi Gor",
+    "title": "Öne Çıkan Projeler",
+    "subtitle": "Yapay zeka, otomasyon ve yazılım geliştirme alanlarındaki uzmanlığımızı gösteren seçilmiş projeler.",
+    "view_all": "Tüm Projeleri Gör",
+    "view_project": "Projeyi Gör",
     "visit_github": "GitHub"
   },
   "about": {
-    "title": "Hakkimizda",
-    "founder_title": "Kurucumuz Cengiz Selcuk",
-    "founder_bio": "Teknoloji altyapisi ve yazilim gelistirme alaninda 15+ yillik deneyim, Intel, NVIDIA ve MSI ile kurumsal ortakliklar dahil, Uptake Agency her projeye derin teknik uzmanlik getirmektedir.",
+    "title": "Hakkımızda",
+    "founder_title": "Kurucumuz Cengiz Selçuk",
+    "founder_bio": "Intel, NVIDIA ve MSI ile kurumsal ortaklıklar dahil olmak üzere teknoloji altyapısı ve yazılım geliştirme alanında 15+ yıllık deneyimiyle Uptake Agency, her projeye derin teknik uzmanlık getirmektedir.",
     "stats": {
-      "experience": "15+ Yil Deneyim",
-      "revenue": "2M$+ Gelir Uretildi",
+      "experience": "15+ Yıl Deneyim",
+      "revenue": "2M$+ Gelir Üretildi",
       "partners": "Kurumsal Ortaklar"
     }
   },
   "partners": {
-    "title": "Sektorde Guvenilen Ortaklar"
+    "title": "Sektörde Güvenilen Ortaklar"
   },
   "contact": {
-    "title": "Birlikte Bir Seyler Insa Edelim",
-    "subtitle": "Isletmenizi teknolojiyle donusturmeye hazir misiniz? Bir sonraki projenizi konusalim.",
-    "cta": "Iletisime Gecin",
+    "title": "Birlikte Bir Şeyler İnşa Edelim",
+    "subtitle": "İşletmenizi teknolojiyle dönüştürmeye hazır mısınız? Bir sonraki projenizi konuşalım.",
+    "cta": "İletişime Geçin",
     "email_label": "E-posta adresimiz",
-    "page_title": "Iletisim",
-    "page_subtitle": "Bir sonraki projenizi konusmak icin bizimle iletisime gecin.",
+    "page_title": "İletişim",
+    "page_subtitle": "Bir sonraki projenizi konuşmak için bizimle iletişime geçin.",
     "form_name": "Ad Soyad",
-    "form_name_placeholder": "Adiniz",
+    "form_name_placeholder": "Adınız",
     "form_email_placeholder": "siz@sirket.com",
     "form_message": "Mesaj",
-    "form_message_placeholder": "Projenizi anlatin...",
-    "form_submit": "Mesaj Gonder",
-    "form_sending": "Gonderiliyor...",
-    "form_success": "Mesajiniz alindi. En kisa surede donus yapacagiz.",
-    "form_error": "Bir seyler ters gitti. Lutfen tekrar deneyin veya bize e-posta gonderin."
+    "form_message_placeholder": "Projenizi anlatın...",
+    "form_submit": "Mesaj Gönder",
+    "form_sending": "Gönderiliyor...",
+    "form_success": "Mesajınız alındı. En kısa sürede dönüş yapacağız.",
+    "form_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize e-posta gönderin."
   },
   "footer": {
-    "about": "Uptake Agency, Istanbul merkezli bir teknoloji danismanlik firmasidir. Yapay zeka entegrasyonu, ozel yazilim gelistirme, otomasyon ve bulut altyapisi konularinda uzmandir. Cengiz Selcuk tarafindan 15+ yillik deneyim ve Intel, NVIDIA, MSI ile kurumsal ortakliklarla kurulmustur.",
-    "services_keywords": "Yapay Zeka Danismanligi \u2022 Ozel LLM Cozumleri \u2022 RAG Sistemleri \u2022 Full-Stack Gelistirme \u2022 TypeScript \u2022 React \u2022 Next.js \u2022 WhatsApp Business API \u2022 Is Akisi Otomasyonu \u2022 Docker \u2022 Kubernetes \u2022 CI/CD \u2022 Bulut Altyapisi",
-    "rights": "Tum haklari saklidir.",
-    "privacy": "Gizlilik Politikasi",
-    "terms": "Kullanim Kosullari",
+    "about": "Uptake Agency, İstanbul merkezli bir teknoloji danışmanlık firmasıdır. Yapay zeka entegrasyonu, özel yazılım geliştirme, otomasyon ve bulut altyapısı konularında uzmandır. Cengiz Selçuk tarafından 15+ yıllık deneyim ve Intel, NVIDIA, MSI ile kurumsal ortaklıklarla kurulmuştur.",
+    "services_keywords": "Yapay Zeka Danışmanlığı • Özel LLM Çözümleri • RAG Sistemleri • Full-Stack Geliştirme • TypeScript • React • Next.js • WhatsApp Business API • İş Akışı Otomasyonu • Docker • Kubernetes • CI/CD • Bulut Altyapısı",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
     "data_deletion": "Veri Silme"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Yapay zeka, yazilim gelistirme ve teknoloji danismanligi uzerine yazilar.",
-    "read_more": "Devamini Oku",
-    "back": "Bloga Don",
+    "subtitle": "Yapay zeka, yazılım geliştirme ve teknoloji danışmanlığı üzerine yazılar.",
+    "read_more": "Devamını Oku",
+    "back": "Bloga Dön",
     "reading_time": "dk okuma",
-    "published": "Yayinlanma",
-    "by": "tarafindan"
+    "published": "Yayınlanma",
+    "by": "tarafından"
   },
   "stack": {
-    "title": "Teknoloji Yigini",
-    "subtitle": "Cozumlerimizi gelistirmek icin kullandigimiz teknolojiler.",
-    "daily": "Gunluk",
-    "frequent": "Sik",
-    "occasional": "Ara Sira"
+    "title": "Teknoloji Yığını",
+    "subtitle": "Çözümlerimizi geliştirmek için kullandığımız teknolojiler.",
+    "daily": "Günlük",
+    "frequent": "Sık",
+    "occasional": "Ara Sıra"
   },
   "common": {
     "learn_more": "Daha Fazla",
     "back": "Geri",
-    "read_more": "Devamini Oku"
+    "read_more": "Devamını Oku"
   }
 }

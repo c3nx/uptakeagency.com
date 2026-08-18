@@ -13,15 +13,15 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => a.data.order - b.data.order);
 
 const typeLabels: Record<string, string> = {
-  client: "Musteri Projesi",
-  "open-source": "Acik Kaynak",
+  client: "Müşteri Projesi",
+  "open-source": "Açık Kaynak",
   demo: "Demo",
 };
 ---
 
 <PageLayout
   title="Projeler"
-  description="Yapay zeka, otomasyon ve yazilim gelistirme projelerimiz."
+  description="Yapay zeka, otomasyon ve yazılım geliştirme projelerimiz."
   locale={locale}
   canonicalPath="/work"
 >

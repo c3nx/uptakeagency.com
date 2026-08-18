@@ -1,12 +1,12 @@
 ---
-title: "Kurumsal WhatsApp icin Yapay Zeka Ajanlari Gelistirme"
-description: "Bir oyun eglence sirketi icin sorularin %85'ini otomatik cozumleyen cok kanalli yapay zeka musteri hizmetleri ajanini nasil gelistirdik."
+title: "Kurumsal WhatsApp için Yapay Zeka Ajanları Geliştirme"
+description: "Bir oyun eğlence şirketi için soruların %85'ini otomatik çözümleyen çok kanallı yapay zeka müşteri hizmetleri ajanını nasıl geliştirdik."
 date: 2026-03-20
-tags: ["Yapay Zeka", "WhatsApp", "LLM", "Vaka Calismasi"]
-author: "Cengiz Selcuk"
+tags: ["Yapay Zeka", "WhatsApp", "LLM", "Vaka Çalışması"]
+author: "Cengiz Selçuk"
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-*Yakinda — bu blog altyapisi icin bir yer tutucu yazidir.*
+*Yakında — bu blog altyapısı için bir yer tutucu yazıdır.*

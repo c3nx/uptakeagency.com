@@ -10,16 +10,16 @@ const { locale } = Astro.props;
 const i18n = t(locale);
 
 const stats = [
-  { value: "15+", label: locale === "en" ? "Years Experience" : "Yil Deneyim" },
-  { value: "$2M+", label: locale === "en" ? "Revenue Generated" : "Uretilen Gelir" },
+  { value: "15+", label: locale === "en" ? "Years Experience" : "Yıl Deneyim" },
+  { value: "$2M+", label: locale === "en" ? "Revenue Generated" : "Üretilen Gelir" },
   { value: "4", label: locale === "en" ? "Enterprise Partners" : "Kurumsal Ortak" },
 ];
 
 const timeline = [
-  { year: "2009", label: locale === "en" ? "IT Infrastructure" : "BT Altyapi" },
-  { year: "2014", label: locale === "en" ? "Gaming Industry" : "Oyun Sektoru" },
+  { year: "2009", label: locale === "en" ? "IT Infrastructure" : "BT Altyapı" },
+  { year: "2014", label: locale === "en" ? "Gaming Industry" : "Oyun Sektörü" },
   { year: "2018", label: locale === "en" ? "Enterprise Partners" : "Kurumsal Ortaklar" },
-  { year: "2022", label: locale === "en" ? "AI Pivot" : "YZ Donusumu" },
+  { year: "2022", label: locale === "en" ? "AI Pivot" : "YZ Dönüşümü" },
   { year: "2024", label: locale === "en" ? "Uptake Agency" : "Uptake Agency" },
 ];
 ---
@@ -29,7 +29,7 @@ const timeline = [
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
       <!-- Content -->
       <div>
-        <p class="font-mono text-sm text-brand-400 mb-4">// {locale === "en" ? "about" : "hakkimizda"}</p>
+        <p class="font-mono text-sm text-brand-400 mb-4">// {locale === "en" ? "about" : "hakkımızda"}</p>
         <h2 class="text-headline font-bold tracking-tight text-text-primary sm:text-4xl">
           {i18n.about.founder_title}
         </h2>
@@ -70,7 +70,7 @@ const timeline = [
           </div>
           <div class="mt-6 pt-4 border-t border-surface-border">
             <p class="text-text-muted">
-              <span class="text-green-400">Cengiz Selcuk</span>
+              <span class="text-green-400">Cengiz Selçuk</span>
               <span class="text-text-muted"> // Founder & CTO</span>
             </p>
           </div>

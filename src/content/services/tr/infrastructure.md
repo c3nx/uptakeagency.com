@@ -1,26 +1,26 @@
 ---
-title: "Altyapi & DevOps"
-description: "Olceklenebilir bulut altyapisi, CI/CD pipeline'lari, konteynerizasyon ve performans optimizasyonu."
+title: "Altyapı & DevOps"
+description: "Ölçeklenebilir bulut altyapısı, CI/CD pipeline'ları, konteynerizasyon ve performans optimizasyonu."
 icon: "server"
 order: 4
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Guvenilir yazilim, guvenilir altyapi gerektirir. Buyumenizle birlikte olceklenen, degisiklikleri guvenle gonderebilen ve kullanicilar fark etmeden sizi uyaran bulut ortamlari tasarlayip yonetiyoruz.
+Güvenilir yazılım, güvenilir altyapı gerektirir. Büyümenizle birlikte ölçeklenen, değişiklikleri güvenle gönderebilen ve kullanıcılar fark etmeden sizi uyaran bulut ortamları tasarlayıp yönetiyoruz.
 
-## Sundugumuz Hizmetler
+## Sunduğumuz Hizmetler
 
-- **Konteynerizasyon**: Gelistirme, staging ve uretim ortamlarinda tutarlilik icin Docker ve Kubernetes kurulumu
-- **CI/CD Pipeline'lari**: GitHub Actions, GitLab CI veya benzeri araclarda otomatik derleme, test ve dagitim is akislari
-- **Izleme ve Uyarilar**: Eyleme donusturulebilir uyarili gozlemlenebilirlik yiginlari (gunlukler, metrikler, izler)
-- **Performans Ayari**: Veritabani sorgu optimizasyonu, onbellekleme stratejileri ve yuk testleri
+- **Konteynerizasyon**: Geliştirme, staging ve üretim ortamlarında tutarlılık için Docker ve Kubernetes kurulumu
+- **CI/CD Pipeline'ları**: GitHub Actions, GitLab CI veya benzeri araçlarda otomatik derleme, test ve dağıtım iş akışları
+- **İzleme ve Uyarılar**: Eyleme dönüştürülebilir uyarılı gözlemlenebilirlik yığınları (günlükler, metrikler, izler)
+- **Performans Ayarı**: Veritabanı sorgu optimizasyonu, önbellekleme stratejileri ve yük testleri
 
-## Guvenlik ve Uyumluluk
+## Güvenlik ve Uyumluluk
 
-Altyapi varsayilan olarak guclendirilir: en az ayricalikli IAM politikalari, gizli bilgi yonetimi, ag bolumlemesi ve duzenli bagimlilik denetimleri. Guvenligi erken yakalamak icin CI pipeline'larina guvenlik taramasi entegre ediyoruz.
+Altyapı varsayılan olarak güçlendirilir: en az ayrıcalıklı IAM politikaları, gizli bilgi yönetimi, ağ bölümlemesi ve düzenli bağımlılık denetimleri. Güvenliği erken yakalamak için CI pipeline'larına güvenlik taraması entegre ediyoruz.
 
-## Surekli Operasyonlar
+## Sürekli Operasyonlar
 
-Altyapinizi haftalik ucret karsiligi isletebiliriz; nobetci mudahale, kapasite planlamasi ve maliyet optimizasyonunu ustleniyoruz — boylece muhendislik ekibiniz urun odakli kalmaya devam eder.
+Altyapınızı haftalık ücret karşılığı işletebiliriz; nöbetçi müdahale, kapasite planlaması ve maliyet optimizasyonunu üstleniyoruz — böylece mühendislik ekibiniz ürün odaklı kalmaya devam eder.

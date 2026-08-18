@@ -1,6 +1,6 @@
 ---
 title: "ARU"
-description: "WhatsApp Business Platform CRM ve otomasyon sistemi. Randevu hatirlatalari, kampanya yonetimi ve KOBIler icin yapay zeka destekli mesajlasma."
+description: "WhatsApp Business Platform CRM ve otomasyon sistemi. Randevu hatırlatmaları, kampanya yönetimi ve KOBİ'ler için yapay zeka destekli mesajlaşma."
 tags: ["WhatsApp API", "CRM", "AI", "SaaS"]
 type: "client"
 featured: true
@@ -8,25 +8,25 @@ order: 3
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-ARU, WhatsApp Business Platform uzerine kurulu kapsamli bir CRM ve pazarlama otomasyon platformudur. Kucuk ve orta olcekli isletmelerin musteri iliskilerini yonetmesine, iletisimi otomatiklestirmesine ve hedefli pazarlama kampanyalari yurutmesine olanak tanir.
+ARU, WhatsApp Business Platform üzerine kurulu kapsamlı bir CRM ve pazarlama otomasyon platformudur. Küçük ve orta ölçekli işletmelerin müşteri ilişkilerini yönetmesine, iletişimi otomatikleştirmesine ve hedefli pazarlama kampanyaları yürütmesine olanak tanır.
 
 ## Sorun
 
-Turkiye'deki KOBIler, bolgedeki en yaygin mesajlasma platformu olan WhatsApp uzerinden musteri iletisimini yonetmek icin ucreti uygun ve kullanimi kolay bir platforma ihtiyac duyuyordu. Mevcut cozumler ya cok karmasikti ya da WhatsApp entegrasyonundan yoksundu.
+Türkiye'deki KOBİ'ler, bölgedeki en yaygın mesajlaşma platformu olan WhatsApp üzerinden müşteri iletişimini yönetmek için ücreti uygun ve kullanımı kolay bir platforma ihtiyaç duyuyordu. Mevcut çözümler ya çok karmaşıktı ya da WhatsApp entegrasyonundan yoksundu.
 
-## Temel Ozellikler
+## Temel Özellikler
 
-- **Randevu hatirlatalari**: Randevulardan 24 saat ve 2 saat once otomatik WhatsApp hatirlatalari
-- **Kampanya yonetimi**: Kitle segmentasyonu ile sablon tabanli pazarlama kampanyalari
-- **Yapay zeka destekli mesajlasma**: Kisisellestirilmis mesaj olusturma icin Gemini AI entegrasyonu
-- **Musteri veritabani**: Ziyaret gecmisi, satin alma kayitlari ve iletisim yonetimi ile tam CRM
-- **Analitik**: Teslimat takibi, acilma oranlari ve kampanya performans metrikleri
-- **Rol tabanli erisim**: Yonetici, mudur ve personel izin seviyeleri
+- **Randevu hatırlatmaları**: Randevulardan 24 saat ve 2 saat önce otomatik WhatsApp hatırlatmaları
+- **Kampanya yönetimi**: Kitle segmentasyonu ile şablon tabanlı pazarlama kampanyaları
+- **Yapay zeka destekli mesajlaşma**: Kişiselleştirilmiş mesaj oluşturma için Gemini AI entegrasyonu
+- **Müşteri veritabanı**: Ziyaret geçmişi, satın alma kayıtları ve iletişim yönetimi ile tam CRM
+- **Analitik**: Teslimat takibi, açılma oranları ve kampanya performans metrikleri
+- **Rol tabanlı erişim**: Yönetici, müdür ve personel izin seviyeleri
 
 ## Etki
 
-- Turkiye genelinde birden fazla aktif isletmeye hizmet veriliyor
-- Her ay binlerce otomatik mesaj isleniyor
-- Musteriler icin musteri elde tutma oranlarinda olculebilir iyilesme
+- Türkiye genelinde birden fazla aktif işletmeye hizmet veriliyor
+- Her ay binlerce otomatik mesaj işleniyor
+- Müşteriler için müşteri elde tutma oranlarında ölçülebilir iyileşme

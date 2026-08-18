@@ -1,6 +1,6 @@
 ---
 title: "Quix"
-description: "Canli cok oyunculu destek, gercek zamanli WebSocket iletisimi ve modern monorepo mimarisi ile gercek zamanli interaktif bilgi yarismasi platformu."
+description: "Canlı çok oyunculu destek, gerçek zamanlı WebSocket iletişimi ve modern monorepo mimarisi ile gerçek zamanlı interaktif bilgi yarışması platformu."
 tags: ["Next.js", "Express.js", "WebSocket", "Real-time", "MongoDB"]
 type: "client"
 featured: true
@@ -8,23 +8,23 @@ order: 4
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Quix, canli cok oyunculu bilgi yarismasi oturumlarina olanak taniyan gercek zamanli interaktif bir bilgi yarismasi platformudur. Full-stack monorepo olarak insa edilen platform, kesintisiz gercek zamanli oyun deneyimi icin anlik WebSocket tabanli iletisim, modern React frontend ve saglam bir API backend icermektedir.
+Quix, canlı çok oyunculu bilgi yarışması oturumlarına olanak tanıyan gerçek zamanlı interaktif bir bilgi yarışması platformudur. Full-stack monorepo olarak inşa edilen platform, kesintisiz gerçek zamanlı oyun deneyimi için anlık WebSocket tabanlı iletişim, modern React frontend ve sağlam bir API backend içermektedir.
 
 ## Teknik Mimari
 
-Platform, paylasimli TypeScript paketleriyle Turborepo monorepo olarak insaa edilmistir:
+Platform, paylaşımlı TypeScript paketleriyle Turborepo monorepo olarak inşa edilmiştir:
 
-- **Frontend**: Next.js 15, React 19, Tailwind CSS ve veri cekme icin SWR
-- **Backend**: Express.js REST API, Mongoose, Pusher entegrasyonu ve Zod dogrulamasi
-- **Gercek zamanli**: Canli yarisma olaylari ve oyuncu senkronizasyonu icin Sockudo WebSocket sunucusu
-- **Paylasimli**: Tum uygulamalar arasinda ortak TypeScript tipleri, Zod semalari ve sabitler
-- **Altyapi**: Bun runtime ve statik varliklar icin Nginx ile Docker tabanli dagitim
+- **Frontend**: Next.js 15, React 19, Tailwind CSS ve veri çekme için SWR
+- **Backend**: Express.js REST API, Mongoose, Pusher entegrasyonu ve Zod doğrulaması
+- **Gerçek zamanlı**: Canlı yarışma olayları ve oyuncu senkronizasyonu için Sockudo WebSocket sunucusu
+- **Paylaşımlı**: Tüm uygulamalar arasında ortak TypeScript tipleri, Zod şemaları ve sabitler
+- **Altyapı**: Bun runtime ve statik varlıklar için Nginx ile Docker tabanlı dağıtım
 
-## Temel Ozellikler
+## Temel Özellikler
 
-- **Canli cok oyunculu yarisma**: Katilimcilar arasinda gercek zamanli soru dagitimi ve cevap toplama
-- **Anlik geri bildirim**: WebSocket destekli skor guncellemeleri ve siralamalar
-- **Yonetim paneli**: Yarisma olusturma, soru yonetimi ve oturum analizleri
-- **Olceklenebilir mimari**: Redis onbellekleme, MongoDB kaliciligi ve konteynerize mikroservisler
+- **Canlı çok oyunculu yarışma**: Katılımcılar arasında gerçek zamanlı soru dağıtımı ve cevap toplama
+- **Anlık geri bildirim**: WebSocket destekli skor güncellemeleri ve sıralamalar
+- **Yönetim paneli**: Yarışma oluşturma, soru yönetimi ve oturum analizleri
+- **Ölçeklenebilir mimari**: Redis önbellekleme, MongoDB kalıcılığı ve konteynerize mikroservisler

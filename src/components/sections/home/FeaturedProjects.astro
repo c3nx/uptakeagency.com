@@ -17,12 +17,12 @@ const projects = [
     title: "Estanbul AI Agent",
     description: locale === "en"
       ? "Multi-channel AI customer service agent handling inquiries across WhatsApp, web chat, and social media for a gaming entertainment company."
-      : "Oyun eglence sirketi icin WhatsApp, web sohbet ve sosyal medya uzerinden musterilere hizmet veren cok kanalli yapay zeka ajansi.",
+      : "Oyun eğlence şirketi için WhatsApp, web sohbet ve sosyal medya üzerinden müşterilere hizmet veren çok kanallı yapay zeka ajanı.",
     tags: ["AI", "LLM", "WhatsApp", "Multi-channel"],
-    type: locale === "en" ? "Client Work" : "Musteri Projesi",
+    type: locale === "en" ? "Client Work" : "Müşteri Projesi",
     metrics: [
-      { value: "70%", label: locale === "en" ? "faster response" : "daha hizli yanit" },
-      { value: "85%", label: locale === "en" ? "auto-resolved" : "otomatik cozum" },
+      { value: "70%", label: locale === "en" ? "faster response" : "daha hızlı yanıt" },
+      { value: "85%", label: locale === "en" ? "auto-resolved" : "otomatik çözüm" },
     ],
   },
   {
@@ -30,30 +30,30 @@ const projects = [
     title: "Quill",
     description: locale === "en"
       ? "AI-powered system-wide technical dictionary for macOS and Windows. Built with Swift and Rust/Tauri for native performance."
-      : "macOS ve Windows icin yapay zeka destekli sistem genelinde teknik sozluk. Yerel performans icin Swift ve Rust/Tauri ile gelistirildi.",
+      : "macOS ve Windows için yapay zeka destekli sistem genelinde teknik sözlük. Yerel performans için Swift ve Rust/Tauri ile geliştirildi.",
     tags: ["AI", "Swift", "Rust", "Tauri"],
     github: "https://github.com/nicepkg/quill",
-    type: locale === "en" ? "Open Source" : "Acik Kaynak",
+    type: locale === "en" ? "Open Source" : "Açık Kaynak",
   },
   {
     slug: "aru",
     title: "ARU",
     description: locale === "en"
       ? "WhatsApp Business Platform CRM and automation system. Appointment reminders, campaign management, and AI-powered messaging for SMBs."
-      : "WhatsApp Business Platform CRM ve otomasyon sistemi. Randevu hatirlatalari, kampanya yonetimi ve KOBIler icin yapay zeka destekli mesajlasma.",
+      : "WhatsApp Business Platform CRM ve otomasyon sistemi. Randevu hatırlatmaları, kampanya yönetimi ve KOBİ'ler için yapay zeka destekli mesajlaşma.",
     tags: ["WhatsApp API", "CRM", "AI", "SaaS"],
-    type: locale === "en" ? "Client Work" : "Musteri Projesi",
+    type: locale === "en" ? "Client Work" : "Müşteri Projesi",
   },
   {
     slug: "quix",
     title: "Quix",
     description: locale === "en"
       ? "Real-time interactive quiz platform with live multiplayer support, WebSocket communication, and a modern monorepo architecture."
-      : "Canli cok oyunculu destek, gercek zamanli WebSocket iletisimi ve modern monorepo mimarisi ile interaktif bilgi yarismasi platformu.",
+      : "Canlı çok oyunculu destek, gerçek zamanlı WebSocket iletişimi ve modern monorepo mimarisi ile interaktif bilgi yarışması platformu.",
     tags: ["Next.js", "Express.js", "WebSocket", "Real-time"],
-    type: locale === "en" ? "Client Work" : "Musteri Projesi",
+    type: locale === "en" ? "Client Work" : "Müşteri Projesi",
     metrics: [
-      { value: "<100ms", label: locale === "en" ? "response time" : "yanit suresi" },
+      { value: "<100ms", label: locale === "en" ? "response time" : "yanıt süresi" },
     ],
   },
   {
@@ -61,9 +61,9 @@ const projects = [
     title: "OEMBuilder",
     description: locale === "en"
       ? "B2B PC build visualization service for MSI. Generates photorealistic images of assembled PC builds from selected components using AI."
-      : "MSI icin B2B PC yapi gorsellistirme hizmeti. Yapay zeka kullanarak secilen bilesenlerden fotorealistik monte edilmis PC gorselleri uretir.",
+      : "MSI için B2B PC yapı görselleştirme hizmeti. Yapay zeka kullanarak seçilen bileşenlerden fotorealistik monte edilmiş PC görselleri üretir.",
     tags: ["AI", "Gemini", "Python", "FastAPI", "MSI"],
-    type: locale === "en" ? "Client Work" : "Musteri Projesi",
+    type: locale === "en" ? "Client Work" : "Müşteri Projesi",
   },
 ];
 ---
@@ -73,7 +73,7 @@ const projects = [
     <!-- Section header -->
     <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
       <div>
-        <p class="font-mono text-sm text-brand-400 mb-4">// {locale === "en" ? "production_outcomes" : "uretim_sonuclari"}</p>
+        <p class="font-mono text-sm text-brand-400 mb-4">// {locale === "en" ? "production_outcomes" : "üretim_sonuçları"}</p>
         <h2 class="text-headline font-bold tracking-tight text-text-primary sm:text-4xl">
           {i18n.projects.title}
         </h2>

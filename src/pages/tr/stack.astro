@@ -22,7 +22,7 @@ interface Category {
 const categories: Category[] = [
   {
     key: "diller_calisma_ortami",
-    label: "Diller & Calisma Ortami",
+    label: "Diller & Çalışma Ortamı",
     techs: [
       { name: "TypeScript", usage: "daily" },
       { name: "Python", usage: "frequent" },
@@ -63,7 +63,7 @@ const categories: Category[] = [
   },
   {
     key: "veritabanlari",
-    label: "Veritabanlari",
+    label: "Veritabanları",
     techs: [
       { name: "PostgreSQL", usage: "daily" },
       { name: "MongoDB", usage: "frequent" },
@@ -72,7 +72,7 @@ const categories: Category[] = [
   },
   {
     key: "altyapi",
-    label: "Altyapi",
+    label: "Altyapı",
     techs: [
       { name: "Docker", usage: "daily" },
       { name: "Kubernetes", usage: "frequent" },
@@ -83,7 +83,7 @@ const categories: Category[] = [
   },
   {
     key: "gercek_zamanli",
-    label: "Gercek Zamanli",
+    label: "Gerçek Zamanlı",
     techs: [
       { name: "WebSocket", usage: "frequent" },
       { name: "Sockudo", usage: "frequent" },
@@ -171,19 +171,19 @@ function getUsageLabel(usage: UsageLevel): string {
             <span class="inline-flex items-center rounded-full border bg-brand-500/20 text-brand-400 border-brand-500/30 px-3 py-1 text-xs font-medium">
               {i18n.stack.daily}
             </span>
-            <span class="text-sm text-text-muted">Temel araclar</span>
+            <span class="text-sm text-text-muted">Temel araçlar</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="inline-flex items-center rounded-full border bg-brand-400/10 text-brand-400/70 border-brand-400/20 px-3 py-1 text-xs font-medium">
               {i18n.stack.frequent}
             </span>
-            <span class="text-sm text-text-muted">Duzeli kullanim</span>
+            <span class="text-sm text-text-muted">Düzenli kullanım</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="inline-flex items-center rounded-full border bg-surface-overlay text-text-muted border-surface-border px-3 py-1 text-xs font-medium">
               {i18n.stack.occasional}
             </span>
-            <span class="text-sm text-text-muted">Projeye ozel</span>
+            <span class="text-sm text-text-muted">Projeye özel</span>
           </div>
         </div>
       </div>

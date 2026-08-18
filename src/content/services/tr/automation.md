@@ -1,26 +1,26 @@
 ---
 title: "Otomasyon & Entegrasyon"
-description: "Akilli otomasyon, CRM entegrasyonu ve cok kanalli iletisim platformlariyla operasyonlari optimize edin."
+description: "Akıllı otomasyon, CRM entegrasyonu ve çok kanallı iletişim platformlarıyla operasyonları optimize edin."
 icon: "cog"
 order: 3
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Manuel ve tekrarlayan surecler ekibinizin zamanini tuketiyor ve hatalara yol aciyor. Araclarinizi birbirine baglayan, verinizi yonlendiren ve operasyonlarinizi surekli insan mudahalesi olmadan devam ettiren otomasyon sistemleri tasarlayip hayata geciriyoruz.
+Manuel ve tekrarlayan süreçler ekibinizin zamanını tüketiyor ve hatalara yol açıyor. Araçlarınızı birbirine bağlayan, verinizi yönlendiren ve operasyonlarınızı sürekli insan müdahalesi olmadan devam ettiren otomasyon sistemleri tasarlayıp hayata geçiriyoruz.
 
-## Sundugumuz Hizmetler
+## Sunduğumuz Hizmetler
 
-- **Is Akisi Otomasyonu**: Sistemler arasinda onay, bildirim ve veri senkronizasyonunu yoneten tetikleyici tabanli pipeline'lar
-- **CRM Entegrasyonu**: CRM'iniz ile dis platformlar arasinda cift yonlu senkronizasyon — satis, destek, pazarlama
-- **WhatsApp Business API**: Musteri katilimi, islemsel bildirimler ve destek akislari icin programatik mesajlasma
-- **Cok Kanalli Mesajlasma**: E-posta, SMS, WhatsApp ve web sohbetini kapsayan birlesik iletisim altyapisi
+- **İş Akışı Otomasyonu**: Sistemler arasında onay, bildirim ve veri senkronizasyonunu yöneten tetikleyici tabanlı pipeline'lar
+- **CRM Entegrasyonu**: CRM'iniz ile dış platformlar arasında çift yönlü senkronizasyon — satış, destek, pazarlama
+- **WhatsApp Business API**: Müşteri katılımı, işlemsel bildirimler ve destek akışları için programatik mesajlaşma
+- **Çok Kanallı Mesajlaşma**: E-posta, SMS, WhatsApp ve web sohbetini kapsayan birleşik iletişim altyapısı
 
-## Entegrasyon Yaklasimimiz
+## Entegrasyon Yaklaşımımız
 
-Once mevcut arac zincirinizi haritalandiriyor, ardından hatalara karsi dayanikli ve idempotent entegrasyonlar tasarliyoruz. Her entegrasyon, sorunlarin hizlica ortaya cikmasi icin gunlukleme ve uyarilar iceriyor.
+Önce mevcut araç zincirinizi haritalandırıyor, ardından hatalara karşı dayanıklı ve idempotent entegrasyonlar tasarlıyoruz. Her entegrasyon, sorunların hızlıca ortaya çıkması için günlükleme ve uyarılar içeriyor.
 
-## Beklenen Sonuclar
+## Beklenen Sonuçlar
 
-Veri girisi icin harcanan daha az zaman, ekipler arasinda daha az kaybolan gorevler ve musterilerinizle yolculuklarinin her asamasinda tutarli iletisim.
+Veri girişi için harcanan daha az zaman, ekipler arasında daha az kaybolan görevler ve müşterilerinizle yolculuklarının her aşamasında tutarlı iletişim.

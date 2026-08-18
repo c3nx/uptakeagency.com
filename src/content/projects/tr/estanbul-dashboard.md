@@ -1,6 +1,6 @@
 ---
 title: "Estanbul Dashboard"
-description: "Personel takibi, vardiya yonetimi ve gercek zamanli operasyonel metrikler dahil oyun eglence mekan yonetimi icin kapsamli operasyon ve analitik panosu."
+description: "Personel takibi, vardiya yönetimi ve gerçek zamanlı operasyonel metrikler dahil oyun eğlence mekan yönetimi için kapsamlı operasyon ve analitik panosu."
 tags: ["Analytics", "Dashboard", "Real-time", "Operations", "HR"]
 type: "client"
 featured: false
@@ -8,30 +8,30 @@ order: 7
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Estanbul'un oyun eglence mekanlari icin gelistirilen kapsamli bir operasyon ve analitik panosu. Platform, mekan yonetimi, personel takibi ve is analizlerini tek bir gercek zamanli arayuzde merkezilestirerek yonetimin tum lokasyonlarda veriye dayali kararlar almasini saglar.
+Estanbul'un oyun eğlence mekanları için geliştirilen kapsamlı bir operasyon ve analitik panosu. Platform, mekan yönetimi, personel takibi ve iş analizlerini tek bir gerçek zamanlı arayüzde merkezileştirerek yönetimin tüm lokasyonlarda veriye dayalı kararlar almasını sağlar.
 
-## Temel Ozellikler
+## Temel Özellikler
 
-- **Personel takip sistemi**: Tum mekanlarda calisan devamlilik, giris/cikis ve calisma saati izleme
-- **Vardiya yonetimi**: Otomatik vardiya programlama, degisim talepleri ve fazla mesai takibi
-- **Gercek zamanli mekan analitikleri**: Mekan dolulugu, istasyon basina gelir ve musteri trafik desenleri hakkinda canli veriler
-- **Finansal raporlama**: Gunluk gelir dokumleri, gider takibi ve mekan/istasyon basina karlilik analizi
-- **Envanter yonetimi**: Oyun donanimi envanteri, bakim takvimleri ve degisim takibi
-- **Personel performansi**: Bireysel ve takim performans metrikleri, verimlilik analizi ve KPI panolari
-- **Coklu mekan destegi**: Detaya inme ozellikleriyle tum lokasyonlarin merkezilesmis gorunumu
+- **Personel takip sistemi**: Tüm mekanlarda çalışan devamlılık, giriş/çıkış ve çalışma saati izleme
+- **Vardiya yönetimi**: Otomatik vardiya programlama, değişim talepleri ve fazla mesai takibi
+- **Gerçek zamanlı mekan analitikleri**: Mekan doluluğu, istasyon başına gelir ve müşteri trafik desenleri hakkında canlı veriler
+- **Finansal raporlama**: Günlük gelir dökümleri, gider takibi ve mekan/istasyon başına kârlılık analizi
+- **Envanter yönetimi**: Oyun donanımı envanteri, bakım takvimleri ve değişim takibi
+- **Personel performansı**: Bireysel ve takım performans metrikleri, verimlilik analizi ve KPI panoları
+- **Çoklu mekan desteği**: Detaya inme özellikleriyle tüm lokasyonların merkezileşmiş görünümü
 
-## Personel Modulu
+## Personel Modülü
 
-Personel modulu, mekan operasyonlari icin eksiksiz IK yonetimi saglar:
+Personel modülü, mekan operasyonları için eksiksiz İK yönetimi sağlar:
 
-- Dogru zaman takibi icin biyometrik devamlilik entegrasyonu
-- Fazla mesai kurallariyla otomatik maas saati hesaplamalari
-- Onay is akislariyla izin yonetimi
-- Vardiya sablonlari ve rotasyon desenleriyle personel programlama
-- Performans degerlendirmeleri ve olay kaydi
+- Doğru zaman takibi için biyometrik devamlılık entegrasyonu
+- Fazla mesai kurallarıyla otomatik maaş saati hesaplamaları
+- Onay iş akışlarıyla izin yönetimi
+- Vardiya şablonları ve rotasyon desenleriyle personel programlama
+- Performans değerlendirmeleri ve olay kaydı
 
 ## Etki
 
-Birden fazla baglantisiz elektronik tablo ve manuel sureci birlesik bir platformla degistirerek, yonetim yukunu azaltti ve yonetime tum mekanlardaki operasyonlara gercek zamanli gorunurluk sagladi.
+Birden fazla bağlantısız elektronik tablo ve manuel süreci birleşik bir platformla değiştirerek, yönetim yükünü azalttı ve yönetime tüm mekanlardaki operasyonlara gerçek zamanlı görünürlük sağladı.

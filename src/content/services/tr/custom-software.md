@@ -1,26 +1,26 @@
 ---
-title: "Ozel Yazilim Gelistirme"
-description: "Is gereksinimlerinize ozel web uygulamalari, API'ler ve platformlarin full-stack gelistirilmesi."
+title: "Özel Yazılım Geliştirme"
+description: "İş gereksinimlerinize özel web uygulamaları, API'ler ve platformların full-stack geliştirilmesi."
 icon: "code-bracket"
 order: 2
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Sizi proseslere uydurmak yerine, proseslerinize uyan yazilim gelistiriyoruz. Ic araclardan musteri odakli platformlara kadar, ekibinizin sahip olabilecegi ve genisletebilecegi temiz, olceklenebilir kod teslim ediyoruz.
+Sizi proseslere uydurmak yerine, proseslerinize uyan yazılım geliştiriyoruz. İç araçlardan müşteri odaklı platformlara kadar, ekibinizin sahip olabileceği ve genişletebileceği temiz, ölçeklenebilir kod teslim ediyoruz.
 
-## Sundugumuz Hizmetler
+## Sunduğumuz Hizmetler
 
-- **Web Uygulamalari**: Guclu arka uc mantigiyla desteklenen duyarli, performansli on yuzler
-- **API'ler ve Entegrasyonlar**: Guvenilirlik ve gelistirici deneyimi icin tasarlanmis RESTful ve GraphQL API'leri
-- **Platformlar ve Panolar**: Operasyon, analitik ve yonetim icin veri odakli arayuzler
-- **Ucuncu Taraf Entegrasyonlari**: Sistemlerinizi odeme altyapilariniza, CRM'lere, ERP'lere ve iletisim araclarinaa baglama
+- **Web Uygulamaları**: Güçlü arka uç mantığıyla desteklenen duyarlı, performanslı ön yüzler
+- **API'ler ve Entegrasyonlar**: Güvenilirlik ve geliştirici deneyimi için tasarlanmış RESTful ve GraphQL API'leri
+- **Platformlar ve Panolar**: Operasyon, analitik ve yönetim için veri odaklı arayüzler
+- **Üçüncü Taraf Entegrasyonları**: Sistemlerinizi ödeme altyapılarınıza, CRM'lere, ERP'lere ve iletişim araçlarına bağlama
 
-## Teknoloji Yiginimiz
+## Teknoloji Yığınımız
 
-TypeScript, React, Next.js, Node.js, Python, PostgreSQL gibi modern ve kanitlanmis teknolojiler kullaniyoruz. Altyapi, konteyner tabanli dagitimlarla bulut saglayicilari uzerinde calisir.
+TypeScript, React, Next.js, Node.js, Python, PostgreSQL gibi modern ve kanıtlanmış teknolojiler kullanıyoruz. Altyapı, konteyner tabanlı dağıtımlarla bulut sağlayıcıları üzerinde çalışır.
 
-## Teslimat Sureci
+## Teslimat Süreci
 
-Kisa sprintler ve duzenli toplantilara gore calisiyoruz. Gereksinimler netlestikce yeniden onceliklendirme imkaniyla, calisir yazilimi erken ve sik gorursunuz.
+Kısa sprintler ve düzenli toplantılara göre çalışıyoruz. Gereksinimler netleştikçe yeniden önceliklendirme imkanıyla, çalışır yazılımı erken ve sık görürsünüz.

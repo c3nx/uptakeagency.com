@@ -1,6 +1,6 @@
 ---
 title: "Quill"
-description: "macOS ve Windows icin yapay zeka destekli sistem genelinde teknik sozluk. Yerel performans icin Swift ve Rust/Tauri ile gelistirildi."
+description: "macOS ve Windows için yapay zeka destekli sistem genelinde teknik sözlük. Yerel performans için Swift ve Rust/Tauri ile geliştirildi."
 tags: ["AI", "Swift", "Rust", "Tauri"]
 type: "open-source"
 github: "https://github.com/nicepkg/quill"
@@ -9,23 +9,23 @@ order: 2
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Quill, hem macOS hem de Windows icin kullanilabilen yapay zeka destekli sistem genelinde teknik sozluk uygulamasidir. Herhangi bir uygulamada teknik terimler icin aninda, baglama duyarli tanim ve aciklamalar sunar.
+Quill, hem macOS hem de Windows için kullanılabilen yapay zeka destekli sistem genelinde teknik sözlük uygulamasıdır. Herhangi bir uygulamada teknik terimler için anında, bağlama duyarlı tanım ve açıklamalar sunar.
 
-## Teknik Yapi
+## Teknik Yapı
 
-- **macOS**: Global kisayol tus aktivasyonu icin sistem API'lerinden yararlanan yerel Swift uygulamasi
-- **Windows**: Web tabanli arayuz ile neredeyse yerel performans icin Rust ve Tauri ile gelistirildi
-- **Yapay Zeka Arka Ucu**: Akilli, baglama duyarli tanimlar icin LLM entegrasyonu
+- **macOS**: Global kısayol tuş aktivasyonu için sistem API'lerinden yararlanan yerel Swift uygulaması
+- **Windows**: Web tabanlı arayüz ile neredeyse yerel performans için Rust ve Tauri ile geliştirildi
+- **Yapay Zeka Arka Ucu**: Akıllı, bağlama duyarlı tanımlar için LLM entegrasyonu
 
-## Temel Ozellikler
+## Temel Özellikler
 
-- **Sistem genelinde aktivasyon**: Global kisayol tus ile herhangi bir uygulamadan tanimlara erisim
-- **Baglama duyarli**: Daha alakali tanimlar icin secili metnin baglamini anlar
-- **Cevrimdisi kullanim**: Temel sozluk internet baglantisi olmadan da kullanilabilir
-- **Platformlar arasi**: macOS ve Windows genelinde tutarli deneyim
+- **Sistem genelinde aktivasyon**: Global kısayol tuşu ile herhangi bir uygulamadan tanımlara erişim
+- **Bağlama duyarlı**: Daha alakalı tanımlar için seçili metnin bağlamını anlar
+- **Çevrimdışı kullanım**: Temel sözlük internet bağlantısı olmadan da kullanılabilir
+- **Platformlar arası**: macOS ve Windows genelinde tutarlı deneyim
 
-## Acik Kaynak
+## Açık Kaynak
 
-Quill acik kaynak kodludur ve GitHub'da mevcuttur. Topluluk katkilarini memnuniyetle karsılıyoruz.
+Quill açık kaynak kodludur ve GitHub'da mevcuttur. Topluluk katkılarını memnuniyetle karşılıyoruz.

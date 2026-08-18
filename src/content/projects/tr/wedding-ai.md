@@ -1,6 +1,6 @@
 ---
 title: "Wedding AI Visualization"
-description: "Uretken yapay zeka kullanarak dugun gorsellistirme ve planlama icin yapay zeka destekli yaratici platform."
+description: "Üretken yapay zeka kullanarak düğün görselleştirme ve planlama için yapay zeka destekli yaratıcı platform."
 tags: ["AI", "Generative AI", "Creative", "Visualization"]
 type: "demo"
 featured: false
@@ -8,13 +8,13 @@ order: 9
 locale: "tr"
 ---
 
-## Genel Bakis
+## Genel Bakış
 
-Cifte dugun temaları, dekorasyonlar ve mekanları gorsellistirmek icin uretken yapay zekadan yararlanan yapay zeka destekli yaratici platformdur. Farkli dugun tarzi ve duzenlemelerinin gercekci onizlemelerini olusturun.
+Çifte düğün temalarını, dekorasyonları ve mekanları görselleştirmek için üretken yapay zekadan yararlanan yapay zeka destekli yaratıcı platformdur. Farklı düğün tarzı ve düzenlemelerinin gerçekçi önizlemelerini oluşturun.
 
-## Temel Ozellikler
+## Temel Özellikler
 
-- **Yapay zeka uretimi**: Metin aciklamalarindan gercekci dugun gorsellestirmeleri olusturma
-- **Stil kesfetme**: Farkli dugun estetiklerini gozatma ve yeniden duzenleme
-- **Mekan onizleme**: Bir mekanin farkli dekorasyonlarla nasil gorunecegini gorsellestirme
-- **Paylasılabilirlik**: Gorsellistirmeleri dugun planlamacilar ve tedarikcilarla disa aktarma ve paylasma
+- **Yapay zeka üretimi**: Metin açıklamalarından gerçekçi düğün görselleştirmeleri oluşturma
+- **Stil keşfetme**: Farklı düğün estetiklerini göz atma ve yeniden düzenleme
+- **Mekan önizleme**: Bir mekanın farklı dekorasyonlarla nasıl görüneceğini görselleştirme
+- **Paylaşılabilirlik**: Görselleştirmeleri düğün planlamacıları ve tedarikçilerle dışa aktarma ve paylaşma
