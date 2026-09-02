@@ -14,7 +14,7 @@ ARU, WhatsApp Business Platform üzerine kurulu kapsamlı bir CRM ve pazarlama o
 
 ## Sorun
 
-Türkiye'deki KOBİ'ler, bölgedeki en yaygın mesajlaşma platformu olan WhatsApp üzerinden müşteri iletişimini yönetmek için ücreti uygun ve kullanımı kolay bir platforma ihtiyaç duyuyordu. Mevcut çözümler ya çok karmaşıktı ya da WhatsApp entegrasyonundan yoksundu.
+Türkiye'deki KOBİ'ler, bölgedeki en yaygın mesajlaşma platformu olan WhatsApp üzerinden müşteri iletişimini yönetmek için uygun fiyatlı ve kullanımı kolay bir platforma ihtiyaç duyuyordu. Mevcut çözümler ya çok karmaşıktı ya da WhatsApp entegrasyonundan yoksundu.
 
 ## Temel Özellikler
 
