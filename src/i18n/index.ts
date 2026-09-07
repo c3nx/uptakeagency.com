@@ -17,6 +17,8 @@ export function t(locale: Locale): typeof en {
 export function getLocalizedPath(path: string, locale: Locale): string {
   const clean = path.startsWith("/") ? path : `/${path}`;
   if (locale === "en") return clean;
+  // kok path icin /tr/ degil /tr donmeli (trailing slash yok)
+  if (clean === "/") return "/tr";
   return `/tr${clean}`;
 }
 

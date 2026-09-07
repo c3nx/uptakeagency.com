@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://uptakeagency.com",
   output: "static",
+  trailingSlash: "never",
   integrations: [
     tailwind(),
     sitemap(),
