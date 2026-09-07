@@ -7,6 +7,9 @@ dist/
 # Astro
 .astro/
 
+# Wrangler
+.wrangler/
+
 # OS
 .DS_Store
 Thumbs.db
