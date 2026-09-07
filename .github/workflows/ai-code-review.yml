@@ -4,11 +4,15 @@ on:
   pull_request:
     branches: [main, master]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   review:
     uses: uptakeagency/.github/.github/workflows/ai-code-review.yml@main
     with:
       fail_on_critical: true
-      runs_on: 'self-hosted'
+      runs_on: 'ubuntu-latest'
     secrets:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_CI }}
