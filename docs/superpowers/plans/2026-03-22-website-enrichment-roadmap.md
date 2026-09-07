@@ -4,7 +4,7 @@
 
 **Goal:** Transform uptakeagency.com from a basic portfolio site into a comprehensive, conversion-optimized agency presence with rich content, social proof, and interactive elements.
 
-**Architecture:** Astro 5 static site, Tailwind CSS dark theme, Content Collections (Zod schemas), i18n (EN/TR), deployed via Docker/Nginx.
+**Architecture:** Astro 5 static site, Tailwind CSS dark theme, Content Collections (Zod schemas), i18n (EN/TR), deployed via Cloudflare Workers static assets (GitHub Actions on push to main).
 
 **Tech Stack:** Astro, TypeScript, Tailwind CSS, Content Collections (Markdown), JSON-LD, Plausible Analytics, Cal.com, Resend
 
