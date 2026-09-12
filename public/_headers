@@ -6,3 +6,8 @@
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Demo/örnek ürün görselleri: dış uygulamalar tarayıcıdan fetch ile çeker, CORS şart
+/samples/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
