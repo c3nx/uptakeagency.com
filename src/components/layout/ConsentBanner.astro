@@ -17,12 +17,13 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
 ---
 
 {/* Varsayılan gizli: JS kapalıysa bant da GA de yok */}
+{/* Kutu biçimi yalnız genişlik>=640 VE yükseklik>=500 iken (bkz. tailwind.config.mjs "box" ekranı); aksi halde alttaki tam genişlik şerit kalır */}
 <div
   data-consent-banner
   role="region"
   aria-labelledby="consent-banner-title"
   aria-describedby="consent-banner-description"
-  class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur sm:inset-x-auto sm:bottom-5 sm:left-5 sm:w-[26rem] sm:rounded-xl sm:border sm:shadow-lg"
+  class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur box:inset-x-auto box:bottom-5 box:left-5 box:w-[26rem] box:max-w-[calc(100vw-2.5rem)] box:rounded-xl box:border box:shadow-lg"
 >
   <div class="flex flex-col gap-4 px-4 py-4 sm:px-6">
     <div class="min-w-0">
