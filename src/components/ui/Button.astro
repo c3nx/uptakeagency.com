@@ -4,6 +4,9 @@ interface Props {
   variant?: "primary" | "secondary" | "ghost" | "inverse";
   size?: "sm" | "md" | "lg";
   class?: string;
+  type?: "button" | "submit" | "reset";
+  // Yalnızca data-* nitelikleri serbest, gerisi tip denetimine tabi
+  [key: `data-${string}`]: string | boolean | undefined;
 }
 
 const {
@@ -11,6 +14,7 @@ const {
   variant = "primary",
   size = "md",
   class: className = "",
+  ...rest
 } = Astro.props;
 
 const Tag = href ? "a" : "button";
@@ -34,6 +38,7 @@ const sizes = {
 <Tag
   href={href}
   class:list={[baseStyles, variants[variant], sizes[size], className]}
+  {...rest}
 >
   <slot />
 </Tag>
