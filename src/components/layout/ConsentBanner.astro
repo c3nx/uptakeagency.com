@@ -54,7 +54,7 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
       </Button>
       <Button
         type="button"
-        variant="primary"
+        variant="secondary"
         size="md"
         class="w-full sm:w-auto"
         data-consent-accept
@@ -98,6 +98,8 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
   });
 
   banner?.querySelector("[data-consent-reject]")?.addEventListener("click", () => {
+    // Sıra önemli: disableAnalytics sayfayı yeniden yükleyebilir,
+    // tercih ondan önce yazılmış olmalı ki yeni sayfa "denied" okusun
     storeConsent("denied");
     disableAnalytics();
     hideBanner();

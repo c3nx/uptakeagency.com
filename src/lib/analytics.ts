@@ -118,14 +118,17 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     doc.head.appendChild(script);
   }
 
-  // Onay geri alındı: aynı sayfada da ölçüm durur, çerezler silinir
+  // Onay geri alındı: çerezler silinir ve sayfa Google kodu olmadan yeniden yüklenir.
+  // Yüklenmiş gtag.js'i yerinde susturmak güvenilir değil: gerçek tarayıcı ölçümünde
+  // ga-disable true iken bile reddetmeden saniyeler sonra collect isteği gitti.
   function disableAnalytics(): void {
     pushConsentDefaults();
     consentGranted = false;
-    // Önce kapat: bundan sonra gtag.js yüklü olsa bile istek gitmez
     setGaDisabled(true);
     gtag("consent", "update", toConsentModeState("denied"));
     clearGaCookies();
+    // gtag bu sayfada hiç yüklenmediyse yeniden yüklemeye gerek yok
+    if (gtagLoaded) win.location.reload();
   }
 
   // Sayfa açılışında kayıtlı tercihi uygular, tercih yoksa hiçbir şey yüklenmez

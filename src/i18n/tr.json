@@ -102,7 +102,7 @@
   "consent": {
     "aria_label": "Çerez onayı",
     "title": "Analitik çerezleri",
-    "description": "Bu sitenin nasıl kullanıldığını anlamak için Google Analytics kullanmak istiyoruz. Yalnızca kabul ederseniz yüklenir. Her iki durumda da reklam çerezi kullanılmaz, reklam kişiselleştirmesi yapılmaz.",
+    "description": "Sitenin nasıl kullanıldığını anlamak için Google Analytics kullanmak istiyoruz. Yalnızca kabul ederseniz yüklenir, reklam çerezi kullanılmaz.",
     "accept": "Kabul et",
     "reject": "Reddet",
     "privacy_link": "Gizlilik Politikası",
