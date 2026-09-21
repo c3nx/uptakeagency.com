@@ -64,14 +64,15 @@ const locale = "tr";
     <li><strong>Meta Platforms / WhatsApp:</strong> Telefon numaraları ve mesaj içerikleri, mesajları teslim etmek için WhatsApp Business Cloud API üzerinden iletilir. Meta'nın gizlilik politikası, platformlarında işlenen veriler için geçerlidir.</li>
     <li><strong>Google (Gemini API):</strong> Kişiselleştirilmiş mesaj şablonları oluşturmak için Google'ın Gemini AI'sini kullanıyoruz. Yalnızca anonimleştirilmiş bağlamsal bilgiler (hizmet türü, zamanlama) yapay zekaya gönderilir; mesaj oluşturma için Google ile kişisel olarak tanımlanabilir müşteri bilgisi paylaşılmaz.</li>
     <li><strong>Google (Google Analytics):</strong> Yalnızca ve yalnızca bu web sitesinde onay verirseniz, Google Analytics 4 ziyaretinize dair site kullanım verilerini alır. Tam olarak neyin toplandığı ve onayın nasıl geri alınacağı için Bölüm 13'e bakınız.</li>
-    <li><strong>Google (Google Fonts):</strong> Bu web sitesi yazı tiplerini Google'ın font sunucularından yükler; bu nedenle her sayfa görüntülemesinde IP adresiniz ve temel tarayıcı bilgileriniz Google'a ulaşır. Çerez oluşturulmaz, profil çıkarılmaz. Bkz. Bölüm 13.3.</li>
+    <li><strong>Google (Google Fonts):</strong> Bu web sitesi yazı tiplerini Google'ın font sunucularından yükler; bu nedenle her sayfa görüntülemesinde IP adresiniz ve temel tarayıcı bilgileriniz Google'a ulaşır. Çerez oluşturulmaz, profil çıkarılmaz. Bkz. Bölüm 13.4.</li>
+    <li><strong>Cloudflare:</strong> Bu web sitesi Cloudflare üzerinde barındırılır; Cloudflare ayrıca toplu trafik istatistikleri için sayfalara çerezsiz bir ölçüm betiği ekler. Bkz. Bölüm 13.3.</li>
     <li><strong>Müşteri işletmeleri:</strong> Müşteri verileri ve iletişim raporları, müşteri ilişkisine sahip işletme tarafından erişilebilir.</li>
     <li><strong>Altyapı sağlayıcıları:</strong> Platformumuz kendi yönettiğimiz altyapıda barındırılıyor. Veritabanı yedekleri şifrelenmiştir.</li>
   </ul>
   <p>Kişisel verileri hiçbir üçüncü tarafa <strong>satmıyoruz</strong>, kiralamıyoruz veya lisanslamıyoruz. Kişisel verileri yukarıda açıklanan hizmetlerle ilgisi olmayan reklam, profilleme veya amaçlar için <strong>kullanmıyoruz</strong>.</p>
 
   <h2>7. Uluslararası Veri Transferleri</h2>
-  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si, Google'ın Gemini API'si, Google Fonts (bkz. Bölüm 13.3) ve onay vermeniz halinde Google Analytics (bkz. Bölüm 13) kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
+  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si, Google'ın Gemini API'si, Google Fonts (bkz. Bölüm 13.4) ve onay vermeniz halinde Google Analytics (bkz. Bölüm 13) kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
 
   <h2>8. Veri Saklama</h2>
   <ul>
@@ -150,10 +151,13 @@ const locale = "tr";
   <h3>13.2 Plausible Analytics, çerez yok ve kişi bazlı izleme yok</h3>
   <p>Bu web sitesi ayrıca toplu trafik istatistikleri için Plausible Analytics kullanır. Plausible hiçbir çerez oluşturmaz, cihazınızda hiçbir şey saklamaz, size kalıcı bir kimlik atamaz ve sizi ne siteler arasında ne de oturumlar arasında takip edebilir. Profil değil sayı üretir; bu nedenle onay sorulmadan çalışır.</p>
 
-  <h3>13.3 Google Fonts</h3>
+  <h3>13.3 Cloudflare Web Analytics, çerez yok ve kişi bazlı izleme yok</h3>
+  <p>Bu web sitesi Cloudflare üzerinde barındırılır. Cloudflare, toplu trafik ve sayfa performansı istatistikleri üretmek için bu siteden sunulan sayfalara küçük bir ölçüm betiği ekler. Bu betik çerez oluşturmaz, cihazınızda hiçbir şey saklamaz ve sizi siteler ya da oturumlar arasında takip etmez; bu nedenle onay bandına bağlı değildir.</p>
+
+  <h3>13.4 Google Fonts</h3>
   <p>Bu web sitesi yazı tiplerini (Inter ve JetBrains Mono) her sayfada Google'ın font sunucularından yükler. Font dosyalarının teslimi için tarayıcınız <code>fonts.googleapis.com</code> ve <code>fonts.gstatic.com</code> adreslerine bağlanır ve bu sırada IP adresinizi ve temel tarayıcı bilgilerinizi Google'a iletir. Bu nedenle hiçbir çerez oluşturulmaz, bundan analitik ya da reklam profili çıkarılmaz. Yazı tipleri sayfanın görüntülenmesi için gerekli olduğundan bu yükleme çerez bandına bağlı değildir, analitik tercihiniz ne olursa olsun gerçekleşir.</p>
 
-  <h3>13.4 Kullanmadıklarımız</h3>
+  <h3>13.5 Kullanmadıklarımız</h3>
   <p>Ne bu web sitesinde ne de platformumuzda reklam pikseli, reklam ağları için yeniden pazarlama veya dönüşüm etiketi, siteler arası izleme çerezi ya da sizi birey olarak profilleyen herhangi bir araç kullanmıyoruz.</p>
 
   <h2>14. Bu Politikadaki Değişiklikler</h2>
