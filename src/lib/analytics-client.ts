@@ -17,3 +17,4 @@ export const disableAnalytics = analytics.disableAnalytics;
 export const applyStoredConsent = analytics.applyStoredConsent;
 export const trackEvent = analytics.trackEvent;
 export const initMailtoTracking = analytics.initMailtoTracking;
+export const initConsentSync = analytics.initConsentSync;

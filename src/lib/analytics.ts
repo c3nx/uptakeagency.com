@@ -21,14 +21,18 @@ export interface AnalyticsEnv {
   measurementId: string;
 }
 
+// Onay başka bir sekmede ya da bfcache dönüşünde değiştiğinde çağrılır, DOM işi bileşende kalır
+export type ConsentChangeHandler = (choice: ConsentChoice | null) => void;
+
 export interface Analytics {
   readStoredConsent(): ConsentChoice | null;
-  storeConsent(choice: ConsentChoice): void;
+  storeConsent(choice: ConsentChoice): boolean;
   enableAnalytics(): void;
   disableAnalytics(): void;
   applyStoredConsent(): ConsentChoice | null;
   trackEvent(name: string, params?: Record<string, string>): void;
   initMailtoTracking(): void;
+  initConsentSync(onConsentChanged: ConsentChangeHandler): void;
 }
 
 export function createAnalytics({ window: win, document: doc, measurementId }: AnalyticsEnv): Analytics {
@@ -66,12 +70,20 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     }
   }
 
-  function storeConsent(choice: ConsentChoice): void {
+  // Yazımı geri okuyarak doğrular. Tutmadıysa kaydı silmeye çalışır: kayıt yok = onay yok.
+  function storeConsent(choice: ConsentChoice): boolean {
     try {
       win.localStorage.setItem(CONSENT_STORAGE_KEY, choice);
     } catch {
-      // Depolama kapalı: tercih kalıcı olmaz, oturum içinde geçerli kalır
+      // Yazılamadı, aşağıdaki doğrulama yakalar
     }
+    if (readStoredConsent() === choice) return true;
+    try {
+      win.localStorage.removeItem(CONSENT_STORAGE_KEY);
+    } catch {
+      // Silinemedi de: eski kayıt yerinde kalır, çağıran buna göre davranır
+    }
+    return false;
   }
 
   // GA çerezlerini alan adı ve yol varyantlarıyla siler
@@ -122,13 +134,33 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
   // Yüklenmiş gtag.js'i yerinde susturmak güvenilir değil: gerçek tarayıcı ölçümünde
   // ga-disable true iken bile reddetmeden saniyeler sonra collect isteği gitti.
   function disableAnalytics(): void {
-    pushConsentDefaults();
     consentGranted = false;
     setGaDisabled(true);
-    gtag("consent", "update", toConsentModeState("denied"));
-    clearGaCookies();
+    // Temizlik en iyi çaba: hatası kritik adım olan yeniden yüklemeyi engellemesin
+    try {
+      pushConsentDefaults();
+      gtag("consent", "update", toConsentModeState("denied"));
+    } catch {
+      // dataLayer yazılamadı
+    }
+    try {
+      clearGaCookies();
+    } catch {
+      // Çerez silinemedi
+    }
     // gtag bu sayfada hiç yüklenmediyse yeniden yüklemeye gerek yok
-    if (gtagLoaded) win.location.reload();
+    if (!gtagLoaded) return;
+    // Kayıt hâlâ granted okunuyorsa yeniden yükleme ölçümü geri açardı
+    if (readStoredConsent() === "granted") return;
+    win.location.reload();
+  }
+
+  // Onay bu belge dışında geri alındı: kapıları kapat, gtag yüklüyse temiz sayfaya dön
+  function revokeInThisDocument(): void {
+    consentGranted = false;
+    if (!gtagLoaded) return;
+    setGaDisabled(true);
+    win.location.reload();
   }
 
   // Sayfa açılışında kayıtlı tercihi uygular, tercih yoksa hiçbir şey yüklenmez
@@ -159,6 +191,30 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     });
   }
 
+  // Diğer sekmeler ve bfcache dönüşü ile onayı uzlaştırır
+  function initConsentSync(onConsentChanged: ConsentChangeHandler): void {
+    win.addEventListener("storage", (event) => {
+      // key null: storage.clear(). Başka anahtarlar bizi ilgilendirmiyor.
+      if (event.key !== null && event.key !== CONSENT_STORAGE_KEY) return;
+      const nextChoice =
+        event.key === null ? readStoredConsent() : parseStoredConsent(event.newValue);
+      onConsentChanged(nextChoice);
+      // Kabul yönünde otomatik yükleme yok: bu sekmede kullanıcı eylemi olmadan Google kodu gelmez
+      if (nextChoice !== "granted") revokeInThisDocument();
+    });
+
+    win.addEventListener("pageshow", (event) => {
+      if (!event.persisted) return;
+      const choice = readStoredConsent();
+      onConsentChanged(choice);
+      if (choice !== "granted") {
+        revokeInThisDocument();
+        return;
+      }
+      if (!gtagLoaded) enableAnalytics();
+    });
+  }
+
   return {
     readStoredConsent,
     storeConsent,
@@ -167,5 +223,6 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     applyStoredConsent,
     trackEvent,
     initMailtoTracking,
+    initConsentSync,
   };
 }
