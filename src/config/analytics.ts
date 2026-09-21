@@ -1,5 +1,5 @@
 // GA4 ölçüm kimliği. Gerçek değer buraya elle yazılır, fallback/varsayılan YOK.
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-QRRBT37JQ3";
 
 const GA_MEASUREMENT_ID_PATTERN = /^G-[A-Z0-9]{6,}$/;
 
