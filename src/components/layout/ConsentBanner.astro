@@ -22,11 +22,9 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
   role="region"
   aria-labelledby="consent-banner-title"
   aria-describedby="consent-banner-description"
-  class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur"
+  class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur sm:inset-x-auto sm:bottom-5 sm:left-5 sm:w-[26rem] sm:rounded-xl sm:border sm:shadow-lg"
 >
-  <div
-    class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8"
-  >
+  <div class="flex flex-col gap-4 px-4 py-4 sm:px-6">
     <div class="min-w-0">
       <p
         id="consent-banner-title"
@@ -46,13 +44,13 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
         </a>
       </p>
     </div>
-    {/* 320px'de iki buton yan yana ve eşit genişlikte, sm ve üstünde satır içi */}
-    <div class="grid grid-cols-2 gap-3 sm:flex sm:flex-row lg:shrink-0">
+    {/* Düğmeler her genişlikte grid-cols-2: eşit genişlik, yan yana */}
+    <div class="grid grid-cols-2 gap-3">
       <Button
         type="button"
         variant="secondary"
         size="md"
-        class="w-full sm:w-auto"
+        class="w-full"
         data-consent-reject
       >
         {i18n.consent.reject}
@@ -61,7 +59,7 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
         type="button"
         variant="secondary"
         size="md"
-        class="w-full sm:w-auto"
+        class="w-full"
         data-consent-accept
       >
         {i18n.consent.accept}
