@@ -64,13 +64,14 @@ const locale = "tr";
     <li><strong>Meta Platforms / WhatsApp:</strong> Telefon numaraları ve mesaj içerikleri, mesajları teslim etmek için WhatsApp Business Cloud API üzerinden iletilir. Meta'nın gizlilik politikası, platformlarında işlenen veriler için geçerlidir.</li>
     <li><strong>Google (Gemini API):</strong> Kişiselleştirilmiş mesaj şablonları oluşturmak için Google'ın Gemini AI'sini kullanıyoruz. Yalnızca anonimleştirilmiş bağlamsal bilgiler (hizmet türü, zamanlama) yapay zekaya gönderilir; mesaj oluşturma için Google ile kişisel olarak tanımlanabilir müşteri bilgisi paylaşılmaz.</li>
     <li><strong>Google (Google Analytics):</strong> Yalnızca ve yalnızca bu web sitesinde onay verirseniz, Google Analytics 4 ziyaretinize dair site kullanım verilerini alır. Tam olarak neyin toplandığı ve onayın nasıl geri alınacağı için Bölüm 13'e bakınız.</li>
+    <li><strong>Google (Google Fonts):</strong> Bu web sitesi yazı tiplerini Google'ın font sunucularından yükler; bu nedenle her sayfa görüntülemesinde IP adresiniz ve temel tarayıcı bilgileriniz Google'a ulaşır. Çerez oluşturulmaz, profil çıkarılmaz. Bkz. Bölüm 13.3.</li>
     <li><strong>Müşteri işletmeleri:</strong> Müşteri verileri ve iletişim raporları, müşteri ilişkisine sahip işletme tarafından erişilebilir.</li>
     <li><strong>Altyapı sağlayıcıları:</strong> Platformumuz kendi yönettiğimiz altyapıda barındırılıyor. Veritabanı yedekleri şifrelenmiştir.</li>
   </ul>
   <p>Kişisel verileri hiçbir üçüncü tarafa <strong>satmıyoruz</strong>, kiralamıyoruz veya lisanslamıyoruz. Kişisel verileri yukarıda açıklanan hizmetlerle ilgisi olmayan reklam, profilleme veya amaçlar için <strong>kullanmıyoruz</strong>.</p>
 
   <h2>7. Uluslararası Veri Transferleri</h2>
-  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si, Google'ın Gemini API'si ve onay vermeniz halinde Google Analytics (bkz. Bölüm 13) kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
+  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si, Google'ın Gemini API'si, Google Fonts (bkz. Bölüm 13.3) ve onay vermeniz halinde Google Analytics (bkz. Bölüm 13) kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
 
   <h2>8. Veri Saklama</h2>
   <ul>
@@ -125,7 +126,7 @@ const locale = "tr";
   <p>SaaS platformumuz (ARU) yalnızca kimlik doğrulama ve oturum yönetimi için temel çerezler kullanır. Bu bölümün geri kalanı, şu anda okuduğunuz uptakeagency.com web sitesini anlatır.</p>
 
   <h3>13.1 Google Analytics 4, yalnızca onayınızla yüklenir</h3>
-  <p>Bu web sitesinin nasıl kullanıldığını anlamak için Google Analytics 4 (GA4) kullanıyoruz. <strong>GA4 yalnızca siz açıkça kabul ettikten sonra yüklenir.</strong> Çerez bandındaki "Kabul et" seçeneğini işaretlemediğiniz sürece Google'a hiçbir istek gönderilmez, hiçbir Google script'i indirilmez ve hiçbir analitik çerezi oluşturulmaz. "Reddet" derseniz ya da bandı hiç yanıtlamazsanız da hiçbir şey yüklenmez ve Google'a hiçbir şey gitmez. Daha önce kabul edip sonra cevabınızı "Reddet" olarak değiştirirseniz GA4 çerezleri silinir ve sayfa Google kodu olmadan yeniden yüklenir; bu andan sonraki hiçbir etkileşiminiz ölçülmez.</p>
+  <p>Bu web sitesinin nasıl kullanıldığını anlamak için Google Analytics 4 (GA4) kullanıyoruz. <strong>GA4 yalnızca siz açıkça kabul ettikten sonra yüklenir.</strong> Çerez bandındaki "Kabul et" seçeneğini işaretlemediğiniz sürece Google Analytics'e hiçbir istek gönderilmez, Google Analytics kodu indirilmez ve hiçbir analitik çerezi oluşturulmaz. "Reddet" derseniz ya da bandı hiç yanıtlamazsanız da Google Analytics kodu yüklenmez ve Google Analytics'e hiçbir şey gitmez. (Bu yalnızca analitik içindir. Site, yazı tiplerini tercihiniz ne olursa olsun her sayfada Google Fonts'tan yükler; bkz. 13.3.) Daha önce kabul edip sonra cevabınızı "Reddet" olarak değiştirirseniz GA4 çerezleri silinir ve sayfa Google Analytics kodu olmadan yeniden yüklenir; bu andan sonraki hiçbir etkileşiminiz ölçülmez.</p>
   <p>Kabul etmeniz halinde GA4, bu web sitesindeki ziyaretinize dair şunları toplar:</p>
   <ul>
     <li><strong>Sayfa görüntülemeleri:</strong> bu sitenin hangi sayfalarını ne zaman açtığınız</li>
@@ -133,22 +134,26 @@ const locale = "tr";
     <li><strong>Cihaz ve tarayıcı bilgisi:</strong> cihaz türü, işletim sistemi, tarayıcı, ekran boyutu, dil</li>
     <li><strong>Yönlendiren kaynak:</strong> sizi buraya getiren web sitesi, arama motoru veya kampanya bağlantısı</li>
     <li><strong>GA4'ün otomatik etkileşim ölçümleri:</strong> sayfanın sonuna kadar kaydırma, site dışına giden bağlantı tıklamaları, dosya indirmeleri ve formla etkileşimin başlaması veya gönderilmesi. Bu ölçümler yalnızca eylemin gerçekleştiğini kaydeder; form alanlarına yazdığınız içerik gönderilmez.</li>
-    <li><strong>Bizim tanımladığımız iki olay:</strong> iletişim formunun başarıyla gönderilmesi (<code>generate_lead</code>) ve bir e-posta bağlantısına tıklanması (<code>contact_email_click</code>). Bu olaylar yalnızca eylemin gerçekleştiğini ve sitenin hangi sayfasında gerçekleştiğini kaydeder. Adınız, e-posta adresiniz ve mesajınızın içeriği Google'a hiçbir zaman gönderilmez.</li>
+    <li><strong>Bizim tanımladığımız iki olay:</strong> iletişim formunun başarıyla gönderilmesi (<code>generate_lead</code>) ve bir e-posta bağlantısına tıklanması (<code>contact_email_click</code>). Bu olaylar yalnızca eylemin gerçekleştiğini ve sitenin hangi sayfasında gerçekleştiğini kaydeder. Form alanlarına girdiğiniz ad, e-posta ve mesaj GA4'e aktarılmaz; yalnızca formun başarıyla gönderildiği bilgisi kaydedilir.</li>
   </ul>
   <p>Onayınızla birlikte GA4 tarayıcınızda şu çerezleri saklar:</p>
   <ul>
     <li><strong>_ga</strong>: tekrar eden ziyaretlerin iki kez sayılmaması için bir tarayıcıyı diğerinden ayırt eder. Oluşturulduktan 2 yıl sonra sona erer.</li>
     <li><strong>_ga_&lt;ölçüm kimliği&gt;</strong>: bu mülke ait analitik oturum durumunu tutar. Oluşturulduktan 2 yıl sonra sona erer.</li>
   </ul>
+  <p><strong>GA4 verileri ne kadar saklar.</strong> Google Analytics'te kullanıcı ve olay düzeyindeki veriler en fazla 14 ay saklanır, sonra otomatik olarak silinir. Birey düzeyinde veri içermeyen toplu raporlar bu sürenin dışındadır.</p>
   <p><strong>Reklam yok.</strong> Reklam yayınlamıyoruz; reklam çerezi, yeniden pazarlama etiketi, reklam pikseli, Google Signals veya reklam kişiselleştirmesi kullanmıyoruz. Google'ın onay ayarlarında reklam depolaması, reklam kullanıcı verisi ve reklam kişiselleştirmesi her durumda "reddedildi" konumunda tutulur; analitiği kabul etmeniz bunu değiştirmez. Kabul yalnızca analitik depolamasını açar.</p>
   <p><strong>Hizmet sağlayıcı ve yurt dışına aktarım.</strong> Analitik hizmet sağlayıcısı Google'dır (Google LLC ve bağlı şirketleri). GA4 tarafından toplanan veriler Türkiye dışındaki ve Avrupa Ekonomik Alanı dışındaki sunuculara aktarılabilir ve buralarda işlenebilir; bu aktarımlar Bölüm 7'de anlatılan güvencelere tabidir.</p>
   <p><strong>Hukuki dayanak.</strong> Açık rızanız. Dayanak, Kişisel Verilerin Korunması Kanunu (KVKK) ve geçerli olduğu durumlarda GDPR madde 6(1)(a) uyarınca açık rızadır. GA4'ü yüklememizin tek dayanağı budur ve rızanızı geri almanın size hiçbir maliyeti yoktur.</p>
-  <p><strong>Onayı geri alma.</strong> Sitedeki herhangi bir sayfanın altbilgisinde yer alan "Çerez tercihleri" bağlantısını kullanın. Bu bağlantı onay bandını yeniden açar, böylece cevabınızı istediğiniz zaman değiştirebilirsiniz. Kabulden redde geçerseniz tarayıcınızdaki <code>_ga</code> ve <code>_ga_&lt;ölçüm kimliği&gt;</code> çerezleri silinir ve sayfa Google kodu olmadan yeniden yüklenir. Bu andan sonraki hiçbir etkileşiminiz ölçülmez, sonrasında ziyaret ettiğiniz hiçbir sayfada da GA4 yüklenmez. Tek bir ayrıntıyı açıkça söyleyelim: onayınız hâlâ geçerliyken yapmış olduğunuz etkileşimlerin Google'a gönderimi, yeniden yüklemeden önce tamamlanmış olabilir.</p>
+  <p><strong>Onayı geri alma.</strong> Sayfaların altbilgisinde yer alan "Çerez tercihleri" bağlantısını kullanın. Bu bağlantı onay bandını yeniden açar, böylece cevabınızı istediğiniz zaman değiştirebilirsiniz. Kabulden redde geçerseniz tarayıcınızdaki <code>_ga</code> ve <code>_ga_&lt;ölçüm kimliği&gt;</code> çerezleri silinir ve sayfa Google Analytics kodu olmadan yeniden yüklenir. Bu andan sonraki hiçbir etkileşiminiz ölçülmez, sonrasında ziyaret ettiğiniz hiçbir sayfada da GA4 yüklenmez. Tek bir ayrıntıyı açıkça söyleyelim: onayınız hâlâ geçerliyken yapmış olduğunuz etkileşimlerin Google Analytics'e gönderimi, yeniden yüklemeden önce tamamlanmış olabilir.</p>
 
   <h3>13.2 Plausible Analytics, çerez yok ve kişi bazlı izleme yok</h3>
   <p>Bu web sitesi ayrıca toplu trafik istatistikleri için Plausible Analytics kullanır. Plausible hiçbir çerez oluşturmaz, cihazınızda hiçbir şey saklamaz, size kalıcı bir kimlik atamaz ve sizi ne siteler arasında ne de oturumlar arasında takip edebilir. Profil değil sayı üretir; bu nedenle onay sorulmadan çalışır.</p>
 
-  <h3>13.3 Kullanmadıklarımız</h3>
+  <h3>13.3 Google Fonts</h3>
+  <p>Bu web sitesi yazı tiplerini (Inter ve JetBrains Mono) her sayfada Google'ın font sunucularından yükler. Font dosyalarının teslimi için tarayıcınız <code>fonts.googleapis.com</code> ve <code>fonts.gstatic.com</code> adreslerine bağlanır ve bu sırada IP adresinizi ve temel tarayıcı bilgilerinizi Google'a iletir. Bu nedenle hiçbir çerez oluşturulmaz, bundan analitik ya da reklam profili çıkarılmaz. Yazı tipleri sayfanın görüntülenmesi için gerekli olduğundan bu yükleme çerez bandına bağlı değildir, analitik tercihiniz ne olursa olsun gerçekleşir.</p>
+
+  <h3>13.4 Kullanmadıklarımız</h3>
   <p>Ne bu web sitesinde ne de platformumuzda reklam pikseli, reklam ağları için yeniden pazarlama veya dönüşüm etiketi, siteler arası izleme çerezi ya da sizi birey olarak profilleyen herhangi bir araç kullanmıyoruz.</p>
 
   <h2>14. Bu Politikadaki Değişiklikler</h2>

@@ -64,13 +64,14 @@ const locale = "en";
     <li><strong>Meta Platforms / WhatsApp:</strong> Phone numbers and message content are transmitted through the WhatsApp Business Cloud API to deliver messages. Meta's privacy policy applies to data processed on their platform.</li>
     <li><strong>Google (Gemini API):</strong> We use Google's Gemini AI to generate personalized message templates. Only anonymized context (service type, timing) is sent to the AI; no personally identifiable customer information is shared with Google for message generation.</li>
     <li><strong>Google (Google Analytics):</strong> If, and only if, you give consent on this website, Google Analytics 4 receives website usage data about your visit. See Section 13 for exactly what is collected and how to withdraw consent.</li>
+    <li><strong>Google (Google Fonts):</strong> This website loads its typefaces from Google's font servers, so your IP address and basic browser information reach Google on every page view. No cookie is set and no profile is built. See Section 13.3.</li>
     <li><strong>Client businesses:</strong> Customer data and communication reports are accessible to the business that owns the customer relationship.</li>
     <li><strong>Infrastructure providers:</strong> Our platform is hosted on self-managed infrastructure. Database backups are encrypted.</li>
   </ul>
   <p>We do <strong>not</strong> sell, rent, or license personal data to any third party. We do <strong>not</strong> use personal data for advertising, profiling, or purposes unrelated to the services described above.</p>
 
   <h2>7. International Data Transfers</h2>
-  <p>Personal data may be transferred to and processed in countries outside of Turkey as part of using Meta's WhatsApp Business API, Google's Gemini API, and, where you have consented to it, Google Analytics (see Section 13). These transfers are subject to appropriate safeguards as required by applicable data protection laws, including the Turkish Personal Data Protection Law (KVKK).</p>
+  <p>Personal data may be transferred to and processed in countries outside of Turkey as part of using Meta's WhatsApp Business API, Google's Gemini API, Google Fonts (see Section 13.3), and, where you have consented to it, Google Analytics (see Section 13). These transfers are subject to appropriate safeguards as required by applicable data protection laws, including the Turkish Personal Data Protection Law (KVKK).</p>
 
   <h2>8. Data Retention</h2>
   <ul>
@@ -125,7 +126,7 @@ const locale = "en";
   <p>Our SaaS platform (ARU) uses essential cookies for authentication and session management only. The rest of this section describes the uptakeagency.com website you are reading right now.</p>
 
   <h3>13.1 Google Analytics 4, loaded only with your consent</h3>
-  <p>We use Google Analytics 4 (GA4) to understand how this website is used. <strong>GA4 is loaded only after you explicitly accept it.</strong> Until you choose "Accept" in the cookie banner, no request of any kind is sent to Google, no Google script is downloaded, and no analytics cookie is created. If you choose "Reject", or if you simply ignore the banner, nothing is loaded and nothing is sent to Google. If you accepted earlier and later change your answer to "Reject", the GA4 cookies are deleted and the page is reloaded without any Google code, so none of your interactions from that point on are measured.</p>
+  <p>We use Google Analytics 4 (GA4) to understand how this website is used. <strong>GA4 is loaded only after you explicitly accept it.</strong> Until you choose "Accept" in the cookie banner, no request is sent to Google Analytics, no Google Analytics code is downloaded, and no analytics cookie is created. If you choose "Reject", or if you simply ignore the banner, no Google Analytics code is loaded and nothing is sent to Google Analytics. (This is about analytics only. The site loads its fonts from Google Fonts on every page regardless of your choice; see 13.3.) If you accepted earlier and later change your answer to "Reject", the GA4 cookies are deleted and the page is reloaded without any Google Analytics code, so none of your interactions from that point on are measured.</p>
   <p>If you accept, GA4 collects the following about your visit to this website:</p>
   <ul>
     <li><strong>Page views:</strong> which pages of this site you open, and when</li>
@@ -133,22 +134,26 @@ const locale = "en";
     <li><strong>Device and browser information:</strong> device type, operating system, browser, screen size, language</li>
     <li><strong>Referring source:</strong> the website, search engine, or campaign link that brought you here</li>
     <li><strong>GA4's automatic interaction measurement:</strong> scrolling to the bottom of a page, clicks on links that lead away from this site, file downloads, and starting or submitting a form. These measurements record only that the action happened; what you type into form fields is not sent.</li>
-    <li><strong>Two events we defined ourselves:</strong> a successful contact form submission (<code>generate_lead</code>) and a click on an email link (<code>contact_email_click</code>). These events record only that the action happened and on which page of the site. Your name, your email address, and the contents of your message are never sent to Google.</li>
+    <li><strong>Two events we defined ourselves:</strong> a successful contact form submission (<code>generate_lead</code>) and a click on an email link (<code>contact_email_click</code>). These events record only that the action happened and on which page of the site. The name, email address, and message you type into the form are not passed to GA4; only the fact that the form was submitted successfully is recorded.</li>
   </ul>
   <p>With your consent, GA4 stores the following cookies in your browser:</p>
   <ul>
     <li><strong>_ga</strong>: distinguishes one browser from another so that returning visits are not counted twice. Expires 2 years after it is set.</li>
     <li><strong>_ga_&lt;measurement id&gt;</strong>: keeps the analytics session state for this specific property. Expires 2 years after it is set.</li>
   </ul>
+  <p><strong>How long GA4 keeps the data.</strong> In Google Analytics, user level and event level data is retained for at most 14 months and then deleted automatically. Aggregate reports, which contain no individual level data, are not subject to that limit.</p>
   <p><strong>No advertising.</strong> We do not run ads, and we do not use advertising cookies, remarketing tags, advertising pixels, Google Signals, or ad personalisation. In Google's consent settings, advertising storage, advertising user data, and ad personalisation are kept at "denied" at all times, including after you accept analytics. Accepting only turns on analytics storage.</p>
   <p><strong>Service provider and international transfer.</strong> The analytics service provider is Google (Google LLC and its affiliates). Data collected by GA4 may be transferred to and processed on servers outside Turkey and outside the European Economic Area, subject to the safeguards described in Section 7.</p>
   <p><strong>Legal basis.</strong> Your explicit consent, under the Turkish Personal Data Protection Law (KVKK) and, where applicable, Article 6(1)(a) of the GDPR. Consent is the only basis on which we load GA4, and withdrawing it costs you nothing.</p>
-  <p><strong>Withdrawing consent.</strong> Use the "Cookie preferences" link in the footer of any page on this site. It reopens the consent banner so you can change your answer at any time. If you switch from accept to reject, the <code>_ga</code> and <code>_ga_&lt;measurement id&gt;</code> cookies are deleted from your browser and the page is reloaded without any Google code. From that moment on, none of your interactions are measured and GA4 is not loaded again on any page you visit afterwards. To be precise about one detail: interactions you had already made while your consent was still valid may have finished being sent to Google before the reload.</p>
+  <p><strong>Withdrawing consent.</strong> Use the "Cookie preferences" link in the footer of the site's pages. It reopens the consent banner so you can change your answer at any time. If you switch from accept to reject, the <code>_ga</code> and <code>_ga_&lt;measurement id&gt;</code> cookies are deleted from your browser and the page is reloaded without any Google Analytics code. From that moment on, none of your interactions are measured and GA4 is not loaded again on any page you visit afterwards. To be precise about one detail: interactions you had already made while your consent was still valid may have finished being sent to Google Analytics before the reload.</p>
 
   <h3>13.2 Plausible Analytics, no cookies and no personal tracking</h3>
   <p>This website also uses Plausible Analytics for aggregate traffic statistics. Plausible sets no cookies, stores nothing on your device, assigns no persistent identifier to you, and cannot follow you across websites or across sessions. It produces counts, not profiles, which is why it runs without a consent prompt.</p>
 
-  <h3>13.3 What we do not use</h3>
+  <h3>13.3 Google Fonts</h3>
+  <p>This website loads its typefaces (Inter and JetBrains Mono) from Google's font servers on every page. To deliver the font files, your browser connects to <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>, and in doing so it passes your IP address and basic browser information to Google. No cookie is set by this, and no analytics or advertising profile is built from it. Because the fonts are needed to render the page itself, this is not tied to the cookie banner and happens whatever your analytics choice is.</p>
+
+  <h3>13.4 What we do not use</h3>
   <p>We do not use advertising pixels, remarketing or conversion tags for ad networks, cross-site tracking cookies, or any tool that builds a profile of you as an individual, on this website or on our platform.</p>
 
   <h2>14. Changes to This Policy</h2>
