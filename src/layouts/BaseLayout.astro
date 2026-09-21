@@ -26,7 +26,7 @@ const { title, description, locale, canonicalPath, ogImage } = Astro.props;
     />
   </head>
   <body class="min-h-screen bg-surface text-text-primary font-sans antialiased">
-    <!-- Konum fixed bottom, görünüm değişmez; DOM'da başta olması klavye erişimi için -->
+    {/* Konum fixed bottom, görünüm değişmez; DOM'da başta olması klavye erişimi için */}
     <ConsentBanner locale={locale} />
     <slot />
   </body>
