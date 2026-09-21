@@ -11,7 +11,7 @@ const locale = "tr";
   canonicalPath="/privacy-policy"
 >
   <h1>Gizlilik Politikası</h1>
-  <p class="text-text-secondary">Son güncelleme: 14 Mart 2026</p>
+  <p class="text-text-secondary">Son güncelleme: 21 Eylül 2026</p>
 
   <h2>1. Biz Kimiz</h2>
   <p>Uptake Agency ("biz", "bize", "bizim"), Türkiye merkezli, işletmeler için pazarlama otomasyonu ve müşteri ilişkileri yönetimi (CRM) platformları geliştiren ve işleten bir dijital ajanstır. Ana ürünümüz ARU, işletmelerin WhatsApp Business Platform üzerinden müşteri iletişimlerini yönetmelerine yardımcı olan bir SaaS platformudur.</p>
@@ -63,13 +63,14 @@ const locale = "tr";
   <ul>
     <li><strong>Meta Platforms / WhatsApp:</strong> Telefon numaraları ve mesaj içerikleri, mesajları teslim etmek için WhatsApp Business Cloud API üzerinden iletilir. Meta'nın gizlilik politikası, platformlarında işlenen veriler için geçerlidir.</li>
     <li><strong>Google (Gemini API):</strong> Kişiselleştirilmiş mesaj şablonları oluşturmak için Google'ın Gemini AI'sini kullanıyoruz. Yalnızca anonimleştirilmiş bağlamsal bilgiler (hizmet türü, zamanlama) yapay zekaya gönderilir; mesaj oluşturma için Google ile kişisel olarak tanımlanabilir müşteri bilgisi paylaşılmaz.</li>
+    <li><strong>Google (Google Analytics):</strong> Yalnızca ve yalnızca bu web sitesinde onay verirseniz, Google Analytics 4 ziyaretinize dair site kullanım verilerini alır. Tam olarak neyin toplandığı ve onayın nasıl geri alınacağı için Bölüm 13'e bakınız.</li>
     <li><strong>Müşteri işletmeleri:</strong> Müşteri verileri ve iletişim raporları, müşteri ilişkisine sahip işletme tarafından erişilebilir.</li>
     <li><strong>Altyapı sağlayıcıları:</strong> Platformumuz kendi yönettiğimiz altyapıda barındırılıyor. Veritabanı yedekleri şifrelenmiştir.</li>
   </ul>
   <p>Kişisel verileri hiçbir üçüncü tarafa <strong>satmıyoruz</strong>, kiralamıyoruz veya lisanslamıyoruz. Kişisel verileri yukarıda açıklanan hizmetlerle ilgisi olmayan reklam, profilleme veya amaçlar için <strong>kullanmıyoruz</strong>.</p>
 
   <h2>7. Uluslararası Veri Transferleri</h2>
-  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si ve Google'ın Gemini API'sinin kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
+  <p>Kişisel veriler, Meta'nın WhatsApp Business API'si, Google'ın Gemini API'si ve onay vermeniz halinde Google Analytics (bkz. Bölüm 13) kullanımı kapsamında Türkiye dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu transferler, Türk Kişisel Verilerin Korunması Kanunu (KVKK) dahil olmak üzere yürürlükteki veri koruma yasalarının gerektirdiği uygun güvencelere tabidir.</p>
 
   <h2>8. Veri Saklama</h2>
   <ul>
@@ -121,7 +122,33 @@ const locale = "tr";
   </ul>
 
   <h2>13. Çerezler ve İzleme</h2>
-  <p>Web platformumuz yalnızca kimlik doğrulama ve oturum yönetimi için temel çerezler kullanır. Üçüncü taraf izleme çerezleri, reklam pikselleri veya bireysel kullanıcıları izleyen analiz araçları kullanmıyoruz.</p>
+  <p>SaaS platformumuz (ARU) yalnızca kimlik doğrulama ve oturum yönetimi için temel çerezler kullanır. Bu bölümün geri kalanı, şu anda okuduğunuz uptakeagency.com web sitesini anlatır.</p>
+
+  <h3>13.1 Google Analytics 4, yalnızca onayınızla yüklenir</h3>
+  <p>Bu web sitesinin nasıl kullanıldığını anlamak için Google Analytics 4 (GA4) kullanıyoruz. <strong>GA4 yalnızca siz açıkça kabul ettikten sonra yüklenir.</strong> Çerez bandındaki "Kabul et" seçeneğini işaretlemediğiniz sürece Google'a hiçbir istek gönderilmez, hiçbir Google script'i indirilmez ve hiçbir analitik çerezi oluşturulmaz. "Reddet" derseniz ya da bandı hiç yanıtlamazsanız da hiçbir şey yüklenmez ve Google'a hiçbir şey gitmez.</p>
+  <p>Kabul etmeniz halinde GA4, bu web sitesindeki ziyaretinize dair şunları toplar:</p>
+  <ul>
+    <li><strong>Sayfa görüntülemeleri:</strong> bu sitenin hangi sayfalarını ne zaman açtığınız</li>
+    <li><strong>Yaklaşık konum:</strong> IP adresinizden türetilen ülke ve bölge düzeyinde bilgi</li>
+    <li><strong>Cihaz ve tarayıcı bilgisi:</strong> cihaz türü, işletim sistemi, tarayıcı, ekran boyutu, dil</li>
+    <li><strong>Yönlendiren kaynak:</strong> sizi buraya getiren web sitesi, arama motoru veya kampanya bağlantısı</li>
+    <li><strong>İki etkileşim olayı:</strong> iletişim formunun başarıyla gönderilmesi (<code>generate_lead</code>) ve bir e-posta bağlantısına tıklanması (<code>contact_email_click</code>). Bu olaylar yalnızca eylemin gerçekleştiğini ve sitenin hangi sayfasında gerçekleştiğini kaydeder. Adınız, e-posta adresiniz ve mesajınızın içeriği Google'a hiçbir zaman gönderilmez.</li>
+  </ul>
+  <p>Onayınızla birlikte GA4 tarayıcınızda şu çerezleri saklar:</p>
+  <ul>
+    <li><strong>_ga</strong>: tekrar eden ziyaretlerin iki kez sayılmaması için bir tarayıcıyı diğerinden ayırt eder. Oluşturulduktan 2 yıl sonra sona erer.</li>
+    <li><strong>_ga_&lt;ölçüm kimliği&gt;</strong>: bu mülke ait analitik oturum durumunu tutar. Oluşturulduktan 2 yıl sonra sona erer.</li>
+  </ul>
+  <p><strong>Reklam yok.</strong> Reklam yayınlamıyoruz; reklam çerezi, yeniden pazarlama etiketi, reklam pikseli, Google Signals veya reklam kişiselleştirmesi kullanmıyoruz. Google'ın onay ayarlarında reklam depolaması, reklam kullanıcı verisi ve reklam kişiselleştirmesi her durumda "reddedildi" konumunda tutulur; analitiği kabul etmeniz bunu değiştirmez. Kabul yalnızca analitik depolamasını açar.</p>
+  <p><strong>Hizmet sağlayıcı ve yurt dışına aktarım.</strong> Analitik hizmet sağlayıcısı Google'dır (Google Ireland Limited, alt işleyen olarak Google LLC). GA4 tarafından toplanan veriler Türkiye dışındaki ve Avrupa Ekonomik Alanı dışındaki sunuculara aktarılabilir ve buralarda işlenebilir; bu aktarımlar Bölüm 7'de anlatılan güvencelere tabidir.</p>
+  <p><strong>Hukuki dayanak.</strong> Açık rızanız. Dayanak, Kişisel Verilerin Korunması Kanunu (KVKK) ve geçerli olduğu durumlarda GDPR madde 6(1)(a) uyarınca açık rızadır. GA4'ü yüklememizin tek dayanağı budur ve rızanızı geri almanın size hiçbir maliyeti yoktur.</p>
+  <p><strong>Onayı geri alma.</strong> Sitedeki herhangi bir sayfanın altbilgisinde yer alan "Çerez tercihleri" bağlantısını kullanın. Bu bağlantı onay bandını yeniden açar, böylece cevabınızı istediğiniz zaman değiştirebilirsiniz. Kabulden redde geçerseniz geri almayı anında Google'a bildiririz, tarayıcınızdaki <code>_ga</code> ve <code>_ga_&lt;ölçüm kimliği&gt;</code> çerezlerini sileriz ve sonrasında ziyaret ettiğiniz hiçbir sayfada GA4 yüklenmez.</p>
+
+  <h3>13.2 Plausible Analytics, çerez yok ve kişi bazlı izleme yok</h3>
+  <p>Bu web sitesi ayrıca toplu trafik istatistikleri için Plausible Analytics kullanır. Plausible hiçbir çerez oluşturmaz, cihazınızda hiçbir şey saklamaz, size kalıcı bir kimlik atamaz ve sizi ne siteler arasında ne de oturumlar arasında takip edebilir. Profil değil sayı üretir; bu nedenle onay sorulmadan çalışır.</p>
+
+  <h3>13.3 Hiçbir zaman yapmadıklarımız</h3>
+  <p>Ne bu web sitesinde ne de platformumuzda reklam pikseli, reklam ağları için yeniden pazarlama veya dönüşüm etiketi, etiket yöneticisi, siteler arası izleme çerezi ya da sizi birey olarak profilleyen herhangi bir araç kullanmıyoruz.</p>
 
   <h2>14. Bu Politikadaki Değişiklikler</h2>
   <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Bu sayfanın üstündeki "Son güncelleme" tarihi, politikanın en son ne zaman revize edildiğini gösterir. Bu politikayı düzenli olarak gözden geçirmenizi öneririz.</p>

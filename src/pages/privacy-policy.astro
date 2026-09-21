@@ -11,7 +11,7 @@ const locale = "en";
   canonicalPath="/privacy-policy"
 >
   <h1>Privacy Policy</h1>
-  <p class="text-text-secondary">Last updated: March 14, 2026</p>
+  <p class="text-text-secondary">Last updated: September 21, 2026</p>
 
   <h2>1. Who We Are</h2>
   <p>Uptake Agency ("we", "us", "our") is a digital agency based in Turkey that builds and operates marketing automation and customer relationship management (CRM) platforms for businesses. Our primary product, ARU, is a SaaS platform that helps businesses manage customer communications through the WhatsApp Business Platform.</p>
@@ -63,13 +63,14 @@ const locale = "en";
   <ul>
     <li><strong>Meta Platforms / WhatsApp:</strong> Phone numbers and message content are transmitted through the WhatsApp Business Cloud API to deliver messages. Meta's privacy policy applies to data processed on their platform.</li>
     <li><strong>Google (Gemini API):</strong> We use Google's Gemini AI to generate personalized message templates. Only anonymized context (service type, timing) is sent to the AI; no personally identifiable customer information is shared with Google for message generation.</li>
+    <li><strong>Google (Google Analytics):</strong> If, and only if, you give consent on this website, Google Analytics 4 receives website usage data about your visit. See Section 13 for exactly what is collected and how to withdraw consent.</li>
     <li><strong>Client businesses:</strong> Customer data and communication reports are accessible to the business that owns the customer relationship.</li>
     <li><strong>Infrastructure providers:</strong> Our platform is hosted on self-managed infrastructure. Database backups are encrypted.</li>
   </ul>
   <p>We do <strong>not</strong> sell, rent, or license personal data to any third party. We do <strong>not</strong> use personal data for advertising, profiling, or purposes unrelated to the services described above.</p>
 
   <h2>7. International Data Transfers</h2>
-  <p>Personal data may be transferred to and processed in countries outside of Turkey as part of using Meta's WhatsApp Business API and Google's Gemini API. These transfers are subject to appropriate safeguards as required by applicable data protection laws, including the Turkish Personal Data Protection Law (KVKK).</p>
+  <p>Personal data may be transferred to and processed in countries outside of Turkey as part of using Meta's WhatsApp Business API, Google's Gemini API, and, where you have consented to it, Google Analytics (see Section 13). These transfers are subject to appropriate safeguards as required by applicable data protection laws, including the Turkish Personal Data Protection Law (KVKK).</p>
 
   <h2>8. Data Retention</h2>
   <ul>
@@ -121,7 +122,33 @@ const locale = "en";
   </ul>
 
   <h2>13. Cookies and Tracking</h2>
-  <p>Our web platform uses essential cookies for authentication and session management only. We do not use third-party tracking cookies, advertising pixels, or analytics tools that track individual users.</p>
+  <p>Our SaaS platform (ARU) uses essential cookies for authentication and session management only. The rest of this section describes the uptakeagency.com website you are reading right now.</p>
+
+  <h3>13.1 Google Analytics 4, loaded only with your consent</h3>
+  <p>We use Google Analytics 4 (GA4) to understand how this website is used. <strong>GA4 is loaded only after you explicitly accept it.</strong> Until you choose "Accept" in the cookie banner, no request of any kind is sent to Google, no Google script is downloaded, and no analytics cookie is created. If you choose "Reject", or if you simply ignore the banner, nothing is loaded and nothing is sent to Google.</p>
+  <p>If you accept, GA4 collects the following about your visit to this website:</p>
+  <ul>
+    <li><strong>Page views:</strong> which pages of this site you open, and when</li>
+    <li><strong>Approximate location:</strong> country and region level, derived from your IP address</li>
+    <li><strong>Device and browser information:</strong> device type, operating system, browser, screen size, language</li>
+    <li><strong>Referring source:</strong> the website, search engine, or campaign link that brought you here</li>
+    <li><strong>Two interaction events:</strong> a successful contact form submission (<code>generate_lead</code>) and a click on an email link (<code>contact_email_click</code>). These events record only that the action happened and on which page of the site. Your name, your email address, and the contents of your message are never sent to Google.</li>
+  </ul>
+  <p>With your consent, GA4 stores the following cookies in your browser:</p>
+  <ul>
+    <li><strong>_ga</strong>: distinguishes one browser from another so that returning visits are not counted twice. Expires 2 years after it is set.</li>
+    <li><strong>_ga_&lt;measurement id&gt;</strong>: keeps the analytics session state for this specific property. Expires 2 years after it is set.</li>
+  </ul>
+  <p><strong>No advertising.</strong> We do not run ads, and we do not use advertising cookies, remarketing tags, advertising pixels, Google Signals, or ad personalisation. In Google's consent settings, advertising storage, advertising user data, and ad personalisation are kept at "denied" at all times, including after you accept analytics. Accepting only turns on analytics storage.</p>
+  <p><strong>Service provider and international transfer.</strong> The analytics service provider is Google (Google Ireland Limited, with Google LLC as a sub-processor). Data collected by GA4 may be transferred to and processed on servers outside Turkey and outside the European Economic Area, subject to the safeguards described in Section 7.</p>
+  <p><strong>Legal basis.</strong> Your explicit consent, under the Turkish Personal Data Protection Law (KVKK) and, where applicable, Article 6(1)(a) of the GDPR. Consent is the only basis on which we load GA4, and withdrawing it costs you nothing.</p>
+  <p><strong>Withdrawing consent.</strong> Use the "Cookie preferences" link in the footer of any page on this site. It reopens the consent banner so you can change your answer at any time. If you switch from accept to reject, we immediately signal the withdrawal to Google, delete the <code>_ga</code> and <code>_ga_&lt;measurement id&gt;</code> cookies from your browser, and GA4 is no longer loaded on any page you visit afterwards.</p>
+
+  <h3>13.2 Plausible Analytics, no cookies and no personal tracking</h3>
+  <p>This website also uses Plausible Analytics for aggregate traffic statistics. Plausible sets no cookies, stores nothing on your device, assigns no persistent identifier to you, and cannot follow you across websites or across sessions. It produces counts, not profiles, which is why it runs without a consent prompt.</p>
+
+  <h3>13.3 What we never do</h3>
+  <p>We do not use advertising pixels, remarketing or conversion tags for ad networks, tag managers, cross-site tracking cookies, or any tool that builds a profile of you as an individual, on this website or on our platform.</p>
 
   <h2>14. Changes to This Policy</h2>
   <p>We may update this privacy policy from time to time. The "Last updated" date at the top of this page indicates when the policy was last revised. We encourage you to review this policy periodically.</p>
