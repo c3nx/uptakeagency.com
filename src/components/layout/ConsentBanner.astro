@@ -20,19 +20,23 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
 <div
   data-consent-banner
   role="region"
-  aria-label={i18n.consent.aria_label}
-  tabindex="-1"
+  aria-labelledby="consent-banner-title"
+  aria-describedby="consent-banner-description"
   class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur"
 >
   <div
     class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8"
   >
     <div class="min-w-0">
-      <p class="font-mono text-sm font-semibold text-text-primary">
+      <p
+        id="consent-banner-title"
+        tabindex="-1"
+        class="font-mono text-sm font-semibold text-text-primary focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2 focus:ring-offset-surface-raised rounded-sm"
+      >
         <span class="text-brand-400">//</span>
         {i18n.consent.title}
       </p>
-      <p class="mt-1 text-sm leading-relaxed text-text-secondary">
+      <p id="consent-banner-description" class="mt-1 text-sm leading-relaxed text-text-secondary">
         {i18n.consent.description}{" "}
         <a
           href={privacyHref}
@@ -42,7 +46,8 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
         </a>
       </p>
     </div>
-    <div class="flex flex-col gap-3 sm:flex-row lg:shrink-0">
+    <!-- 320px'de iki buton yan yana ve eşit genişlikte, sm ve üstünde satır içi -->
+    <div class="grid grid-cols-2 gap-3 sm:flex sm:flex-row lg:shrink-0">
       <Button
         type="button"
         variant="secondary"
@@ -70,26 +75,35 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
     applyStoredConsent,
     disableAnalytics,
     enableAnalytics,
+    initConsentSync,
     initMailtoTracking,
+    readStoredConsent,
     storeConsent,
   } from "@/lib/analytics-client";
 
   const banner = document.querySelector<HTMLElement>("[data-consent-banner]");
+  const title = document.getElementById("consent-banner-title");
+  // Bandı yeniden açan buton, kapanınca odak ona döner
+  let opener: HTMLElement | null = null;
 
-  function showBanner(moveFocus: boolean) {
+  function showBanner(source: HTMLElement | null) {
     if (!banner) return;
+    opener = source;
     banner.classList.remove("hidden");
-    if (moveFocus) banner.focus();
+    if (source) title?.focus();
   }
 
-  function hideBanner() {
-    banner?.classList.add("hidden");
+  function hideBanner(returnFocus = true) {
+    if (!banner) return;
+    banner.classList.add("hidden");
+    if (returnFocus) opener?.focus();
+    opener = null;
   }
 
   // Kayıtlı tercih yoksa GA yüklenmez, bant gösterilir
   const storedChoice = applyStoredConsent();
   initMailtoTracking();
-  if (storedChoice === null) showBanner(false);
+  if (storedChoice === null) showBanner(null);
 
   banner?.querySelector("[data-consent-accept]")?.addEventListener("click", () => {
     storeConsent("granted");
@@ -109,7 +123,22 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
   document.addEventListener("click", (event) => {
     const target = event.target;
     if (!(target instanceof Element)) return;
-    if (!target.closest("[data-consent-reopen]")) return;
-    showBanner(true);
+    const reopener = target.closest<HTMLElement>("[data-consent-reopen]");
+    if (!reopener) return;
+    showBanner(reopener);
+  });
+
+  // Escape yalnızca kayıtlı tercih varken kapatır, ilk ziyarette bant kapanmaz
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    if (!banner || banner.classList.contains("hidden")) return;
+    if (readStoredConsent() === null) return;
+    hideBanner();
+  });
+
+  // Diğer sekmeler ve bfcache dönüşü ile uzlaştır, odağı çalma
+  initConsentSync((choice) => {
+    if (choice === null) showBanner(null);
+    else hideBanner(false);
   });
 </script>
