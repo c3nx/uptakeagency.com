@@ -56,6 +56,8 @@ const i18n = t(locale);
 </form>
 
 <script>
+  import { trackEvent } from "@/lib/analytics-client";
+
   document.querySelectorAll<HTMLFormElement>("[data-contact-form]").forEach((form) => {
     const status = form.querySelector<HTMLElement>("[data-form-status]")!;
     const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
@@ -78,6 +80,8 @@ const i18n = t(locale);
         form.reset();
         status.className = "rounded-lg px-4 py-3 text-sm bg-green-500/10 text-green-400 border border-green-500/30";
         status.textContent = form.dataset.success!;
+        // Yalnizca basari dalinda, kisisel veri parametresi yok
+        trackEvent("generate_lead", { method: "contact_form" });
       } catch {
         status.className = "rounded-lg px-4 py-3 text-sm bg-red-500/10 text-red-400 border border-red-500/30";
         status.textContent = form.dataset.error!;

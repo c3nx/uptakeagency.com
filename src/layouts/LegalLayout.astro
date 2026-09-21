@@ -52,7 +52,7 @@ const i18n = t(locale);
         <p class="text-sm text-text-secondary">
           &copy; {new Date().getFullYear()} Uptake Agency. {i18n.footer.rights}
         </p>
-        <div class="flex gap-6">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <a
             href={getLocalizedPath("/privacy-policy", locale)}
             class="text-sm text-text-secondary hover:text-text-primary transition-colors"
@@ -71,6 +71,14 @@ const i18n = t(locale);
           >
             {i18n.footer.data_deletion}
           </a>
+          <!-- Gizlilik politikasi "footer'daki baglanti" diyor: legal sayfalarda da bulunmali -->
+          <button
+            type="button"
+            data-consent-reopen
+            class="rounded-sm text-sm text-text-secondary transition-colors hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2 focus:ring-offset-surface"
+          >
+            {i18n.consent.manage}
+          </button>
         </div>
       </div>
     </Container>

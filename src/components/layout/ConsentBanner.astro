@@ -1,0 +1,113 @@
+---
+import Button from "@/components/ui/Button.astro";
+import { GA_MEASUREMENT_ID, assertGaMeasurementId } from "@/config/analytics";
+import { getLocalizedPath, t } from "@/i18n";
+
+interface Props {
+  locale: "en" | "tr";
+}
+
+const { locale } = Astro.props;
+const i18n = t(locale);
+
+// Build sirasinda dogrula: gecersiz kimlikle derleme durur
+assertGaMeasurementId(GA_MEASUREMENT_ID);
+
+const privacyHref = getLocalizedPath("/privacy-policy", locale);
+---
+
+<!-- Varsayilan gizli: JS kapaliysa bant da GA de yok -->
+<div
+  data-consent-banner
+  role="region"
+  aria-label={i18n.consent.aria_label}
+  tabindex="-1"
+  class="hidden fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-y-auto border-t border-surface-border bg-surface-raised/95 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8"
+  >
+    <div class="min-w-0">
+      <p class="font-mono text-sm font-semibold text-text-primary">
+        <span class="text-brand-400">//</span>
+        {i18n.consent.title}
+      </p>
+      <p class="mt-1 text-sm leading-relaxed text-text-secondary">
+        {i18n.consent.description}{" "}
+        <a
+          href={privacyHref}
+          class="rounded-sm text-brand-400 underline underline-offset-2 transition-colors hover:text-brand-300 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:ring-offset-2 focus:ring-offset-surface-raised"
+        >
+          {i18n.consent.privacy_link}
+        </a>
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 sm:flex-row lg:shrink-0">
+      <Button
+        type="button"
+        variant="secondary"
+        size="md"
+        class="w-full sm:w-auto"
+        data-consent-reject
+      >
+        {i18n.consent.reject}
+      </Button>
+      <Button
+        type="button"
+        variant="primary"
+        size="md"
+        class="w-full sm:w-auto"
+        data-consent-accept
+      >
+        {i18n.consent.accept}
+      </Button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {
+    applyStoredConsent,
+    disableAnalytics,
+    enableAnalytics,
+    initMailtoTracking,
+    storeConsent,
+  } from "@/lib/analytics-client";
+
+  const banner = document.querySelector<HTMLElement>("[data-consent-banner]");
+
+  function showBanner(moveFocus: boolean) {
+    if (!banner) return;
+    banner.classList.remove("hidden");
+    if (moveFocus) banner.focus();
+  }
+
+  function hideBanner() {
+    banner?.classList.add("hidden");
+  }
+
+  // Kayitli tercih yoksa GA yuklenmez, bant gosterilir
+  const storedChoice = applyStoredConsent();
+  initMailtoTracking();
+  if (storedChoice === null) showBanner(false);
+
+  banner?.querySelector("[data-consent-accept]")?.addEventListener("click", () => {
+    storeConsent("granted");
+    enableAnalytics();
+    hideBanner();
+  });
+
+  banner?.querySelector("[data-consent-reject]")?.addEventListener("click", () => {
+    storeConsent("denied");
+    disableAnalytics();
+    hideBanner();
+  });
+
+  // Footer'daki "Cerez tercihleri" butonu banti yeniden acar
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (!target.closest("[data-consent-reopen]")) return;
+    showBanner(true);
+  });
+</script>

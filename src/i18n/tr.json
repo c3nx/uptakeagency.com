@@ -99,6 +99,15 @@
     "frequent": "Sık",
     "occasional": "Ara Sıra"
   },
+  "consent": {
+    "aria_label": "Çerez onayı",
+    "title": "Analitik çerezleri",
+    "description": "Bu sitenin nasıl kullanıldığını anlamak için Google Analytics kullanmak istiyoruz. Yalnızca kabul ederseniz yüklenir. Her iki durumda da reklam çerezi kullanılmaz, reklam kişiselleştirmesi yapılmaz.",
+    "accept": "Kabul et",
+    "reject": "Reddet",
+    "privacy_link": "Gizlilik Politikası",
+    "manage": "Çerez tercihleri"
+  },
   "common": {
     "learn_more": "Daha Fazla",
     "back": "Geri",

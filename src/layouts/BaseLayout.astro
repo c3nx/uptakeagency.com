@@ -1,5 +1,6 @@
 ---
 import SEOHead from "@/components/layout/SEOHead.astro";
+import ConsentBanner from "@/components/layout/ConsentBanner.astro";
 import "@/styles/global.css";
 
 interface Props {
@@ -26,5 +27,6 @@ const { title, description, locale, canonicalPath, ogImage } = Astro.props;
   </head>
   <body class="min-h-screen bg-surface text-text-primary font-sans antialiased">
     <slot />
+    <ConsentBanner locale={locale} />
   </body>
 </html>
