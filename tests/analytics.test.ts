@@ -35,6 +35,8 @@ function createFakeEnv(options: FakeEnvOptions = {}) {
   const appendedScripts: FakeScript[] = [];
   const cookieWrites: string[] = [];
   const clickListeners: ClickListener[] = [];
+  // Her yeniden yükleme anında kayıtlı tercihi de saklar, sıra böyle sabitlenir
+  const reloadCalls: Array<string | null> = [];
   let cookieValue = options.cookie ?? "";
 
   const fakeWindow: Record<string, unknown> = {
@@ -48,7 +50,13 @@ function createFakeEnv(options: FakeEnvOptions = {}) {
         store.set(key, value);
       },
     },
-    location: { hostname: "uptakeagency.com", pathname: "/contact" },
+    location: {
+      hostname: "uptakeagency.com",
+      pathname: "/contact",
+      reload(): void {
+        reloadCalls.push(store.get(CONSENT_STORAGE_KEY) ?? null);
+      },
+    },
   };
 
   const fakeDocument = {
@@ -83,6 +91,7 @@ function createFakeEnv(options: FakeEnvOptions = {}) {
     appendedScripts,
     cookieWrites,
     clickListeners,
+    reloadCalls,
     storedValue: () => store.get(CONSENT_STORAGE_KEY) ?? null,
     gaDisableFlag: () => fakeWindow[GA_DISABLE_KEY],
     // dataLayer'a basılan arguments nesnelerini düz diziye çevirir
@@ -210,6 +219,52 @@ describe("kabul sonrası reddetme aynı sayfada ölçümü durdurur", () => {
       ad_personalization: "denied",
       analytics_storage: "denied",
     });
+  });
+});
+
+// Gerçek tarayıcı ölçümü gösterdi: gtag.js bir kez yüklendikten sonra ga-disable güvenilir
+// değil, kendi kuyruğu ve dinleyicileri istek göndermeye devam edebiliyor. Tek kesin çözüm
+// sayfayı Google kodu olmadan yeniden yüklemek.
+describe("geri almada sayfa Google kodu olmadan yeniden yüklenir", () => {
+  test("kabul sonrası reddet: yeniden yükleme tam bir kez çağrılır", () => {
+    const env = createFakeEnv();
+    env.analytics.enableAnalytics();
+    env.analytics.storeConsent("denied");
+    env.analytics.disableAnalytics();
+    expect(env.reloadCalls).toHaveLength(1);
+  });
+
+  test("yeniden yükleme anında kayıtlı tercih 'denied' olmalı", () => {
+    const env = createFakeEnv();
+    env.analytics.enableAnalytics();
+    env.analytics.storeConsent("denied");
+    env.analytics.disableAnalytics();
+    expect(env.reloadCalls[0]).toBe("denied");
+  });
+
+  test("hiç kabul edilmeden reddet: yeniden yükleme yok", () => {
+    const env = createFakeEnv();
+    env.analytics.storeConsent("denied");
+    env.analytics.disableAnalytics();
+    expect(env.reloadCalls).toHaveLength(0);
+  });
+
+  test("kayıtlı 'granted' ile açılan sayfada reddet: yeniden yükleme yapılır", () => {
+    const env = createFakeEnv({ stored: "granted" });
+    env.analytics.applyStoredConsent();
+    env.analytics.storeConsent("denied");
+    env.analytics.disableAnalytics();
+    expect(env.reloadCalls).toHaveLength(1);
+    expect(env.reloadCalls[0]).toBe("denied");
+  });
+
+  test("yeniden yüklemeden önce çerezler silinmiş olmalı", () => {
+    const env = createFakeEnv({ cookie: "_ga=1; _ga_XYZ=2" });
+    env.analytics.enableAnalytics();
+    env.analytics.storeConsent("denied");
+    env.analytics.disableAnalytics();
+    expect(env.cookieWrites.some((written) => written.startsWith("_ga="))).toBe(true);
+    expect(env.reloadCalls).toHaveLength(1);
   });
 });
 
