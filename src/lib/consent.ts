@@ -1,4 +1,4 @@
-// Ziyaretci onayinin saf mantigi. DOM/tarayici API'si kullanmaz, testten dogrudan cagrilir.
+// Ziyaretçi onayının saf mantığı. DOM kullanmaz, testten doğrudan çağrılır.
 
 export const CONSENT_STORAGE_KEY = "uptake_consent_v1";
 
@@ -11,14 +11,14 @@ export type ConsentModeState = {
   analytics_storage: ConsentChoice;
 };
 
-/** Kayitli degeri okur. Taninmayan her girdi "onay yok" (null) sayilir, asla granted degil. */
+// Tanınmayan her girdi "onay yok" sayılır, asla granted değil
 export function parseStoredConsent(raw: string | null): ConsentChoice | null {
   if (raw === "granted") return "granted";
   if (raw === "denied") return "denied";
   return null;
 }
 
-/** Consent Mode v2 durumu. Sitede reklam yok: uc reklam anahtari her zaman denied. */
+// Sitede reklam yok: üç reklam anahtarı her durumda denied
 export function toConsentModeState(choice: ConsentChoice | null): ConsentModeState {
   return {
     ad_storage: "denied",
@@ -28,7 +28,7 @@ export function toConsentModeState(choice: ConsentChoice | null): ConsentModeSta
   };
 }
 
-/** document.cookie dizesinden silinecek GA cerez adlarini cikarir (_ga ve _ga_*). */
+// document.cookie dizesinden silinecek GA çerez adları (_ga ve _ga_*)
 export function gaCookieNamesToClear(cookieString: string): string[] {
   const names = new Set<string>();
   for (const pair of cookieString.split(";")) {

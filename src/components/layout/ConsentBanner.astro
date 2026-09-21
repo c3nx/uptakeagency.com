@@ -10,13 +10,13 @@ interface Props {
 const { locale } = Astro.props;
 const i18n = t(locale);
 
-// Build sirasinda dogrula: gecersiz kimlikle derleme durur
+// Build sırasında doğrula: geçersiz kimlikle derleme durur
 assertGaMeasurementId(GA_MEASUREMENT_ID);
 
 const privacyHref = getLocalizedPath("/privacy-policy", locale);
 ---
 
-<!-- Varsayilan gizli: JS kapaliysa bant da GA de yok -->
+<!-- Varsayılan gizli: JS kapalıysa bant da GA de yok -->
 <div
   data-consent-banner
   role="region"
@@ -86,7 +86,7 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
     banner?.classList.add("hidden");
   }
 
-  // Kayitli tercih yoksa GA yuklenmez, bant gosterilir
+  // Kayıtlı tercih yoksa GA yüklenmez, bant gösterilir
   const storedChoice = applyStoredConsent();
   initMailtoTracking();
   if (storedChoice === null) showBanner(false);
@@ -103,7 +103,7 @@ const privacyHref = getLocalizedPath("/privacy-policy", locale);
     hideBanner();
   });
 
-  // Footer'daki "Cerez tercihleri" butonu banti yeniden acar
+  // Footer'daki "Çerez tercihleri" butonu bandı yeniden açar
   document.addEventListener("click", (event) => {
     const target = event.target;
     if (!(target instanceof Element)) return;

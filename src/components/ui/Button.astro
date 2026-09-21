@@ -4,8 +4,9 @@ interface Props {
   variant?: "primary" | "secondary" | "ghost" | "inverse";
   size?: "sm" | "md" | "lg";
   class?: string;
-  // type, data-* gibi ek HTML nitelikleri oldugu gibi gecer
-  [key: string]: any;
+  type?: "button" | "submit" | "reset";
+  // Yalnızca data-* nitelikleri serbest, gerisi tip denetimine tabi
+  [key: `data-${string}`]: string | boolean | undefined;
 }
 
 const {

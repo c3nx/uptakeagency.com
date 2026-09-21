@@ -1,0 +1,153 @@
+// GA4 yükleyicisi. Ortam (window/document) dışarıdan verilir, böylece tarayıcıda çalışan kodun
+// aynısı testte sahte nesnelerle koşturulabilir.
+
+import {
+  CONSENT_STORAGE_KEY,
+  gaCookieNamesToClear,
+  parseStoredConsent,
+  toConsentModeState,
+  type ConsentChoice,
+} from "./consent";
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+  }
+}
+
+export interface AnalyticsEnv {
+  window: Window;
+  document: Document;
+  measurementId: string;
+}
+
+export interface Analytics {
+  readStoredConsent(): ConsentChoice | null;
+  storeConsent(choice: ConsentChoice): void;
+  enableAnalytics(): void;
+  disableAnalytics(): void;
+  applyStoredConsent(): ConsentChoice | null;
+  trackEvent(name: string, params?: Record<string, string>): void;
+  initMailtoTracking(): void;
+}
+
+export function createAnalytics({ window: win, document: doc, measurementId }: AnalyticsEnv): Analytics {
+  let defaultsPushed = false;
+  let gtagLoaded = false;
+
+  const gtag: (...args: unknown[]) => void = function () {
+    win.dataLayer = win.dataLayer ?? [];
+    // gtag.js dataLayer'da arguments nesnesi bekler
+    win.dataLayer.push(arguments);
+  };
+
+  // Consent Mode v2 varsayılanı: dört anahtar da denied, gtag yüklenmeden önce basılır
+  function pushConsentDefaults(): void {
+    if (defaultsPushed) return;
+    defaultsPushed = true;
+    gtag("consent", "default", toConsentModeState(null));
+  }
+
+  // Kayıtlı tercih okunamazsa onay yok sayılır
+  function readStoredConsent(): ConsentChoice | null {
+    try {
+      return parseStoredConsent(win.localStorage.getItem(CONSENT_STORAGE_KEY));
+    } catch {
+      return null;
+    }
+  }
+
+  function storeConsent(choice: ConsentChoice): void {
+    try {
+      win.localStorage.setItem(CONSENT_STORAGE_KEY, choice);
+    } catch {
+      // Depolama kapalı: tercih kalıcı olmaz, oturum içinde geçerli kalır
+    }
+  }
+
+  // GA çerezlerini alan adı ve yol varyantlarıyla siler
+  function clearGaCookies(): void {
+    const names = gaCookieNamesToClear(doc.cookie);
+    if (names.length === 0) return;
+
+    const host = win.location.hostname;
+    const parts = host.split(".");
+    const domains = new Set<string>(["", host, `.${host}`]);
+    // sub.example.com için .example.com gibi üst alan adı varyantları
+    for (let i = 1; i < parts.length - 1; i += 1) {
+      domains.add(`.${parts.slice(i).join(".")}`);
+    }
+
+    const paths = new Set<string>(["/", win.location.pathname]);
+
+    for (const name of names) {
+      for (const domain of domains) {
+        for (const path of paths) {
+          const domainPart = domain ? `; domain=${domain}` : "";
+          doc.cookie = `${name}=; Max-Age=0; path=${path}${domainPart}`;
+        }
+      }
+    }
+  }
+
+  // Onay verildi: consent update, ardından js ve config, en son gtag.js dinamik olarak eklenir
+  function enableAnalytics(): void {
+    pushConsentDefaults();
+    gtag("consent", "update", toConsentModeState("granted"));
+    if (gtagLoaded) return;
+    gtagLoaded = true;
+
+    gtag("js", new Date());
+    gtag("config", measurementId);
+
+    const script = doc.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    doc.head.appendChild(script);
+  }
+
+  // Onay geri alındı: consent update denied ve GA çerezlerini temizle
+  function disableAnalytics(): void {
+    pushConsentDefaults();
+    gtag("consent", "update", toConsentModeState("denied"));
+    clearGaCookies();
+  }
+
+  // Sayfa açılışında kayıtlı tercihi uygular, tercih yoksa hiçbir şey yüklenmez
+  function applyStoredConsent(): ConsentChoice | null {
+    const choice = readStoredConsent();
+    if (choice === "granted") enableAnalytics();
+    return choice;
+  }
+
+  // Onay yoksa sessiz no-op, asla hata fırlatmaz
+  function trackEvent(name: string, params: Record<string, string> = {}): void {
+    try {
+      if (!gtagLoaded) return;
+      gtag("event", name, params);
+    } catch {
+      // Ölçüm hiçbir zaman sayfayı kırmaz
+    }
+  }
+
+  // mailto bağlantıları için document seviyesinde delegated dinleyici
+  function initMailtoTracking(): void {
+    doc.addEventListener("click", (event: Event) => {
+      const target = event.target as { closest?: (selector: string) => unknown } | null;
+      if (!target || typeof target.closest !== "function") return;
+      if (!target.closest('a[href^="mailto:"]')) return;
+      // Kişisel veri gönderilmez, yalnızca sayfa yolu
+      trackEvent("contact_email_click", { page_path: win.location.pathname });
+    });
+  }
+
+  return {
+    readStoredConsent,
+    storeConsent,
+    enableAnalytics,
+    disableAnalytics,
+    applyStoredConsent,
+    trackEvent,
+    initMailtoTracking,
+  };
+}
