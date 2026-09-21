@@ -34,6 +34,15 @@ export interface Analytics {
 export function createAnalytics({ window: win, document: doc, measurementId }: AnalyticsEnv): Analytics {
   let defaultsPushed = false;
   let gtagLoaded = false;
+  // Ölçüm kapısı gtag'in yüklü olmasına değil, şu anki onaya bakar
+  let consentGranted = false;
+
+  // Google'ın resmi kapatma anahtarı: true iken gtag.js yüklü olsa bile istek göndermez
+  const gaDisableKey = `ga-disable-${measurementId}`;
+
+  function setGaDisabled(disabled: boolean): void {
+    (win as unknown as Record<string, unknown>)[gaDisableKey] = disabled;
+  }
 
   const gtag: (...args: unknown[]) => void = function () {
     win.dataLayer = win.dataLayer ?? [];
@@ -93,7 +102,10 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
   // Onay verildi: consent update, ardından js ve config, en son gtag.js dinamik olarak eklenir
   function enableAnalytics(): void {
     pushConsentDefaults();
+    consentGranted = true;
     gtag("consent", "update", toConsentModeState("granted"));
+    // config'ten önce: yeniden kabulde kapatma anahtarı kalkmış olmalı
+    setGaDisabled(false);
     if (gtagLoaded) return;
     gtagLoaded = true;
 
@@ -106,9 +118,12 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     doc.head.appendChild(script);
   }
 
-  // Onay geri alındı: consent update denied ve GA çerezlerini temizle
+  // Onay geri alındı: aynı sayfada da ölçüm durur, çerezler silinir
   function disableAnalytics(): void {
     pushConsentDefaults();
+    consentGranted = false;
+    // Önce kapat: bundan sonra gtag.js yüklü olsa bile istek gitmez
+    setGaDisabled(true);
     gtag("consent", "update", toConsentModeState("denied"));
     clearGaCookies();
   }
@@ -120,10 +135,10 @@ export function createAnalytics({ window: win, document: doc, measurementId }: A
     return choice;
   }
 
-  // Onay yoksa sessiz no-op, asla hata fırlatmaz
+  // Onay yoksa ya da geri alındıysa sessiz no-op, asla hata fırlatmaz
   function trackEvent(name: string, params: Record<string, string> = {}): void {
     try {
-      if (!gtagLoaded) return;
+      if (!consentGranted) return;
       gtag("event", name, params);
     } catch {
       // Ölçüm hiçbir zaman sayfayı kırmaz
