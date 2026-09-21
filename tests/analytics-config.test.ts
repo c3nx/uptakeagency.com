@@ -39,9 +39,11 @@ describe("GA_MEASUREMENT_ID", () => {
     expect(typeof GA_MEASUREMENT_ID).toBe("string");
   });
 
-  test("boş değilse geçerli GA4 kalıbına uyar", () => {
-    if (GA_MEASUREMENT_ID !== "") {
-      expect(assertGaMeasurementId(GA_MEASUREMENT_ID)).toBe(GA_MEASUREMENT_ID);
-    }
+  test("repodaki kimlik geçerli GA4 kalıbına uyar", () => {
+    expect(assertGaMeasurementId(GA_MEASUREMENT_ID)).toBe(GA_MEASUREMENT_ID);
+  });
+
+  test("repoda geçici doğrulama değeri kalmamıştır", () => {
+    expect(GA_MEASUREMENT_ID.startsWith("G-TEST")).toBe(false);
   });
 });
