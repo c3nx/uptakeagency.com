@@ -101,7 +101,7 @@
   },
   "consent": {
     "title": "Analitik çerezleri",
-    "description": "Hangi sayfaların işe yaradığını görmek için Google Analytics kullanmak istiyoruz. Yalnızca kabul ederseniz yüklenir, reklam çerezi kullanılmaz; veriler Google tarafından yurt dışında işlenebilir.",
+    "description": "Hangi sayfaların ziyaretçilere faydalı olduğunu anlamak için Google Analytics kullanmak istiyoruz. Yalnızca kabul ederseniz yüklenir, reklam çerezi kullanılmaz; veriler Google tarafından yurt dışında işlenebilir.",
     "accept": "Kabul et",
     "reject": "Reddet",
     "privacy_link": "Gizlilik Politikası",

@@ -101,7 +101,7 @@
   },
   "consent": {
     "title": "Analytics cookies",
-    "description": "We would like to use Google Analytics to see which pages are useful. It only loads if you accept and no advertising cookies are used; data may be processed by Google outside your country.",
+    "description": "We would like to use Google Analytics to understand which pages are useful to visitors. It only loads if you accept and no advertising cookies are used; data may be processed by Google outside your country.",
     "accept": "Accept",
     "reject": "Reject",
     "privacy_link": "Privacy Policy",
