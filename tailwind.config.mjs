@@ -6,6 +6,10 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     extend: {
+      // Çerez bandı kutu biçimi: yalnız yeterli genişlik VE yükseklik varken (bkz. ConsentBanner.astro)
+      screens: {
+        box: { raw: "(min-width: 640px) and (min-height: 500px)" },
+      },
       colors: {
         brand: {
           50: "#eff6ff",
