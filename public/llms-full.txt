@@ -75,7 +75,7 @@ Real-time interactive multiplayer quiz platform with live competition, instant f
 AI-powered system-wide technical dictionary for macOS and Windows. Provides instant, context-aware definitions and explanations.
 - Technology: Swift (macOS), Rust/Tauri (Windows), LLM integration
 - Features: System-wide activation via global hotkey, context-aware definitions, offline core dictionary
-- Type: Open Source (github.com/nicepkg/quill)
+- Type: Open Source (github.com/uptakeagency/quill)
 
 ### CastHub
 Self-hosted remote broadcast production monitoring and control platform. Real-time stream health monitoring, OBS/vMix control, and caster management.
@@ -142,7 +142,7 @@ Yes. Services include Docker/Kubernetes containerization, CI/CD pipelines, monit
 Email: info@uptakeagency.com. Website: https://uptakeagency.com. The team is available for project discussions and consultations worldwide.
 
 ### Does Uptake Agency contribute to open source?
-Yes. Quill, an AI-powered system-wide technical dictionary, is an open-source project maintained by the team (github.com/nicepkg/quill).
+Yes. Quill, an AI-powered system-wide technical dictionary, is an open-source project maintained by the team (github.com/uptakeagency/quill).
 
 ### What industries has Uptake Agency served?
 Gaming entertainment, healthcare, education (quiz platforms), PC hardware (MSI), broadcast production, and general B2B SaaS across Turkey and internationally.
