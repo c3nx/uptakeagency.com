@@ -3,7 +3,7 @@
 > Technology consulting and AI solutions firm founded in 2024, based in Istanbul, Turkey, serving clients worldwide.
 
 ## About
-Uptake Agency is a technology consulting firm specializing in AI integration, custom software development, automation, and infrastructure engineering. Founded by Cengiz Selcuk with 15+ years of experience and enterprise partnerships with Intel, NVIDIA, and MSI.
+Uptake Agency is a technology consulting firm specializing in AI integration, custom software development, automation, and infrastructure engineering. Founded by Cengiz Selcuk with 15+ years of experience; current enterprise partners: MSI and Praxilla.
 
 ## Services
 - AI Consulting: Custom LLM solutions, RAG systems, intelligent automation, strategy assessment
@@ -21,7 +21,7 @@ Uptake Agency is a technology consulting firm specializing in AI integration, cu
 ## Stats
 - 15+ years experience
 - $2M+ revenue generated
-- 4 enterprise partners (Intel, NVIDIA, MSI, Praxilla)
+- 2 enterprise partners (MSI, Praxilla)
 
 ## Contact
 - Email: info@uptakeagency.com

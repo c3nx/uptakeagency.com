@@ -48,7 +48,7 @@
   "about": {
     "title": "Hakkımızda",
     "founder_title": "Kurucumuz Cengiz Selçuk",
-    "founder_bio": "Intel, NVIDIA ve MSI ile kurumsal ortaklıklar dahil olmak üzere teknoloji altyapısı ve yazılım geliştirme alanında 15+ yıllık deneyimiyle Uptake Agency, her projeye derin teknik uzmanlık getirmektedir.",
+    "founder_bio": "Geçmişte Intel ve NVIDIA ile yürütülen kurumsal projeler ve bugün süren MSI ve Praxilla ortaklıkları dahil olmak üzere teknoloji altyapısı ve yazılım geliştirme alanında 15+ yıllık deneyimiyle Uptake Agency, her projeye derin teknik uzmanlık getirmektedir.",
     "stats": {
       "experience": "15+ Yıl Deneyim",
       "revenue": "2M$+ Gelir Üretildi",
@@ -56,7 +56,7 @@
     }
   },
   "partners": {
-    "title": "Sektörde Güvenilen Ortaklar"
+    "title": "Birlikte Çalıştığımız Markalar"
   },
   "contact": {
     "title": "Birlikte Bir Şeyler İnşa Edelim",
@@ -76,7 +76,7 @@
     "form_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin veya bize e-posta gönderin."
   },
   "footer": {
-    "about": "Uptake Agency, İstanbul merkezli bir teknoloji danışmanlık firmasıdır. Yapay zeka entegrasyonu, özel yazılım geliştirme, otomasyon ve bulut altyapısı konularında uzmandır. Cengiz Selçuk tarafından 15+ yıllık deneyim ve Intel, NVIDIA, MSI ile kurumsal ortaklıklarla kurulmuştur.",
+    "about": "Uptake Agency, İstanbul merkezli bir teknoloji danışmanlık firmasıdır. Yapay zeka entegrasyonu, özel yazılım geliştirme, otomasyon ve bulut altyapısı konularında uzmandır. Cengiz Selçuk tarafından 15+ yıllık deneyimle kurulmuştur; kurumsal ortakları MSI ve Praxilla'dır.",
     "services_keywords": "Yapay Zeka Danışmanlığı • Özel LLM Çözümleri • RAG Sistemleri • Full-Stack Geliştirme • TypeScript • React • Next.js • WhatsApp Business API • İş Akışı Otomasyonu • Docker • Kubernetes • CI/CD • Bulut Altyapısı",
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
