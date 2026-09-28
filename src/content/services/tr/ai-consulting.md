@@ -1,26 +1,80 @@
 ---
 title: "Yapay Zeka Danışmanlığı"
-description: "Kavram kanıtından üretim dağıtımına kadar stratejik yapay zeka entegrasyonu. Özel LLM çözümleri, RAG sistemleri ve akıllı otomasyon."
+description: "Yapay zekayı şirkete nereden başlayarak sokacağımızı birlikte buluyoruz: sabit fiyatlı keşif, modül modül uygulama, baştan çizilmiş veri sınırları."
 icon: "sparkles"
 order: 1
 locale: "tr"
 ---
 
-## Genel Bakış
+## Önce basitçe: yapay zeka danışmanlığı ne demek?
 
-Şirketleri yapay zeka benimseme sürecinin her aşamasında yönlendiriyoruz — doğru kullanım alanlarını belirlemekten güvenilir, üretim ortamına hazır sistemler kurmaya kadar. Odak noktamız somut sonuçlar, abartılı vaatler değil.
+Herkes yapay zeka kullanmak istiyor ama çoğu şirketin sorusu aynı: "Tamam da, bizde nereye koyacağız?" Yapay zeka danışmanlığı bu sorunun cevabını bulma işi. Şirketin gününü nasıl geçirdiğine bakıyoruz, zamanın ve paranın nerede kaybolduğunu buluyoruz, sonra yapay zekanın gerçekten işe yarayacağı birkaç yeri seçiyoruz.
 
-## Sunduğumuz Hizmetler
+Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağınık duran verinin tek yerde toplanması ve insanların her gün elle yaptığı işlerin ortadan kalkması oluyor. Yapay zeka bunun üstüne oturuyor.
 
-- **Yapay Zeka Strateji Değerlendirmesi**: Mevcut iş akışlarınızı analiz ederek yapay zekanın en fazla değer yaratacağı alanları belirleriz
-- **Özel LLM Çözümleri**: Sektörünüze özel ince ayarlı veya yönlendirme mühendisliği uygulanmış dil modelleri
-- **RAG Implementasyonu**: Yanıtları kendi verinize dayandıran retrieval-augmented generation sistemleri
-- **Akıllı Otomasyon**: Manuel iş yükünü azaltan ve doğruluğu artıran yapay zeka destekli iş akışları
+## Nasıl çalışıyoruz?
 
-## Yaklaşımımız
+**1. Tanışma (ücretsiz).** Kısa bir görüşme. Neyle uğraştığımızı ve yapay zekanın bu işte yeri olup olmadığını konuşuyoruz. Yeri yoksa bunu da açıkça söylüyoruz.
 
-Önce keşfetme aşamasıyla başlıyoruz; iş bağlamını anlayıp net başarı metrikleriyle iteratif prototipler sunuyoruz. Her çözüm, kara kutu karmaşıklığı yerine sürdürülebilirlik göz önünde bulundurularak inşa edilir.
+**2. Keşif (sabit fiyatlı, yaklaşık iki hafta).** Şirketin içine giriyoruz: kullanılan yazılımlar, Excel dosyaları, raporlar, tekrar eden işler. Sonunda elimizde öncelik sırası belli bir yol haritası oluyor: neyi önce yapacağız, ne kadar sürecek, ne kazandıracak. Keşfin bedeli baştan belli; uygulamaya geçersek uygulama bedelinden düşüyoruz.
 
-## Sürekli Optimizasyon
+**3. Uygulama (modül modül).** Her şeyi aynı anda kurmuyoruz. Bir modül çalışıp işe yaradığını gösterdikten sonra sıradakine geçiyoruz. Kod ve hesaplar şirkette kalıyor; istenirse başka bir ekip de denetleyebiliyor.
 
-Dağıtım sonrasında model performansını izler, sapmaları takip eder ve verileriniz geliştikçe doğruluğu yüksek tutmak için yönlendirme ve retrieval pipeline'larını güncelliyoruz.
+**4. Bakım ve gelişim.** Sistem kurulduktan sonra da yanındayız: güncelleme, ekibin eğitimi, yeni ihtiyaçlar.
+
+## Neler yapıyoruz?
+
+- **Şirket verisini tek yerde toplamak:** Kasa, muhasebe, personel, stok gibi ayrı sistemlerdeki veriyi otomatik olarak bir araya getirmek. Excel'le rapor hazırlama işi biter.
+- **Şirketin kendi bilgisiyle çalışan asistanlar:** Yapay zekanın internetten değil, şirketin kendi belgelerinden ve verisinden cevap vermesi. Teknik adı RAG; kısaca "yapay zekaya şirketin arşivini okutmak".
+- **Soru sorulan yönetim panoları:** Yöneticinin "geçen ay hangi şube daha kârlıydı?" diye yazıp ya da sesli sorup cevap alabildiği paneller.
+- **Tekrar eden işlerin otomasyonu:** Her gün aynı adımlarla yapılan işlerin, doğruluğu kontrol edilerek yapay zekaya devredilmesi.
+
+## Gerçek bir örnek: Estanbul'un şirket zekası
+
+Estanbul, İstanbul'da bir espor ve oyun merkezi ile kafe işletmesi. Gelir oyun merkezinin yazılımında, kafe satışları ayrı bir kasa sisteminde, maliyetler franchise (bayilik) sisteminde, personel ve stok başka yerlerde duruyordu. "Bugün gerçekten kâr ettik mi?" sorusunun cevabı günler sonra, elle derlenerek geliyordu.
+
+Birlikte şunu kurduk:
+
+- Bütün bu sistemlerden veri otomatik geliyor, elle giriş yok. Her gece tek bir veri ambarında (bütün verinin toplandığı ortak depo) birleşiyor.
+- 55 oyun bilgisayarı anlık izleniyor; bir sorun olduğunda sistem kendisi fark ediyor.
+- Kimin neyi göreceği tek yerden tanımlı: üç rol, on üç ayrı yetki; kimse yetkisi olmayan veriye ulaşamıyor.
+- Yazarak ya da sesli soru sorulan bir yapay zeka analisti var. Başta yatırımcılara gösterilecek bir deneme olarak yapıldı, bugün günlük işin parçası.
+
+Ayrıntılı hikâye: [Tek Mekan, Tek Ekran](/tr/blog/estanbul-dashboard-case-study).
+
+## Verimiz nerede kalıyor?
+
+Yapay zeka projelerinde en çok sorulan, en az cevaplanan soru bu. Bizim kuralımız basit: sınırları baştan çiziyoruz.
+
+Estanbul'da müşterilerin kişisel bilgisi (isim, telefon, e-posta, kullanıcı adı) yapay zekanın eriştiği veriye hiçbir aşamada taşınmıyor. Yapay zeka veriyi yalnızca okuyabiliyor, değiştiremiyor. Veri Avrupa Birliği bölgesinde tutuluyor.
+
+Bu bir yelpaze. İlk adım veri sınırlarını çizmek; en uç nokta, modeli (yapay zekanın kendisini) tamamen şirketin kendi sunucusunda çalıştırmak. Hangisinin gerektiğine keşif aşamasında birlikte karar veriyoruz.
+
+## Başka neler yaptık?
+
+- **MSI için OEMBuilder:** Seçilen bilgisayar parçalarından, yapay zekayla fotorealistik, monte edilmiş bilgisayar görselleri üreten bir hizmet. [Proje sayfası](/tr/work/oembuilder).
+- **Özel yazılım:** Hazır yazılımın yetmediği yerde şirkete özel sistemler. [Özel yazılım geliştirme](/tr/services/custom-software).
+
+## Sık sorulan sorular
+
+**Yapay zeka danışmanlığı neyi kapsıyor?**
+Şirketin işine bakıp yapay zekanın nerede fayda sağlayacağını bulmayı, bunun bir yol haritasına dökülmesini ve istenirse sistemin kurulmasını. Sadece rapor verip çekilmiyoruz; kuran da biziz.
+
+**Nereden başlamalıyız?**
+Genellikle en çok elle yapılan ve en sık tekrarlanan işten. Keşif aşamasının amacı da bunu tahmine değil, veriye dayanarak seçmek.
+
+**ChatGPT gibi hazır araçlar yetmez mi?**
+Bazı işler için yeter, bunu da söylüyoruz. Hazır araçlar şirketin kendi verisini bilmez, şirketin sistemlerine bağlı değildir ve kimin neyi göreceğini ayarlamaz. Fark burada başlıyor.
+
+**Ne kadar sürer?**
+Keşif yaklaşık iki hafta. Uygulama kapsamına göre değişir; modül modül ilerlediğimiz için her modülün sonucu kendi teslimiyle birlikte görülür.
+
+**Ne kadar tutar?**
+Tanışma ücretsiz. Keşif sabit fiyatlı ve uygulamaya geçilirse bedeli düşülüyor. Uygulama bedeli, keşifte çıkan kapsama göre netleşiyor.
+
+**Verilerimiz güvende mi?**
+Sınırları baştan birlikte çiziyoruz: hangi veri yapay zekaya gider, hangisi gitmez, kim neyi görür. Gerekirse model tamamen şirketin kendi sunucusunda çalışır.
+
+## Tanışalım
+
+Yapay zekanın işimizde nereye oturacağını kısa bir görüşmede birlikte konuşalım. [İletişim](/tr/contact) ya da info@uptakeagency.com.
