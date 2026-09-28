@@ -26,8 +26,3 @@ We developed an AI-powered agent leveraging large language models with retrieval
 - **RAG-based responses**: Accurate answers from a curated knowledge base
 - **Human handoff**: Seamless escalation to human agents for complex queries
 - **Analytics dashboard**: Real-time metrics on conversation volume, resolution rates, and customer satisfaction
-
-## Results
-
-- 70% reduction in average response time
-- Consistent 24/7 customer support coverage

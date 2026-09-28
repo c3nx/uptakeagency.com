@@ -12,7 +12,7 @@ Uptake Agency is a technology consulting firm specializing in AI integration, cu
 - Infrastructure & DevOps: Docker, Kubernetes, CI/CD, monitoring, security hardening
 
 ## Key Projects
-- Estanbul AI Agent: Multi-channel AI customer service (70% faster response)
+- Estanbul AI Agent: Multi-channel AI customer service
 - ARU: WhatsApp Business CRM & automation SaaS
 - OEMBuilder: AI-powered PC build visualization for MSI (Gemini, FastAPI)
 - Quix: Real-time multiplayer quiz platform (sub-100ms response)

@@ -50,7 +50,6 @@ Cloud infrastructure and operations:
 ### Estanbul AI Agent
 Multi-channel AI customer service agent for a gaming entertainment company. Handles inquiries across WhatsApp, web chat, and social media platforms.
 - Technology: LLMs, RAG, WhatsApp API, Web Chat, Social Media APIs
-- Results: 70% reduction in response time, 24/7 coverage
 - Type: Client Work
 
 ### ARU
