@@ -16,7 +16,7 @@ Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağ
 
 **1. Tanışma (ücretsiz).** Kısa bir görüşme. Neyle uğraştığımızı ve yapay zekanın bu işte yeri olup olmadığını konuşuyoruz. Yeri yoksa bunu da açıkça söylüyoruz.
 
-**2. Keşif (sabit fiyatlı, yaklaşık iki hafta).** Şirketin içine giriyoruz: kullanılan yazılımlar, Excel dosyaları, raporlar, tekrar eden işler. Sonunda elimizde öncelik sırası belli bir yol haritası oluyor: neyi önce yapacağız, ne kadar sürecek, ne kazandıracak. Keşfin bedeli baştan belli; uygulamaya geçersek uygulama bedelinden düşüyoruz.
+**2. Keşif (sabit fiyatlı, yaklaşık iki hafta).** Şirketin içine giriyoruz: kullanılan yazılımlar, Excel dosyaları, raporlar, tekrar eden işler. Sonunda elimizde öncelik sırası belli bir yol haritası oluyor: neyi önce yapacağız, ne kadar sürecek, ne kazandıracak. Hangi veriye ihtiyaç olduğunu, kimin sorumlu olacağını ve başarıyı neyle ölçeceğimizi de birlikte netleştiriyoruz. Keşfin bedeli baştan belli; uygulamaya geçersek uygulama bedelinden düşüyoruz.
 
 **3. Uygulama (modül modül).** Her şeyi aynı anda kurmuyoruz. Bir modül çalışıp işe yaradığını gösterdikten sonra sıradakine geçiyoruz. Kod ve hesaplar şirkette kalıyor.
 
@@ -24,8 +24,8 @@ Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağ
 
 ## Neler yapıyoruz?
 
-- **Şirket verisini tek yerde toplamak:** Kasa, muhasebe, personel, stok gibi ayrı sistemlerdeki veriyi otomatik olarak bir araya getirmek. Excel'le rapor hazırlama işi biter.
-- **Şirketin kendi bilgisiyle çalışan asistanlar:** Yapay zekanın internetten değil, şirketin kendi belgelerinden ve verisinden cevap vermesi. Teknik adı RAG; kısaca "yapay zekaya şirketin arşivini okutmak".
+- **Şirket verisini tek yerde toplamak:** Kasa, muhasebe, personel, stok gibi ayrı sistemlerdeki veriyi otomatik olarak bir araya getirmek. Tekrarlayan raporları elle hazırlama işi azalır.
+- **Şirketin kendi bilgisiyle çalışan asistanlar:** Yapay zekanın cevap hazırlarken şirketin kendi belgelerini ve verisini bulup kaynak olarak kullanması. Teknik adı RAG; kısaca "yapay zekaya şirketin arşivini okutmak".
 - **Soru sorulan yönetim panoları:** Yöneticinin "geçen ay hangi şube daha kârlıydı?" diye yazıp ya da sesli sorup cevap alabildiği paneller.
 - **Tekrar eden işlerin otomasyonu:** Her gün aynı adımlarla yapılan işlerin, doğruluğu kontrol edilerek yapay zekaya devredilmesi.
 
@@ -46,9 +46,13 @@ Ayrıntılı hikâye: [Tek Mekan, Tek Ekran](/tr/blog/estanbul-dashboard-case-st
 
 Yapay zeka projelerinde en çok sorulan, en az cevaplanan soru bu. Bizim kuralımız basit: sınırları baştan çiziyoruz.
 
-Estanbul'da müşterilerin kişisel bilgisi (isim, telefon, e-posta, kullanıcı adı) yapay zekanın eriştiği veriye hiçbir aşamada taşınmıyor. Yapay zeka veriyi yalnızca okuyabiliyor, değiştiremiyor. Veri Avrupa Birliği bölgesinde tutuluyor.
+Estanbul'da müşterilerin kişisel bilgisi (isim, telefon, e-posta, kullanıcı adı) yapay zekanın eriştiği veriye hiçbir aşamada taşınmıyor. Yapay zeka veriyi yalnızca okuyabiliyor, değiştiremiyor. Verinin toplandığı ambar Avrupa Birliği bölgesinde duruyor. Yapay zeka katmanı bir bulut hizmeti üzerinde çalışıyor ve ona yalnız izin verilen veri ulaşıyor.
 
 Bu bir yelpaze. İlk adım veri sınırlarını çizmek; en uç nokta, modeli (yapay zekanın kendisini) tamamen şirketin kendi sunucusunda çalıştırmak. Hangisinin gerektiğine keşif aşamasında birlikte karar veriyoruz.
+
+## Kimle çalışıyoruz?
+
+Uptake'te işi kurucumuz Cengiz Selçuk bizzat yürütüyor: altyapı, yazılım ve yapay zeka entegrasyonunda 15 yılı aşkın deneyim, Intel, NVIDIA ve MSI ile kurumsal ortaklıklar. İlk görüşmeyi yapan ile sistemi kuran aynı kişi; iş araya giren bir ekibe devredilmiyor.
 
 ## Başka neler yaptık?
 
@@ -64,7 +68,7 @@ Bu bir yelpaze. İlk adım veri sınırlarını çizmek; en uç nokta, modeli (y
 Genellikle en çok elle yapılan ve en sık tekrarlanan işten. Keşif aşamasının amacı da bunu tahmine değil, veriye dayanarak seçmek.
 
 **ChatGPT gibi hazır araçlar yetmez mi?**
-Bazı işler için yeter, bunu da söylüyoruz. Hazır araçlar şirketin kendi verisini bilmez, şirketin sistemlerine bağlı değildir ve kimin neyi göreceğini ayarlamaz. Fark burada başlıyor.
+Birçok iş için yeter, bunu da açıkça söylüyoruz. Mevcut sistemlere bağlanmak, yetkileri şirketin kurallarına göre işletmek ya da süreci baştan sona otomatikleştirmek gerektiğinde hazır araç yetmemeye başlıyor; özel çözüm orada devreye giriyor.
 
 **Ne kadar sürer?**
 Keşif yaklaşık iki hafta. Uygulama kapsamına göre değişir; modül modül ilerlediğimiz için her modülün sonucu kendi teslimiyle birlikte görülür.
@@ -77,4 +81,4 @@ Sınırları baştan birlikte çiziyoruz: hangi veri yapay zekaya gider, hangisi
 
 ## Tanışalım
 
-Yapay zekanın işimizde nereye oturacağını kısa bir görüşmede birlikte konuşalım. [İletişim](/tr/contact) ya da info@uptakeagency.com.
+Yapay zekanın şirkette nerede işe yarayacağını kısa bir görüşmede birlikte konuşalım. [İletişim](/tr/contact) ya da info@uptakeagency.com.
