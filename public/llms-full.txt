@@ -50,7 +50,7 @@ Cloud infrastructure and operations:
 ### Estanbul AI Agent
 Multi-channel AI customer service agent for a gaming entertainment company. Handles inquiries across WhatsApp, web chat, and social media platforms.
 - Technology: LLMs, RAG, WhatsApp API, Web Chat, Social Media APIs
-- Results: 70% reduction in response time, 85% inquiries auto-resolved, 24/7 coverage
+- Results: 70% reduction in response time, 24/7 coverage
 - Type: Client Work
 
 ### ARU
@@ -127,7 +127,7 @@ Primary stack includes TypeScript, React, Next.js, Node.js, Python, PostgreSQL, 
 Yes. Uptake Agency has established partnerships with Intel, NVIDIA, MSI, and Praxilla. The team has experience delivering enterprise-grade solutions across multiple industries.
 
 ### Can Uptake Agency build AI-powered applications?
-Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents (85% auto-resolution), AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.
+Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents, AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.
 
 ### Does Uptake Agency offer WhatsApp Business API integration?
 Yes. The ARU platform is a WhatsApp Business CRM and automation system built by Uptake Agency. They offer WhatsApp API integration as part of their Automation & Integration services.

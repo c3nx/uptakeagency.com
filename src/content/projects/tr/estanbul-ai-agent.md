@@ -30,5 +30,4 @@ Doğru ve bağlama duyarlı yanıtlar sunmak için geri getirme artırılı üre
 ## Sonuçlar
 
 - Ortalama yanıt süresinde %70 azalma
-- Soruların %85'i insan müdahalesi olmadan çözüldü
 - 7/24 kesintisiz müşteri destek kapsamı

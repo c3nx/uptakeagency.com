@@ -30,5 +30,4 @@ We developed an AI-powered agent leveraging large language models with retrieval
 ## Results
 
 - 70% reduction in average response time
-- 85% of inquiries resolved without human intervention
 - Consistent 24/7 customer support coverage
