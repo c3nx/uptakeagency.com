@@ -27,7 +27,7 @@ Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağ
 - **Şirket verisini tek yerde toplamak:** Kasa, muhasebe, personel, stok gibi ayrı sistemlerdeki veriyi otomatik olarak bir araya getirmek. Tekrarlayan raporları elle hazırlama işi azalır.
 - **Şirketin kendi bilgisiyle çalışan asistanlar:** Yapay zekanın cevap hazırlarken şirketin kendi belgelerini ve verisini bulup kaynak olarak kullanması. Teknik adı RAG; kısaca "yapay zekaya şirketin arşivini okutmak".
 - **Soru sorulan yönetim panoları:** Yöneticinin "geçen ay hangi şube daha kârlıydı?" diye yazıp ya da sesli sorup cevap alabildiği paneller.
-- **Dağınık listeleri güvenilir veriye çevirmek:** Her tedarikçiden farklı düzende, eksik bilgiyle gelen listeleri kontrol ediyor, hatalı ve tutarsız kayıtları yakalıyoruz. Eksik bilgiyi güvenilir kaynaklardan tamamlıyor, her bilginin nereden geldiğini kayda geçiriyoruz.
+- **Dağınık listeleri güvenilir veriye çevirmek:** Her tedarikçiden farklı düzende, eksik bilgiyle gelen listeleri kontrol ediyoruz, hatalı ve tutarsız kayıtları yakalıyoruz. Eksik bilgiyi güvenilir kaynaklardan tamamlıyoruz ve her bilginin nereden geldiğini kayda geçiriyoruz.
 - **Belgeleri kendiliğinden hazırlamak:** Katalog, teklif ve gümrük öncesi belgeler otomatik hazırlanıyor. Müşteriye giden dosyada maliyet ve kâr marjı görünmüyor.
 - **Tekrar eden işlerin otomasyonu:** Her gün aynı adımlarla yapılan işlerin, doğruluğu kontrol edilerek yapay zekaya devredilmesi.
 
@@ -42,7 +42,7 @@ Sayılar için bilgisayarların yıllardır yaptığı bir iş var: hesaplama (�
 - **Yapay zeka anlar:** hangi sütun fiyat, hangi satır hatalı, kullanıcı ne soruyor.
 - **Hesabı kod yapar:** toplam, kur çevirisi, kâr marjı, stok. Yapay zeka bu hesabı bir araç olarak çağırır, sonucu kendisi uydurmaz.
 - **Sonucu yine kod denetler:** toplamlar tutuyor mu, rakam beklenen aralıkta mı.
-- **Önemli kararlarda insan onayı:** her adımın ardından otomatik kontrol çalışıyor; doğrulanan veri sonradan değiştirilemeyecek şekilde kilitleniyor.
+- **Önemli kararlarda insan onayı:** her adımın ardından otomatik kontrol çalışıyor, geri dönüşü olmayan adımlar insan onayından geçiyor; doğrulanan veri sonradan değiştirilemeyecek şekilde kilitleniyor.
 - **Şirketin kuralları hafızada:** iş kuralları kalıcı olarak kaydediliyor, yapay zekanın her önerisi bu kurallara göre denetleniyor.
 
 Örnek: Estanbul'daki yapay zeka analistine "geçen ay kafe ne kadar kazandı?" diye sorulduğunda rakamı yapay zeka tahmin etmiyor. Soruyu veri ambarında bir sorguya çeviriyor, hesabı sorgu yapıyor, yapay zeka sonucu anlaşılır bir cümleyle anlatıyor.
