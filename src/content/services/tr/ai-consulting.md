@@ -18,7 +18,7 @@ Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağ
 
 **2. Keşif (sabit fiyatlı, yaklaşık iki hafta).** Şirketin içine giriyoruz: kullanılan yazılımlar, Excel dosyaları, raporlar, tekrar eden işler. Sonunda elimizde öncelik sırası belli bir yol haritası oluyor: neyi önce yapacağız, ne kadar sürecek, ne kazandıracak. Keşfin bedeli baştan belli; uygulamaya geçersek uygulama bedelinden düşüyoruz.
 
-**3. Uygulama (modül modül).** Her şeyi aynı anda kurmuyoruz. Bir modül çalışıp işe yaradığını gösterdikten sonra sıradakine geçiyoruz. Kod ve hesaplar şirkette kalıyor; istenirse başka bir ekip de denetleyebiliyor.
+**3. Uygulama (modül modül).** Her şeyi aynı anda kurmuyoruz. Bir modül çalışıp işe yaradığını gösterdikten sonra sıradakine geçiyoruz. Kod ve hesaplar şirkette kalıyor.
 
 **4. Bakım ve gelişim.** Sistem kurulduktan sonra da yanındayız: güncelleme, ekibin eğitimi, yeni ihtiyaçlar.
 
