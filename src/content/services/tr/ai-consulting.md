@@ -54,7 +54,7 @@ Estanbul, İstanbul'da bir espor ve oyun merkezi ile kafe işletmesi. Gelir oyun
 Birlikte şunu kurduk:
 
 - Bütün bu sistemlerden veri otomatik geliyor, elle giriş yok. Her gece tek bir veri ambarında (bütün verinin toplandığı ortak depo) birleşiyor.
-- 55 oyun bilgisayarı anlık izleniyor; bir sorun olduğunda sistem kendisi fark ediyor.
+- 75 oyun bilgisayarı anlık izleniyor; bir sorun olduğunda sistem kendisi fark ediyor.
 - Kimin neyi göreceği tek yerden tanımlı: üç rol, on üç ayrı yetki; kimse yetkisi olmayan veriye ulaşamıyor.
 - Yazarak ya da sesli soru sorulan bir yapay zeka analisti var. Başta yatırımcılara gösterilecek bir deneme olarak yapıldı, bugün günlük işin parçası.
 
