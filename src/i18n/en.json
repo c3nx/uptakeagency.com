@@ -48,7 +48,7 @@
   "about": {
     "title": "About",
     "founder_title": "Founded by Cengiz Selcuk",
-    "founder_bio": "With 15+ years of experience in technology infrastructure and software development, including enterprise partnerships with Intel, NVIDIA, and MSI, Uptake Agency brings deep technical expertise to every engagement.",
+    "founder_bio": "With 15+ years of experience in technology infrastructure and software development, including enterprise projects with Intel and NVIDIA and ongoing partnerships with MSI and Praxilla, Uptake Agency brings deep technical expertise to every engagement.",
     "stats": {
       "experience": "15+ Years Experience",
       "revenue": "$2M+ Revenue Generated",
@@ -56,7 +56,7 @@
     }
   },
   "partners": {
-    "title": "Trusted By Industry Leaders"
+    "title": "Brands We Have Worked With"
   },
   "contact": {
     "title": "Let's Build Something Together",
@@ -76,7 +76,7 @@
     "form_error": "Something went wrong. Please try again or email us directly."
   },
   "footer": {
-    "about": "Uptake Agency is a technology consulting firm based in Istanbul, Turkey, specializing in AI integration, custom software development, automation, and cloud infrastructure. Founded by Cengiz Selcuk with 15+ years of experience and enterprise partnerships with Intel, NVIDIA, and MSI.",
+    "about": "Uptake Agency is a technology consulting firm based in Istanbul, Turkey, specializing in AI integration, custom software development, automation, and cloud infrastructure. Founded by Cengiz Selcuk with 15+ years of experience; enterprise partners: MSI and Praxilla.",
     "services_keywords": "AI Consulting \u2022 Custom LLM Solutions \u2022 RAG Systems \u2022 Full-Stack Development \u2022 TypeScript \u2022 React \u2022 Next.js \u2022 WhatsApp Business API \u2022 Workflow Automation \u2022 Docker \u2022 Kubernetes \u2022 CI/CD \u2022 Cloud Infrastructure",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",

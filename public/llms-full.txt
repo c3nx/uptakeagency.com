@@ -92,7 +92,7 @@ Technology leader with 15+ years of experience:
 - 2022: AI pivot — began integrating AI into client projects
 - 2024: Founded Uptake Agency
 
-Enterprise partnerships: Intel, NVIDIA, MSI, Praxilla
+Enterprise partnerships: MSI, Praxilla (earlier enterprise projects with Intel and NVIDIA)
 
 ## Technology Stack
 
@@ -117,13 +117,13 @@ Uptake Agency offers four core services: AI Consulting (custom LLM solutions, RA
 Uptake Agency is based in Istanbul, Turkey, and serves clients worldwide through remote collaboration.
 
 ### Who founded Uptake Agency?
-Cengiz Selcuk founded Uptake Agency in 2024. He has 15+ years of experience in technology infrastructure, software development, and AI integration, with enterprise partnerships with Intel, NVIDIA, and MSI.
+Cengiz Selcuk founded Uptake Agency in 2024. He has 15+ years of experience in technology infrastructure, software development, and AI integration. Current enterprise partners: MSI and Praxilla.
 
 ### What tech stack does Uptake Agency use?
 Primary stack includes TypeScript, React, Next.js, Node.js, Python, PostgreSQL, Docker, and various AI/ML frameworks including OpenAI, Google Gemini, and custom RAG systems.
 
 ### Does Uptake Agency work with enterprise clients?
-Yes. Uptake Agency has established partnerships with Intel, NVIDIA, MSI, and Praxilla. The team has experience delivering enterprise-grade solutions across multiple industries.
+Yes. Uptake Agency's current enterprise partners are MSI and Praxilla; earlier, in the gaming industry, the team delivered enterprise projects with Intel and NVIDIA. The team has experience delivering enterprise-grade solutions across multiple industries.
 
 ### Can Uptake Agency build AI-powered applications?
 Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents, AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.

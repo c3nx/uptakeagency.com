@@ -27,7 +27,25 @@ Bir sohbet robotu kurup geçmek değil bu. Çoğu zaman en büyük kazanç, dağ
 - **Şirket verisini tek yerde toplamak:** Kasa, muhasebe, personel, stok gibi ayrı sistemlerdeki veriyi otomatik olarak bir araya getirmek. Tekrarlayan raporları elle hazırlama işi azalır.
 - **Şirketin kendi bilgisiyle çalışan asistanlar:** Yapay zekanın cevap hazırlarken şirketin kendi belgelerini ve verisini bulup kaynak olarak kullanması. Teknik adı RAG; kısaca "yapay zekaya şirketin arşivini okutmak".
 - **Soru sorulan yönetim panoları:** Yöneticinin "geçen ay hangi şube daha kârlıydı?" diye yazıp ya da sesli sorup cevap alabildiği paneller.
+- **Dağınık listeleri güvenilir veriye çevirmek:** Her tedarikçiden farklı düzende, eksik bilgiyle gelen listeleri kontrol ediyoruz, hatalı ve tutarsız kayıtları yakalıyoruz. Eksik bilgiyi güvenilir kaynaklardan tamamlıyoruz ve her bilginin nereden geldiğini kayda geçiriyoruz.
+- **Belgeleri kendiliğinden hazırlamak:** Katalog, teklif ve gümrük öncesi belgeler otomatik hazırlanıyor. Müşteriye giden dosyada maliyet ve kâr marjı görünmüyor.
 - **Tekrar eden işlerin otomasyonu:** Her gün aynı adımlarla yapılan işlerin, doğruluğu kontrol edilerek yapay zekaya devredilmesi.
+
+## Yapay zeka ve hesaplama: hangisi ne işe yarar?
+
+Önce basitçe: yapay zeka çok iyi bir okur ve yazardır, hesap makinesi değildir. Bir metni anlar, dağınık bir listeyi düzenler, eksik bilgiyi bulur, soruya cevap verir. Ama bir Excel tablosunu "toplarken" yanılabilir, çünkü toplamayı hesaplamaz, tahmin eder.
+
+Sayılar için bilgisayarların yıllardır yaptığı bir iş var: hesaplama (İngilizcesiyle compute). Aynı girdiye her seferinde aynı sonucu veren, hatası test edilebilen kod. Muhasebe programları, tablo formülleri, veritabanı sorguları bu dünyadan gelir. Yapay zeka moda oldu diye bunu bir kenara atmıyoruz.
+
+İkisini karıştırmıyoruz, birlikte kullanıyoruz:
+
+- **Yapay zeka anlar:** hangi sütun fiyat, hangi satır hatalı, kullanıcı ne soruyor.
+- **Hesabı kod yapar:** toplam, kur çevirisi, kâr marjı, stok. Yapay zeka bu hesabı bir araç olarak çağırır, sonucu kendisi uydurmaz.
+- **Sonucu yine kod denetler:** toplamlar tutuyor mu, rakam beklenen aralıkta mı.
+- **Önemli kararlarda insan onayı:** her adımın ardından otomatik kontrol çalışıyor, geri dönüşü olmayan adımlar insan onayından geçiyor; doğrulanan veri sonradan değiştirilemeyecek şekilde kilitleniyor.
+- **Şirketin kuralları hafızada:** iş kuralları kalıcı olarak kaydediliyor, yapay zekanın her önerisi bu kurallara göre denetleniyor.
+
+Örnek: Estanbul'daki yapay zeka analistine "geçen ay kafe ne kadar kazandı?" diye sorulduğunda rakamı yapay zeka tahmin etmiyor. Soruyu veri ambarında bir sorguya çeviriyor, hesabı sorgu yapıyor, yapay zeka sonucu anlaşılır bir cümleyle anlatıyor.
 
 ## Gerçek bir örnek: Estanbul'un şirket zekası
 
@@ -52,7 +70,7 @@ Bu bir yelpaze. İlk adım veri sınırlarını çizmek; en uç nokta, modeli (y
 
 ## Kimle çalışıyoruz?
 
-Uptake'te işi kurucumuz Cengiz Selçuk bizzat yürütüyor: altyapı, yazılım ve yapay zeka entegrasyonunda 15 yılı aşkın deneyim. İlk görüşmeyi yapan ile sistemi kuran aynı kişi; iş araya giren bir ekibe devredilmiyor.
+Uptake'te işi kurucumuz Cengiz Selçuk bizzat yürütüyor: altyapı, yazılım ve yapay zeka entegrasyonunda 15 yılı aşkın deneyim. Bugün MSI ve Praxilla ile kurumsal ortaklıklarımız sürüyor. İlk görüşmeyi yapan ile sistemi kuran aynı kişi; iş araya giren bir ekibe devredilmiyor.
 
 ## Başka neler yaptık?
 
