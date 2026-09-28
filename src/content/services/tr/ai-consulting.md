@@ -52,7 +52,7 @@ Bu bir yelpaze. İlk adım veri sınırlarını çizmek; en uç nokta, modeli (y
 
 ## Kimle çalışıyoruz?
 
-Uptake'te işi kurucumuz Cengiz Selçuk bizzat yürütüyor: altyapı, yazılım ve yapay zeka entegrasyonunda 15 yılı aşkın deneyim, Intel, NVIDIA ve MSI ile kurumsal ortaklıklar. İlk görüşmeyi yapan ile sistemi kuran aynı kişi; iş araya giren bir ekibe devredilmiyor.
+Uptake'te işi kurucumuz Cengiz Selçuk bizzat yürütüyor: altyapı, yazılım ve yapay zeka entegrasyonunda 15 yılı aşkın deneyim. İlk görüşmeyi yapan ile sistemi kuran aynı kişi; iş araya giren bir ekibe devredilmiyor.
 
 ## Başka neler yaptık?
 
