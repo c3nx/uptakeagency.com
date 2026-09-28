@@ -3,7 +3,7 @@ title: "Quill"
 description: "AI-powered system-wide technical dictionary for macOS and Windows. Built with Swift and Rust/Tauri for native performance."
 tags: ["AI", "Swift", "Rust", "Tauri"]
 type: "open-source"
-github: "https://github.com/nicepkg/quill"
+github: "https://github.com/uptakeagency/quill"
 featured: true
 order: 2
 locale: "en"

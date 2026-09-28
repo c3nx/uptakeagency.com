@@ -50,7 +50,6 @@ Cloud infrastructure and operations:
 ### Estanbul AI Agent
 Multi-channel AI customer service agent for a gaming entertainment company. Handles inquiries across WhatsApp, web chat, and social media platforms.
 - Technology: LLMs, RAG, WhatsApp API, Web Chat, Social Media APIs
-- Results: 70% reduction in response time, 85% inquiries auto-resolved, 24/7 coverage
 - Type: Client Work
 
 ### ARU
@@ -75,7 +74,7 @@ Real-time interactive multiplayer quiz platform with live competition, instant f
 AI-powered system-wide technical dictionary for macOS and Windows. Provides instant, context-aware definitions and explanations.
 - Technology: Swift (macOS), Rust/Tauri (Windows), LLM integration
 - Features: System-wide activation via global hotkey, context-aware definitions, offline core dictionary
-- Type: Open Source (github.com/nicepkg/quill)
+- Type: Open Source (github.com/uptakeagency/quill)
 
 ### CastHub
 Self-hosted remote broadcast production monitoring and control platform. Real-time stream health monitoring, OBS/vMix control, and caster management.
@@ -127,7 +126,7 @@ Primary stack includes TypeScript, React, Next.js, Node.js, Python, PostgreSQL, 
 Yes. Uptake Agency has established partnerships with Intel, NVIDIA, MSI, and Praxilla. The team has experience delivering enterprise-grade solutions across multiple industries.
 
 ### Can Uptake Agency build AI-powered applications?
-Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents (85% auto-resolution), AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.
+Yes. AI consulting is a core service. Notable projects include multi-channel AI customer service agents, AI-powered visualization tools for MSI, and custom LLM solutions with RAG architecture.
 
 ### Does Uptake Agency offer WhatsApp Business API integration?
 Yes. The ARU platform is a WhatsApp Business CRM and automation system built by Uptake Agency. They offer WhatsApp API integration as part of their Automation & Integration services.
@@ -142,7 +141,7 @@ Yes. Services include Docker/Kubernetes containerization, CI/CD pipelines, monit
 Email: info@uptakeagency.com. Website: https://uptakeagency.com. The team is available for project discussions and consultations worldwide.
 
 ### Does Uptake Agency contribute to open source?
-Yes. Quill, an AI-powered system-wide technical dictionary, is an open-source project maintained by the team (github.com/nicepkg/quill).
+Yes. Quill, an AI-powered system-wide technical dictionary, is an open-source project maintained by the team (github.com/uptakeagency/quill).
 
 ### What industries has Uptake Agency served?
 Gaming entertainment, healthcare, education (quiz platforms), PC hardware (MSI), broadcast production, and general B2B SaaS across Turkey and internationally.

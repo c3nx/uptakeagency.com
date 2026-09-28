@@ -26,9 +26,3 @@ Doğru ve bağlama duyarlı yanıtlar sunmak için geri getirme artırılı üre
 - **RAG tabanlı yanıtlar**: Seçilmiş bilgi tabanından doğru cevaplar
 - **İnsan aktarımı**: Karmaşık sorgular için insan ajanlarına sorunsuz yönlendirme
 - **Analitik panosu**: Konuşma hacmi, çözüm oranları ve müşteri memnuniyeti üzerine gerçek zamanlı metrikler
-
-## Sonuçlar
-
-- Ortalama yanıt süresinde %70 azalma
-- Soruların %85'i insan müdahalesi olmadan çözüldü
-- 7/24 kesintisiz müşteri destek kapsamı

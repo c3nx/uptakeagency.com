@@ -3,7 +3,7 @@ title: "Quill"
 description: "macOS ve Windows için yapay zeka destekli sistem genelinde teknik sözlük. Yerel performans için Swift ve Rust/Tauri ile geliştirildi."
 tags: ["AI", "Swift", "Rust", "Tauri"]
 type: "open-source"
-github: "https://github.com/nicepkg/quill"
+github: "https://github.com/uptakeagency/quill"
 featured: true
 order: 2
 locale: "tr"
