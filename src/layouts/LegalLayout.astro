@@ -8,9 +8,11 @@ interface Props {
   description: string;
   locale: "en" | "tr";
   canonicalPath: string;
+  alternateExists?: boolean;
 }
 
-const { title, description, locale, canonicalPath } = Astro.props;
+const { title, description, locale, canonicalPath, alternateExists } =
+  Astro.props;
 const i18n = t(locale);
 ---
 
@@ -19,6 +21,7 @@ const i18n = t(locale);
   description={description}
   locale={locale}
   canonicalPath={canonicalPath}
+  alternateExists={alternateExists}
 >
   <!-- Minimal header for legal pages -->
   <header class="border-b border-surface-border">

@@ -4,16 +4,19 @@ import { getAlternateLocale, getLocalizedPath } from "@/i18n";
 interface Props {
   locale: "en" | "tr";
   currentPath: string;
+  alternateExists?: boolean;
 }
 
-const { locale, currentPath } = Astro.props;
+const { locale, currentPath, alternateExists = true } = Astro.props;
 const altLocale = getAlternateLocale(locale);
-const altPath = getLocalizedPath(currentPath, altLocale);
+// Eş yoksa diğer dilin ana sayfasına git
+const altPath = getLocalizedPath(alternateExists ? currentPath : "/", altLocale);
 const label = altLocale === "tr" ? "TR" : "EN";
 ---
 
 <a
   href={altPath}
+  data-lang-switch
   class="text-sm font-medium text-text-muted hover:text-text-primary transition-colors"
   aria-label={altLocale === "tr" ? "Turkce" : "English"}
 >

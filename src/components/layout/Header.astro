@@ -7,9 +7,10 @@ import { t, getLocalizedPath } from "@/i18n";
 interface Props {
   locale: "en" | "tr";
   currentPath: string;
+  alternateExists?: boolean;
 }
 
-const { locale, currentPath } = Astro.props;
+const { locale, currentPath, alternateExists = true } = Astro.props;
 const i18n = t(locale);
 
 const navItems = [
@@ -46,7 +47,7 @@ const navItems = [
             {item.label}
           </a>
         ))}
-        <LanguageSwitcher locale={locale} currentPath={currentPath} />
+        <LanguageSwitcher locale={locale} currentPath={currentPath} alternateExists={alternateExists} />
         <Button href={`mailto:info@uptakeagency.com`} size="sm">
           {i18n.contact.cta}
         </Button>
@@ -79,7 +80,7 @@ const navItems = [
           </a>
         ))}
         <div class="flex items-center gap-4 border-t border-surface-border pt-4">
-          <LanguageSwitcher locale={locale} currentPath={currentPath} />
+          <LanguageSwitcher locale={locale} currentPath={currentPath} alternateExists={alternateExists} />
           <Button href={`mailto:info@uptakeagency.com`} size="sm">
             {i18n.contact.cta}
           </Button>

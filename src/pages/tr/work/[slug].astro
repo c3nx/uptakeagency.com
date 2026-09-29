@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container.astro";
 import Badge from "@/components/ui/Badge.astro";
 import Button from "@/components/ui/Button.astro";
 import { getCollection } from "astro:content";
+import { hasAlternate } from "@/lib/alternate";
 import { getLocalizedPath } from "@/i18n";
 
 export async function getStaticPaths() {
@@ -12,11 +13,19 @@ export async function getStaticPaths() {
     .filter((p) => p.data.locale === "tr")
     .map((project) => ({
       params: { slug: project.slug.replace("tr/", "") },
-      props: { project },
+      props: {
+        project,
+        // Karşı dilde aynı slug'lı kayıt var mı (hreflang ve dil anahtarı için)
+        alternateExists: hasAlternate(
+          projects.map((e) => e.slug),
+          project.slug.replace("tr/", ""),
+          "tr",
+        ),
+      },
     }));
 }
 
-const { project } = Astro.props;
+const { project, alternateExists } = Astro.props;
 const { Content } = await project.render();
 const locale = "tr";
 
@@ -32,6 +41,7 @@ const typeLabels: Record<string, string> = {
   description={project.data.description}
   locale={locale}
   canonicalPath={`/work/${project.slug.replace("tr/", "")}`}
+  alternateExists={alternateExists}
 >
   <section class="py-section-mobile lg:py-section">
     <Container>
