@@ -65,6 +65,8 @@ Yapay zeka araçları cevap hazırlarken kaynak seçiyor. Seçilmek için önce 
 - **Güvenilirlik:** Kaynağı olan bilgi, gerçek vakalar ve başka sitelerin verdiği bağlantılar. Yapay zeka da Google gibi başkalarının güvendiği kaynağa güveniyor.
 - **Ölçüm:** Google'ın yapay zeka modunda, işle ilgili sorulara hangi sitelerin kaynak gösterildiğini topluca sorgulayabiliyoruz. Başlangıçta nerede olduğumuzu ve çalışmanın ardından ne değiştiğini böyle görüyoruz.
 
+Ayrıntılı anlatım: [GEO nedir? SEO ve AEO'dan farkı](/tr/blog/geo-vs-seo).
+
 ## Nasıl çalışıyoruz?
 
 **1. Tanışma (ücretsiz).** Sitenin neye hizmet ettiğini ve kimin bulmasını istediğimizi konuşuyoruz.

@@ -65,6 +65,8 @@ AI tools pick sources when they prepare an answer. To be picked, a site first ha
 - **Trustworthiness:** information with sources, real cases and links from other sites. AI, like Google, trusts the sources that others trust.
 - **Measurement:** we can query Google's AI Mode in bulk to see which sites it cites as sources for questions about the business. That shows us where we start and what has changed after the work.
 
+More detail: [GEO vs SEO vs AEO](/blog/geo-vs-seo).
+
 ## How we work
 
 **1. Intro call (free).** We talk about what the site is for and who should find it.

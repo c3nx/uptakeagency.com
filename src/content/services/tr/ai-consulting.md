@@ -47,6 +47,8 @@ Sayılar için bilgisayarların yıllardır yaptığı bir iş var: hesaplama (�
 
 Örnek: Estanbul'daki yapay zeka analistine "geçen ay kafe ne kadar kazandı?" diye sorulduğunda rakamı yapay zeka tahmin etmiyor. Soruyu veri ambarında bir sorguya çeviriyor, hesabı sorgu yapıyor, yapay zeka sonucu anlaşılır bir cümleyle anlatıyor.
 
+Ayrıntılı yazı: [Yapay Zekaya Excel'inizi Toplatmayın](/tr/blog/ai-and-computation).
+
 ## Gerçek bir örnek: Estanbul'un şirket zekası
 
 Estanbul, İstanbul'da bir espor ve oyun merkezi ile kafe işletmesi. Gelir oyun merkezinin yazılımında, kafe satışları ayrı bir kasa sisteminde, maliyetler franchise (bayilik) sisteminde, personel ve stok başka yerlerde duruyordu. "Bugün gerçekten kâr ettik mi?" sorusunun cevabı günler sonra, elle derlenerek geliyordu.
