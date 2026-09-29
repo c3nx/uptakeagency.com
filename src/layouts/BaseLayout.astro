@@ -9,9 +9,11 @@ interface Props {
   locale: "en" | "tr";
   canonicalPath?: string;
   ogImage?: string;
+  alternateExists?: boolean;
 }
 
-const { title, description, locale, canonicalPath, ogImage } = Astro.props;
+const { title, description, locale, canonicalPath, ogImage, alternateExists } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -23,6 +25,7 @@ const { title, description, locale, canonicalPath, ogImage } = Astro.props;
       locale={locale}
       canonicalPath={canonicalPath}
       ogImage={ogImage}
+      alternateExists={alternateExists}
     />
   </head>
   <body class="min-h-screen bg-surface text-text-primary font-sans antialiased">

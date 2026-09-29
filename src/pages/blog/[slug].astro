@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "@/layouts/BlogLayout.astro";
 import { getCollection } from "astro:content";
+import { hasAlternate } from "@/lib/alternate";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -8,11 +9,19 @@ export async function getStaticPaths() {
     .filter((p) => p.data.locale === "en")
     .map((post) => ({
       params: { slug: post.slug.replace("en/", "") },
-      props: { post },
+      props: {
+        post,
+        // Karşı dilde aynı slug'lı kayıt var mı (hreflang ve dil anahtarı için)
+        alternateExists: hasAlternate(
+          posts.map((e) => e.slug),
+          post.slug.replace("en/", ""),
+          "en",
+        ),
+      },
     }));
 }
 
-const { post } = Astro.props;
+const { post, alternateExists } = Astro.props;
 const { Content } = await post.render();
 const locale = "en";
 ---
@@ -25,6 +34,7 @@ const locale = "en";
   author={post.data.author}
   tags={post.data.tags}
   canonicalPath={`/blog/${post.slug.replace("en/", "")}`}
+  alternateExists={alternateExists}
 >
   <Content />
 </BlogLayout>

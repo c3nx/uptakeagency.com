@@ -3,6 +3,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 import Container from "@/components/ui/Container.astro";
 import Button from "@/components/ui/Button.astro";
 import { getCollection } from "astro:content";
+import { hasAlternate } from "@/lib/alternate";
 import { getLocalizedPath } from "@/i18n";
 
 export async function getStaticPaths() {
@@ -11,11 +12,19 @@ export async function getStaticPaths() {
     .filter((s) => s.data.locale === "en")
     .map((service) => ({
       params: { slug: service.slug.replace("en/", "") },
-      props: { service },
+      props: {
+        service,
+        // Karşı dilde aynı slug'lı kayıt var mı (hreflang ve dil anahtarı için)
+        alternateExists: hasAlternate(
+          services.map((e) => e.slug),
+          service.slug.replace("en/", ""),
+          "en",
+        ),
+      },
     }));
 }
 
-const { service } = Astro.props;
+const { service, alternateExists } = Astro.props;
 const { Content } = await service.render();
 const locale = "en";
 ---
@@ -25,6 +34,7 @@ const locale = "en";
   description={service.data.description}
   locale={locale}
   canonicalPath={`/services/${service.slug.replace("en/", "")}`}
+  alternateExists={alternateExists}
 >
   <section class="py-section-mobile lg:py-section">
     <Container>

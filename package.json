@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "astro check",
-    "test": "bun test ./tests/"
+    "test": "bun test ./tests/",
+    "check:alternates": "bun scripts/check-alternates.ts dist"
   },
   "dependencies": {
     "astro": "^5.7.10",
