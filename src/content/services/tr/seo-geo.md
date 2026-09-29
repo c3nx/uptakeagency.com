@@ -25,7 +25,7 @@ Bu yüzden kendi izleme sistemimizi kurduk. Takip ettiğimiz her siteyi her haft
 - **Alan adı ve güvenlik sertifikası:** Süresi dolmak üzereyse haftalar önceden haber veriyor. Süre dolduğunda site ve alan adına bağlı e-posta birlikte kapanıyor.
 - **Google siteye girebiliyor mu:** robots.txt dosyası, önemli sayfaların dizine eklenebilir olup olmadığı, güvenlik duvarının Google'ın botunu yanlışlıkla engelleyip engellemediği.
 - **Sitenin tamamı:** kırık bağlantılar, yanlış yere işaret eden sayfalar, uzayan yönlendirme zincirleri, açıklaması olmayan görseller, içi boş ya da hiçbir yerden bağlantı almayan sayfalar.
-- **Hız:** Google'ın hız ölçümü, her hafta birkaç kez ölçülüp ortalamasıyla izleniyor; belirgin bir düşüş olduğunda bulgu açılıyor.
+- **Hız:** Google'ın mobil hız puanı her haftaki taramada üç kez ölçülüyor ve ortancasıyla izleniyor; puan belirgin biçimde düştüğünde bulgu açılıyor.
 - **Search Console ve Google Analytics:** Bağlantı doğru çalışıyor mu, arama tıklamalarında ani bir düşüş var mı, sitede ölçülen dönüşüm (ör. form gönderimi) gerçekten işin hedefiyle eşleşiyor mu.
 - **Yapay zeka botları:** ChatGPT, Claude ve Perplexity'nin arama botları siteyi okuyabiliyor mu. Engelliyse site bu araçların cevaplarına hiç giremiyor.
 

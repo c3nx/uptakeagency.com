@@ -45,6 +45,15 @@ Cloud infrastructure and operations:
 - Security hardening, secrets management, network segmentation
 - Self-hosted and cloud deployments
 
+### SEO, GEO & AEO Consulting
+Search visibility in Google, answer boxes, and AI answers:
+- Weekly site health monitoring: domain and TLS expiry, crawlability and indexability, full-site crawl, mobile speed score, Search Console and GA4 checks, AI search bot access
+- Keyword research
+- Weekly location-based rank tracking
+- Competitor and backlink analysis
+- Site audit
+- Answer-first content structure and structured data for answer boxes and AI answers
+
 ## Featured Projects
 
 ### Estanbul AI Agent
@@ -111,7 +120,7 @@ GitHub Actions, GitLab CI, Turborepo, Bun, Tailwind CSS, Playwright
 ## Frequently Asked Questions
 
 ### What services does Uptake Agency offer?
-Uptake Agency offers four core services: AI Consulting (custom LLM solutions, RAG systems), Custom Software Development (full-stack web apps and APIs), Automation & Integration (workflow automation, WhatsApp API), and Infrastructure & DevOps (Docker, CI/CD, cloud).
+Uptake Agency offers five core services: AI Consulting (custom LLM solutions, RAG systems), Custom Software Development (full-stack web apps and APIs), Automation & Integration (workflow automation, WhatsApp API), Infrastructure & DevOps (Docker, CI/CD, cloud), and SEO, GEO & AEO Consulting (weekly site health monitoring, keyword research, rank tracking, answer-first content).
 
 ### Where is Uptake Agency located?
 Uptake Agency is based in Istanbul, Turkey, and serves clients worldwide through remote collaboration.

@@ -25,7 +25,7 @@ So we built our own monitoring system. It re-measures every site we track from s
 - **Domain and security certificate:** If either is about to expire, it warns us weeks ahead. When one expires, the site and any email on that domain go down together.
 - **Whether Google can get into the site:** the robots.txt file, whether important pages can be indexed, and whether a firewall is blocking Google's bot by mistake.
 - **The whole site:** broken links, pages that point to the wrong place, long redirect chains, images without descriptions, empty pages and pages that no other page links to.
-- **Speed:** Google's speed measurement, taken several times a week and tracked as an average. A clear drop opens a finding.
+- **Speed:** Google's mobile speed score is measured three times in each weekly scan and tracked by the median. A clear drop opens a finding.
 - **Search Console and Google Analytics:** whether the connection works, whether search clicks suddenly fell, and whether the conversions measured on the site (for example a form submission) match the goal of the business.
 - **AI bots:** whether the search bots of ChatGPT, Claude and Perplexity can read the site. If they are blocked, the site never appears in those tools' answers.
 
