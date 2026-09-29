@@ -15,13 +15,13 @@ Bu yazıda nedenini sade bir dille anlatıyoruz ve şirkette yapay zekayı sayı
 
 ChatGPT, Gemini ya da Claude gibi araçların arkasındaki dil modelleri metinle eğitiliyor. Çok iyi okuyorlar: hangi sütunun fiyat olduğunu, hangi satırın hatalı girildiğini, kullanıcının ne sorduğunu anlıyorlar. Dağınık bir listeyi düzenliyor, eksik bilgiyi fark ediyor, uzun bir raporu özetliyorlar.
 
-Toplama ise başka bir iş. Anthropic, Claude'un iç işleyişini incelediği araştırma yazısında bunu açıkça söylüyor: Claude bir hesap makinesi olarak tasarlanmadı, metinle eğitildi ve içinde matematik algoritmaları yok. Aynı yazı modelin yine de sayıları çoğu zaman "kafasından" doğru toplayabildiğini anlatıyor. Sorun da burada: çoğu zaman doğru, bazen yanlış, ve yanlış olduğunda bunu söylemiyor.
+Toplama ise başka bir iş. Anthropic, Claude'un iç işleyişini incelediği araştırma yazısında bunu açıkça söylüyor: Claude bir hesap makinesi olarak tasarlanmadı, metinle eğitildi ve içinde matematik algoritmaları yok. Aynı yazı modelin yine de sayıları çoğu zaman "kafasından" doğru toplayabildiğini anlatıyor. Bize göre sorun da burada: çoğu zaman doğru, bazen yanlış; ve yanlış olduğunda bunu cevaba bakarak anlamak mümkün olmuyor.
 
 Excel'in ya da bir muhasebe programının formülü ise her seferinde aynı girdiye aynı sonucu veriyor. Hatası varsa test edilip bulunabiliyor. Bu dünyanın adı hesaplama (İngilizcesiyle compute).
 
 ## Araştırmalar ne diyor?
 
-- **Finans tabloları:** 2026'da yayımlanan bir çalışma (FinSheet-Bench, arXiv ön baskısı) OpenAI, Google ve Anthropic modellerini gerçek finans tablolarından bilgi çıkarma işinde denedi. En iyi model yüzde 82,4 doğrulukta kaldı; bu yaklaşık altı sorudan birinde hata demek. Tablo büyüyüp karmaştıkça doğruluk düştü: en kolay dosyada ortalama yüzde 86,2, en büyük dosyada yüzde 48,6. Araştırmacıların vardığı sonuç: hiçbir model, profesyonel finans işinde denetimsiz kullanılacak kadar düşük hata oranına ulaşmıyor; güvenilir sonuç için belgeyi anlamak ile kesin hesaplamayı birbirinden ayırmak gerekiyor.
+- **Finans tabloları:** 2026'da yayımlanan bir çalışma (FinSheet-Bench, arXiv ön baskısı) OpenAI, Google ve Anthropic modellerini gerçek fon yapılarına göre hazırlanmış sentetik finans tablolarından bilgi çıkarma işinde denedi. En iyi model yüzde 82,4 doğrulukta kaldı; bu yaklaşık altı sorudan birinde hata demek. Tablo büyüyüp karmaştıkça doğruluk düştü: en kolay dosyada ortalama yüzde 86,2, en büyük dosyada yüzde 48,6. Araştırmacıların vardığı sonuç: hiçbir model, profesyonel finans işinde denetimsiz kullanılacak kadar düşük hata oranına ulaşmıyor; güvenilir sonuç büyük olasılıkla belgeyi anlamak ile kesin hesaplamayı birbirinden ayırmayı gerektirecek.
 - **Birden çok tablo üzerinde soru-cevap:** TQA-Bench çalışması, toplama gibi birçok hücre üzerinde açık hesap gerektiren sorularda modellerin belirgin biçimde daha çok zorlandığını bildiriyor.
 - **Hesabı koda devretmek:** 2022 tarihli PAL çalışması, modellerin problemi doğru adımlara bölse bile çözüm adımında mantık ve aritmetik hatası yaptığını gösterdi. Önerdiği çözüm, hesap adımını bir Python yorumlayıcısına bırakmak.
 
