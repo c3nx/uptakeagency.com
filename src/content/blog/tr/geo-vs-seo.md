@@ -27,12 +27,12 @@ Terim, Kasım 2023'te yayımlanan ve KDD 2024 konferansına kabul edilen bir aka
 
 Öne çıkan bulgular:
 
-- **Kaynak göstermek, alıntı eklemek ve istatistik eklemek** en çok işe yarayan yöntemler oldu. Makalenin özeti bu yöntemlerle görünürlüğün yüzde 40'a kadar artabildiğini söylüyor.
+- **Kaynak göstermek, alıntı eklemek ve istatistik eklemek** en çok işe yarayan yöntemler oldu; ölçütlerden birinde yüzde 30 ile 40 arasında iyileşme sağladılar. Makalenin özeti, GEO ile görünürlüğün yüzde 40'a kadar artabildiğini söylüyor.
 - **Anahtar kelime doldurmak** (aynı kelimeyi metne tekrar tekrar serpiştirmek) neredeyse hiç işe yaramadı; bir testte başlangıç düzeyinin de altında kaldı.
-- **Sıralamada geride olan siteler** bu yöntemlerden daha çok kazandı. Google'da beşinci sırada olan bir sitenin kaynak eklendikten sonra yapay zeka cevaplarındaki görünürlüğü iki katını aştı.
+- **Sıralamada geride olan bir site** kaynak göstermekten çok kazandı: testte beşinci sıradaki sitelerin yapay zeka cevaplarındaki görünürlüğü yüzde 115 arttı, yani iki katını aştı.
 - Etki konudan konuya değişiyor.
 
-Burada dikkatli olmak gerekiyor: "yüzde 40'a kadar" bir test ortamında ölçülen en iyi sonuç, her siteye verilmiş bir söz değil. Yine de yön net: yapay zeka, kendisi de kaynağa dayanan, somut bilgi veren metni alıntılamayı tercih ediyor.
+Burada dikkatli olmak gerekiyor: "yüzde 40'a kadar" bir test ortamında ölçülen en iyi sonuç, her siteye verilmiş bir söz değil. Yine de test ortamındaki yön net: kaynak, alıntı ve rakam içeren metin daha çok alıntılandı.
 
 ## Google ne diyor?
 
@@ -53,7 +53,7 @@ Yapay zeka araçlarının sitemizi okuyabilmesi için önce içeri girebilmesi g
 - **OpenAI:** OAI-SearchBot, siteleri ChatGPT'nin arama sonuçlarında göstermek için geliyor; GPTBot ise modellerin eğitimi için. OpenAI, arama sonuçlarında görünmek isteyenlere OAI-SearchBot'a izin vermeyi öneriyor.
 - **Anthropic:** Claude-SearchBot arama kalitesi için, ClaudeBot eğitim için.
 - **Perplexity:** PerplexityBot, siteleri Perplexity'nin arama sonuçlarında göstermek için; Perplexity'ye göre model eğitimi için kullanılmıyor.
-- **Google:** Google-Extended, sitenin içeriğinin Gemini modellerinin eğitiminde kullanılıp kullanılmayacağını belirliyor. Google'a göre bu ayar sitenin Google Arama'da yer almasını etkilemiyor.
+- **Google:** Google-Extended, sitenin içeriğinin Gemini modellerinin eğitiminde ve Gemini'nin cevaplarını dayandırmasında (grounding) kullanılıp kullanılmayacağını belirliyor. Google'a göre bu ayar sitenin Google Arama'da yer almasını etkilemiyor.
 
 Pratik sonuç: eğitim botlarını kapatmak bir tercih meselesi; arama botlarını kapatmak ise sitenin o araçların cevaplarına hiç girmemesi demek. Bu ayrımı robots.txt dosyasında bilerek yapmak gerekiyor.
 
@@ -66,9 +66,9 @@ Pratik sonuç: eğitim botlarını kapatmak bir tercih meselesi; arama botların
 - "SEO ile GEO arasındaki fark nedir?"
 - "Kurumsal şirketler için yapay zeka danışmanlığı alırken nelere dikkat edilmeli?"
 
-Dört cevabın hiçbirinde Uptake geçmiyor. GEO ajansları sorusunun cevabında on ajans adı sayılıyor; danışmanlık sorusunun cevabı büyük danışmanlık firmalarıyla başlıyor. Cevapların önemli bir kısmı ajansların kendi yazılarından ve "en iyi ajanslar" türünden liste sayfalarından derlenmiş görünüyor.
+Dört cevabın hiçbirinde Uptake geçmiyor. GEO ajansları sorusunun cevabında on ajans adı sayılıyor; danışmanlık sorusunun cevabı büyük danışmanlık firmalarıyla başlıyor.
 
-Buradan çıkardığımız iki şey var. Birincisi, yapay zeka yeni bir siteyi kendiliğinden bulmuyor; başka sitelerin, listelerin ve dizinlerin bizden söz etmesi gerekiyor. İkincisi, soruya doğrudan cevap veren yazılar alıntılanıyor; bu yazı da o yüzden var.
+Dört soruluk, tek günlük bir ölçüm kesin sonuç vermez; ama bize iki şey düşündürüyor. Birincisi, yeni bir siteyi yapay zekanın kendiliğinden bulmasını beklemek yerine, başka sitelerin, sektör listelerinin ve dizinlerin bizden söz etmesi için çalışmak gerekiyor. İkincisi, yukarıdaki araştırmanın gösterdiği gibi, soruya doğrudan ve kaynaklı cevap veren yazılar daha çok alıntılanıyor; bu yazıyı da bu yüzden böyle yazdık.
 
 Aynı dört soruyu 23 Kasım 2026'da tekrar soracağız ve sonucu burada paylaşacağız.
 
@@ -77,8 +77,8 @@ Aynı dört soruyu 23 Kasım 2026'da tekrar soracağız ve sonucu burada paylaş
 - **Google sayfayı görebiliyor mu?** Sayfa dizinde mi, arama sonucunda açıklamasıyla görünüyor mu? GEO'nun ilk şartı bu.
 - **Arama botları içeri girebiliyor mu?** robots.txt dosyası OAI-SearchBot, Claude-SearchBot ve PerplexityBot'u engellemiyor olmalı.
 - **Cevap ilk paragrafta mı?** Sayfanın cevapladığı soru ilk birkaç cümlede, alıntılanabilecek kadar kısa ve net cevaplanmalı; ayrıntı sonra gelmeli.
-- **Kaynak ve rakam var mı?** Araştırma, kaynağı belli bilgi ve istatistik içeren metnin daha çok alıntılandığını gösteriyor. Kaynaksız rakam ise güveni bozuyor.
-- **Başka siteler bizden söz ediyor mu?** Sektör listeleri, dizinler ve başka sitelerdeki bağlantılar hem Google'da hem yapay zeka cevaplarında işe yarıyor.
+- **Kaynak ve rakam var mı?** Araştırma, kaynak, alıntı ve istatistik içeren metnin test ortamında daha çok alıntılandığını gösteriyor. Kaynaksız rakam ise güveni bozuyor.
+- **Başka siteler bizden söz ediyor mu?** Sektör listeleri, dizinler ve başka sitelerdeki bağlantılar Google'da sitenin güvenilirliğine katkı sağlıyor; yapay zeka cevaplarında da işe yarayıp yaramadığını kendi ölçümümüzle izliyoruz.
 - **Ölçüyor muyuz?** Hedef soruları belli aralıklarla yapay zeka araçlarına sorup kimin kaynak gösterildiğine bakmak gerekiyor.
 
 ## Kaynaklar

@@ -27,12 +27,12 @@ The term comes from an academic paper published in November 2023 and accepted to
 
 Key findings:
 
-- **Citing sources, adding quotations and adding statistics** were the methods that worked best. The paper's abstract says these methods can raise visibility by up to 40 percent.
+- **Citing sources, adding quotations and adding statistics** were the methods that worked best; on one of the measures they improved results by 30 to 40 percent. The paper's abstract says GEO can raise visibility by up to 40 percent.
 - **Keyword stuffing** (repeating the same word through the text) hardly worked at all; in one test it fell below the baseline.
-- **Sites lower in the rankings** gained more from these methods. A site in fifth place on Google more than doubled its visibility in AI answers after adding sources.
+- **A site lower in the rankings** gained a lot from citing sources: in the test, the visibility of fifth-ranked sites in AI answers rose by 115 percent, which is more than double.
 - The effect varies from topic to topic.
 
-A note of caution is needed here. "Up to 40 percent" is the best result measured in a test environment, and it is no promise for any given site. Still, the direction is clear: AI tools prefer to quote text that gives concrete information and itself rests on sources.
+A note of caution is needed here. "Up to 40 percent" is the best result measured in a test environment, and it is no promise for any given site. Still, the direction in the test environment is clear: text with sources, quotations and numbers got quoted more.
 
 ## What Google says
 
@@ -53,7 +53,7 @@ For AI tools to read our site, they first have to be able to get in. A common co
 - **OpenAI:** OAI-SearchBot comes to show sites in ChatGPT's search results, while GPTBot is for training models. OpenAI recommends allowing OAI-SearchBot for those who want to appear in search results.
 - **Anthropic:** Claude-SearchBot is for search quality, ClaudeBot is for training.
 - **Perplexity:** PerplexityBot is for showing sites in Perplexity's search results; according to Perplexity it is not used for model training.
-- **Google:** Google-Extended controls whether a site's content is used to train Gemini models. According to Google, this setting does not affect whether the site appears in Google Search.
+- **Google:** Google-Extended controls whether a site's content is used to train Gemini models and to ground Gemini's answers. According to Google, this setting does not affect whether the site appears in Google Search.
 
 The practical result: blocking training bots is a matter of choice, while blocking search bots means the site never enters the answers of those tools. This distinction has to be made deliberately in the robots.txt file.
 
@@ -66,9 +66,9 @@ On 30 September 2026 we asked Google's AI Mode four questions. We asked them in 
 - "SEO ile GEO arasındaki fark nedir?" (What is the difference between SEO and GEO?)
 - "Kurumsal şirketler için yapay zeka danışmanlığı alırken nelere dikkat edilmeli?" (What should corporate companies look out for when buying AI consulting?)
 
-Uptake does not appear in any of the four answers. The answer to the GEO agencies question names ten agencies, and the answer to the consulting question starts with the big consulting firms. A large part of the answers appears to be compiled from the agencies' own posts and from list pages of the "best agencies" kind.
+Uptake does not appear in any of the four answers. The answer to the GEO agencies question names ten agencies, and the answer to the consulting question starts with the big consulting firms.
 
-We take two things from this. First, AI does not find a new site on its own; other sites, lists and directories have to mention us. Second, posts that answer the question directly get quoted, and that is why this post exists.
+A single day of measurement with four questions proves nothing conclusive, but it gives us two things to think about. First, instead of waiting for AI to find a new site on its own, we need to work on getting other sites, industry lists and directories to mention us. Second, as the research above shows, posts that answer the question directly and with sources get quoted more, and that is why we wrote this post the way we did.
 
 We will ask the same four questions again on 23 November 2026 and share the result here.
 
@@ -77,8 +77,8 @@ We will ask the same four questions again on 23 November 2026 and share the resu
 - **Can Google see the page?** Is the page in the index, and does it show up in search results with its description? This is the first condition of GEO.
 - **Can search bots get in?** The robots.txt file should not block OAI-SearchBot, Claude-SearchBot and PerplexityBot.
 - **Is the answer in the first paragraph?** The question a page answers should be answered in the first few sentences, short and clear enough to be quoted, with the detail coming after.
-- **Are there sources and numbers?** Research shows that text with sources, sourced information and statistics gets quoted more. A number without a source damages trust.
-- **Do other sites mention us?** Industry lists, directories and links from other sites help both on Google and in AI answers.
+- **Are there sources and numbers?** Research shows that text with sources, quotations and statistics got quoted more in the test environment. A number without a source damages trust.
+- **Do other sites mention us?** Industry lists, directories and links from other sites add to a site's credibility on Google; whether they also help in AI answers is something we track in our own measurements.
 - **Are we measuring?** We need to ask the target questions to AI tools at regular intervals and see who is shown as a source.
 
 ## Sources
