@@ -14,7 +14,7 @@ A growing share of people now ask ChatGPT, Gemini or Google's AI Mode instead of
 
 Sometimes nobody clicks on a site at all. Google answers the question directly in a box above the results, or a voice assistant on the phone reads the answer aloud. Answer engine optimization (AEO) is the work of making sure that answer comes from our page.
 
-All three feed on the same foundation: a site that can be read, that is accurate and that can be trusted. Any AI SEO consultant starts there.
+All three feed on the same foundation: a site that can be read, that is accurate and that can be trusted. That foundation is where our work as AI SEO consultants starts.
 
 ## We check your site's health every week
 
@@ -29,7 +29,7 @@ So we built our own monitoring system. It re-measures every site we track from s
 - **Search Console and Google Analytics:** whether the connection works, whether search clicks suddenly fell, and whether the conversions measured on the site (for example a form submission) match the goal of the business.
 - **AI bots:** whether the search bots of ChatGPT, Claude and Perplexity can read the site. If they are blocked, the site never appears in those tools' answers.
 
-The system makes its decisions with fixed rules, not AI judgment. When data is missing it doesn't say "passed", it says "could not be measured". Every problem it finds lands as a separate item, in priority order, on the to-do list of the team that built the site. One summary report each week shows what got fixed, what is waiting and what could not be measured. When a page-level problem is fixed, the system closes the item itself.
+The system decides with fixed rules; no AI interprets the results. When data is missing it doesn't say "passed", it says "could not be measured". Every problem it finds lands as a separate item, in priority order, on the to-do list of the team that built the site. One summary report each week shows what got fixed, what is waiting and what could not be measured. When a page-level problem is fixed, the system closes the item itself.
 
 For one client, this system caught a domain that was less than a month from expiring, before the site went down.
 
