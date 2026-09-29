@@ -1,6 +1,6 @@
 ---
 title: "GEO Nedir? SEO ve AEO'dan Farkı"
-description: "GEO, sitenin ChatGPT, Gemini ve Google'ın yapay zeka modu gibi araçların cevaplarında kaynak olarak seçilmesi için yapılan iş. SEO ve AEO ile farkını ve bugün neyin gerçekten işe yaradığını anlatıyoruz."
+description: "GEO, sitenin ChatGPT, Gemini ve Google'ın yapay zeka modunun cevaplarında kaynak olarak seçilmesi için yapılan iş. SEO ve AEO ile farkı, işe yarayanlar."
 date: 2026-09-30
 tags: ["GEO", "SEO", "AEO", "Yapay Zeka"]
 locale: "tr"
