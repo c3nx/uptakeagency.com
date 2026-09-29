@@ -7,7 +7,7 @@ const cardCount = [...source.matchAll(/cmd:\s*"/g)].length;
 
 describe("ana sayfa hizmet kartları", () => {
   test("her kartın bir slug'ı var", () => {
-    expect(cardCount).toBe(4);
+    expect(cardCount).toBe(5);
     expect(slugs.length).toBe(cardCount);
   });
 

@@ -43,8 +43,8 @@ export default {
         mono: ["JetBrains Mono", "Fira Code", ...defaultTheme.fontFamily.mono],
       },
       fontSize: {
-        display: ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        headline: ["3rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        display: ["clamp(2rem, 9vw, 4.5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        headline: ["clamp(1.875rem, 6vw, 3rem)", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
         title: ["1.5rem", { lineHeight: "1.4" }],
       },
       spacing: {

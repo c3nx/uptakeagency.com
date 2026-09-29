@@ -36,6 +36,10 @@
     "infrastructure": {
       "title": "Infrastructure & DevOps",
       "description": "Scalable cloud infrastructure, CI/CD pipelines, containerization, and performance optimization."
+    },
+    "seo_geo": {
+      "title": "SEO, GEO & AEO",
+      "description": "We work to get you found on Google, in answer boxes and in AI answers from ChatGPT and Gemini, and we check your site's health every week."
     }
   },
   "projects": {
