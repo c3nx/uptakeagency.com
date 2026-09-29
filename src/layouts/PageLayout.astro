@@ -9,9 +9,11 @@ interface Props {
   locale: "en" | "tr";
   canonicalPath?: string;
   ogImage?: string;
+  alternateExists?: boolean;
 }
 
-const { title, description, locale, canonicalPath, ogImage } = Astro.props;
+const { title, description, locale, canonicalPath, ogImage, alternateExists } =
+  Astro.props;
 
 // Derive current path from canonicalPath for active nav highlighting
 const currentPath = canonicalPath || "/";
@@ -23,8 +25,9 @@ const currentPath = canonicalPath || "/";
   locale={locale}
   canonicalPath={canonicalPath}
   ogImage={ogImage}
+  alternateExists={alternateExists}
 >
-  <Header locale={locale} currentPath={currentPath} />
+  <Header locale={locale} currentPath={currentPath} alternateExists={alternateExists} />
   <main class="pt-16">
     <slot />
   </main>

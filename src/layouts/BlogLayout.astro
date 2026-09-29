@@ -12,10 +12,19 @@ interface Props {
   author: string;
   tags: string[];
   canonicalPath?: string;
+  alternateExists?: boolean;
 }
 
-const { title, description, locale, date, author, tags, canonicalPath } =
-  Astro.props;
+const {
+  title,
+  description,
+  locale,
+  date,
+  author,
+  tags,
+  canonicalPath,
+  alternateExists,
+} = Astro.props;
 const i18n = t(locale);
 
 const formattedDate = date.toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US", {
@@ -30,6 +39,7 @@ const formattedDate = date.toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US
   description={description}
   locale={locale}
   canonicalPath={canonicalPath}
+  alternateExists={alternateExists}
 >
   <section class="py-section-mobile lg:py-section">
     <Container>
