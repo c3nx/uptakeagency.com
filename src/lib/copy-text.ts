@@ -11,15 +11,19 @@ function copyWithTextarea(text: string, doc: Document): boolean {
   area.style.position = "fixed";
   area.style.left = "-9999px";
   area.style.top = "0";
+  // Odak kaybolmasın: önceki öğeyi sakla, iş bitince geri ver
+  const prev = doc.activeElement;
   doc.body.appendChild(area);
   try {
-    area.focus();
+    area.focus({ preventScroll: true });
     area.select();
+    area.setSelectionRange(0, text.length); // iOS için
     return doc.execCommand("copy");
   } catch {
     return false;
   } finally {
     area.remove();
+    (prev as HTMLElement | null)?.focus?.({ preventScroll: true });
   }
 }
 

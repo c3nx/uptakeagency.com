@@ -68,7 +68,11 @@ const { text, label, copiedLabel } = Astro.props;
       }
       iconCopy.classList.add("hidden");
       iconCheck.classList.remove("hidden");
-      status.textContent = button.dataset.copiedLabel ?? "";
+      // Aynı metin tekrar duyurulsun diye önce boşalt
+      status.textContent = "";
+      requestAnimationFrame(() => {
+        status.textContent = button.dataset.copiedLabel ?? "";
+      });
       timer = setTimeout(reset, GOSTERIM_MS);
     });
   });

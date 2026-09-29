@@ -4,11 +4,13 @@ import { copyText, type CopyDeps } from "../src/lib/copy-text";
 // Sahte textarea ve document üretir; çağrıları kaydeder
 function fakeDocument(execResult: boolean | "throw") {
   const calls = { appended: 0, removed: 0, selected: 0, exec: [] as string[] };
+  const oncekiOdak = { focusArgs: [] as unknown[], focus(arg?: unknown) { this.focusArgs.push(arg); } };
   const textarea = {
     value: "",
     style: {} as Record<string, string>,
     setAttribute() {},
     focus() {},
+    setSelectionRange() {},
     select() {
       calls.selected++;
     },
@@ -17,6 +19,7 @@ function fakeDocument(execResult: boolean | "throw") {
     },
   };
   const doc = {
+    activeElement: oncekiOdak,
     createElement: () => textarea,
     body: {
       appendChild() {
@@ -29,7 +32,7 @@ function fakeDocument(execResult: boolean | "throw") {
       return execResult;
     },
   };
-  return { doc: doc as unknown as CopyDeps["document"], textarea, calls };
+  return { doc: doc as unknown as CopyDeps["document"], textarea, calls, oncekiOdak };
 }
 
 describe("copyText", () => {
@@ -55,6 +58,12 @@ describe("copyText", () => {
     expect(textarea.value).toBe("a@b.c");
     expect(calls.exec).toEqual(["copy"]);
     expect(calls.removed).toBe(1);
+  });
+
+  test("yedek yoldan sonra odak önceki öğeye geri verilir (kaydırmadan)", async () => {
+    const { doc, oncekiOdak } = fakeDocument(true);
+    await copyText("a@b.c", { clipboard: undefined, document: doc });
+    expect(oncekiOdak.focusArgs).toEqual([{ preventScroll: true }]);
   });
 
   test("clipboard yoksa yedek yolu kullanır", async () => {
