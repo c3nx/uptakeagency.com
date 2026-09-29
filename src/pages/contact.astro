@@ -2,6 +2,7 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import Container from "@/components/ui/Container.astro";
 import Button from "@/components/ui/Button.astro";
+import CopyButton from "@/components/ui/CopyButton.astro";
 import ContactForm from "@/components/sections/ContactForm.astro";
 import { t } from "@/i18n";
 
@@ -30,12 +31,19 @@ const i18n = t(locale);
             <h2 class="text-xl font-semibold text-text-primary">
               {i18n.contact.email_label}
             </h2>
-            <a
-              href="mailto:info@uptakeagency.com"
-              class="mt-2 inline-block text-2xl font-medium text-brand-600 hover:text-brand-700 transition-colors"
-            >
-              info@uptakeagency.com
-            </a>
+            <div class="mt-2 inline-flex items-center gap-2" data-copy-group>
+              <a
+                href="mailto:info@uptakeagency.com"
+                class="inline-block text-2xl font-medium text-brand-600 hover:text-brand-700 transition-colors"
+              >
+                info@uptakeagency.com
+              </a>
+              <CopyButton
+                text="info@uptakeagency.com"
+                label={i18n.contact.copy_email}
+                copiedLabel={i18n.contact.copied}
+              />
+            </div>
           </div>
 
           <Button href="mailto:info@uptakeagency.com" size="lg">
