@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Uptake Agency",
-    "description": "Teknoloji Danışmanlığı & Yapay Zeka Çözümleri. İşletmelerin en son teknolojiyi ve yapay zekayı kullanarak büyüme ve verimlilik sağlamasına yardımcı oluyoruz."
+    "title": "Yapay Zeka Danışmanlığı ve Özel Yazılım",
+    "description": "İstanbul merkezli teknoloji danışmanlığı. Yapay zekanın şirketinizde nereye oturacağını birlikte buluyor, kuruyor ve çalışır hâlde tutuyoruz."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -14,28 +14,28 @@
   },
   "hero": {
     "title": "Teknoloji Danışmanlığı & Yapay Zeka Çözümleri",
-    "subtitle": "İşletmelerin en son teknolojiyi ve yapay zekayı kullanarak büyüme ve verimlilik sağlamasına yardımcı oluyoruz.",
+    "subtitle": "Yapay zekanın şirketinizde nereye oturacağını birlikte buluyor, kuruyor ve çalışır hâlde tutuyoruz.",
     "cta_primary": "Projelerimiz",
     "cta_secondary": "İletişime Geçin"
   },
   "services": {
     "title": "Ne Yapıyoruz",
-    "subtitle": "İşletmelerin çalışma şeklini dönüştüren uçtan uca teknoloji çözümleri sunuyoruz.",
+    "subtitle": "Fikirden çalışan sisteme kadar birlikte çalışıyoruz.",
     "ai_consulting": {
       "title": "Yapay Zeka Danışmanlığı",
-      "description": "Kavram kanıtından üretim dağıtımına kadar stratejik yapay zeka entegrasyonu. Özel LLM çözümleri, RAG sistemleri ve akıllı otomasyon."
+      "description": "Şirketinizin kendi verisiyle çalışan asistanlar ve soru sorabildiğiniz paneller kuruyoruz."
     },
     "custom_software": {
       "title": "Özel Yazılım Geliştirme",
-      "description": "İş gereksinimlerinize özel web uygulamaları, API'ler ve platformların full-stack geliştirilmesi."
+      "description": "Hazır yazılımın yetmediği yerde şirketinize özel web uygulamaları ve sistemler."
     },
     "automation": {
       "title": "Otomasyon & Entegrasyon",
-      "description": "Akıllı otomasyon, CRM entegrasyonu ve çok kanallı iletişim platformlarıyla operasyonları optimize edin."
+      "description": "Her gün elle yapılan işleri ve birbirinden kopuk sistemleri bağlıyoruz: CRM, WhatsApp, muhasebe."
     },
     "infrastructure": {
       "title": "Altyapı & DevOps",
-      "description": "Ölçeklenebilir bulut altyapısı, CI/CD pipeline'ları, konteynerizasyon ve performans optimizasyonu."
+      "description": "Sistemlerinizin kesintisiz, hızlı ve güvenli çalışması için sunucu ve yayın altyapısı."
     }
   },
   "projects": {
