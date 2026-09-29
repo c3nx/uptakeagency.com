@@ -10,6 +10,7 @@ Uptake Agency is a technology consulting firm specializing in AI integration, cu
 - Custom Software Development: Full-stack web apps, APIs, platforms (TypeScript, React, Next.js, Node.js, Python)
 - Automation & Integration: Workflow automation, CRM sync, WhatsApp Business API, multi-channel platforms
 - Infrastructure & DevOps: Docker, Kubernetes, CI/CD, monitoring, security hardening
+- SEO, GEO & AEO Consulting: Weekly site health monitoring, keyword research, rank tracking, visibility in Google answers and AI answers
 
 ## Key Projects
 - Estanbul AI Agent: Multi-channel AI customer service

@@ -36,6 +36,10 @@
     "infrastructure": {
       "title": "Altyapı & DevOps",
       "description": "Sistemlerinizin kesintisiz, hızlı ve güvenli çalışması için sunucu ve yayın altyapısı."
+    },
+    "seo_geo": {
+      "title": "SEO, GEO ve AEO",
+      "description": "Google'da, cevap kutularında ve ChatGPT, Gemini gibi yapay zeka yanıtlarında görünmek için çalışıyoruz; sitenin sağlığını her hafta ölçüyoruz."
     }
   },
   "projects": {

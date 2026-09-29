@@ -38,6 +38,13 @@ const services = [
     title: i18n.services.infrastructure.title,
     description: i18n.services.infrastructure.description,
   },
+  {
+    slug: "seo-geo",
+    cmd: "seo.monitor()",
+    icon: `<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
+    title: i18n.services.seo_geo.title,
+    description: i18n.services.seo_geo.description,
+  },
 ];
 ---
 
@@ -56,8 +63,8 @@ const services = [
 
     <!-- Services grid -->
     <div class="mt-16 grid gap-6 sm:grid-cols-2">
-      {services.map((service) => (
-        <a href={getLocalizedPath(`/services/${service.slug}`, locale)} class="group glass-card-hover block p-8">
+      {services.map((service, index) => (
+        <a href={getLocalizedPath(`/services/${service.slug}`, locale)} class:list={["group glass-card-hover block p-8", services.length % 2 === 1 && index === services.length - 1 && "sm:col-span-2"]}>
           <!-- Terminal command header -->
           <div class="mb-5 flex items-center gap-3">
             <div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-500/10 text-brand-400">
